@@ -7,8 +7,8 @@ print(size)
 values = [];
 uniqueNames = [];
 for i in data["templates"]:
-  if((str(i["title"])).lower() not in uniqueNames):
-    uniqueNames.append((str(i["title"])).lower());
+  if(((str(i["title"])).replace(" ", "").replace("-", "")).lower() not in uniqueNames):
+    uniqueNames.append(((str(i["title"])).replace(" ", "").replace("-", "")).lower());
     values.append(i)
 jsonFile.close()
 
@@ -18,8 +18,8 @@ data2 = json.load(jsonFile2)
 size=len(data2["templates"])
 print(size)
 for i in data2["templates"]:
-  if((str(i["title"])).lower() not in uniqueNames):
-    uniqueNames.append((str(i["title"])).lower());
+  if(((str(i["title"])).replace(" ", "").replace("-", "")).lower() not in uniqueNames):
+    uniqueNames.append(((str(i["title"])).replace(" ", "").replace("-", "")).lower());
     values.append(i)
 jsonFile.close()
 #print(values)

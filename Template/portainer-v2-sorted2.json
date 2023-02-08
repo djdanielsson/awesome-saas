@@ -213,74 +213,6 @@
       ]
     },
     {
-      "description": "[Airsonic-advanced](https://github.com/airsonic-advanced/airsonic-advanced) is a free, web-based media streamer, providing ubiquitious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.",
-      "env": [
-        {
-          "default": "100",
-          "description": "for UserID",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1024",
-          "description": "for GroupID",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "<URL_BASE>",
-          "description": "For setting url-base in reverse proxy setups.",
-          "label": "CONTEXT_PATH",
-          "name": "CONTEXT_PATH"
-        },
-        {
-          "default": "<options>",
-          "description": "For passing additional java options.",
-          "label": "JAVA_OPTS",
-          "name": "JAVA_OPTS"
-        },
-        {
-          "default": "America/Chicago",
-          "description": "Specify a timezone to use for example America/Chicago",
-          "label": "TZ",
-          "name": "TZ"
-        }
-      ],
-      "image": "linuxserver/airsonic-advanced:latest",
-      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/airsonic-banner.png",
-      "name": "Airsonic-advanced",
-      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/airsonic-advanced/config<br>mkdir -p /volume1/docker/airsonic-advanced/music<br>mkdir -p /volume1/docker/airsonic-advanced/playlists<br>mkdir -p /volume1/docker/airsonic-advanced/podcasts<br>mkdir -p /volume1/docker/airsonic-advanced/media</p>",
-      "platform": "linux",
-      "ports": [
-        "4040:4040/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Airsonic-advanced",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/volume1/docker/airsonic-advanced/config",
-          "container": "/config"
-        },
-        {
-          "bind": "/volume1/docker/airsonic-advanced/media",
-          "container": "/media"
-        },
-        {
-          "bind": "/volume1/docker/airsonic-advanced/music",
-          "container": "/music"
-        },
-        {
-          "bind": "/volume1/docker/airsonic-advanced/playlists",
-          "container": "/playlists"
-        },
-        {
-          "bind": "/volume1/docker/airsonic-advanced/podcasts",
-          "container": "/podcasts"
-        }
-      ]
-    },
-    {
       "categories": [
         "Other",
         "Tools"
@@ -792,7 +724,7 @@
       "description": "BIND 9 provides software for Domain Name System (DNS) management including both defining domain names authoritatively for a given DNS zone, and recursively resolving domain names to their IP addresses. In addition to BIND 9's DNS server itself, named, this container also includes tools for performing DNS queries and dynamic updates. Read more on the BIND 9 https://www.isc.org/bind/ ",
       "env": [
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ"
         }
@@ -1285,65 +1217,6 @@
     },
     {
       "categories": [
-        "Books"
-      ],
-      "description": "[Calibre-web](https://github.com/janeczku/calibre-web) is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database. It is also possible to integrate google drive and edit metadata and your calibre library through the app itself. This software is a fork of library and licensed under the GPL v3 License.",
-      "env": [
-        {
-          "default": "1",
-          "description": "Optionally set this to allow Google OAUTH to work",
-          "label": "OAUTHLIB_RELAX_TOKEN_SCOPE",
-          "name": "OAUTHLIB_RELAX_TOKEN_SCOPE"
-        },
-        {
-          "default": "100",
-          "description": "for UserID",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1024",
-          "description": "for GroupID",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "America/Chicago",
-          "description": "Specify a timezone to use for example America/Chicago",
-          "label": "TZ",
-          "name": "TZ"
-        },
-        {
-          "default": "linuxserver/calibre-web:calibre",
-          "description": "#optional & **x86-64 only** Adds the ability to perform ebook conversion",
-          "label": "DOCKER_MODS",
-          "name": "DOCKER_MODS"
-        }
-      ],
-      "image": "linuxserver/calibre-web:latest",
-      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/calibre-web-icon.png",
-      "name": "Calibre-web",
-      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/calibre-web/config<br>mkdir -p /volume1/docker/calibre-web/books</p>",
-      "platform": "linux",
-      "ports": [
-        "8083:8083/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Calibre-web",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/volume1/docker/calibre-web/books",
-          "container": "/books"
-        },
-        {
-          "bind": "/volume1/docker/calibre-web/config",
-          "container": "/config"
-        }
-      ]
-    },
-    {
-      "categories": [
         "Downloaders"
       ],
       "description": "Cardigann, a server for adding extra indexers to Sonarr, SickRage and CouchPotato via Torznab and TorrentPotato proxies. Behind the scenes Cardigann logs in and runs searches and then transforms the results into a compatible format.",
@@ -1686,60 +1559,6 @@
     },
     {
       "categories": [
-        "Other",
-        "Tools"
-      ],
-      "description": "Code-server is VS Code running on a remote server, accessible through the browser.",
-      "env": [
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "GUID"
-        },
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "America/Chicago",
-          "label": "TZ",
-          "name": "TZ"
-        },
-        {
-          "default": "example.my.domain",
-          "label": "PROXY_DOMAIN",
-          "name": "PROXY_DOMAIN"
-        },
-        {
-          "label": "PASSWORD",
-          "name": "PASSWORD"
-        },
-        {
-          "label": "SUDO_PASSWORD",
-          "name": "SUDO_PASSWORD"
-        }
-      ],
-      "image": "linuxserver/code-server:latest",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/code-server.png",
-      "name": "code-server",
-      "note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://coder.com/\" target=\"_blank\">https://coder.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-code-server\" target=\"_blank\">https://docs.linuxserver.io/images/docker-code-server</a><br><br><br>",
-      "platform": "linux",
-      "ports": [
-        "8443:8443/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Code Server",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/Code-Server",
-          "container": "/config"
-        }
-      ]
-    },
-    {
-      "categories": [
         "Development"
       ],
       "description": "[Code-server](https://coder.com) is VS Code running on a remote server, accessible through the browser. - Code on your Chromebook, tablet, and laptop with a consistent dev environment. - If you have a Windows or Mac workstation, more easily develop for Linux. - Take advantage of large cloud servers to speed up tests, compilations, downloads, and more. - Preserve battery life when you're on the go. - All intensive computation runs on your server. - You're no longer running excess instances of Chrome.",
@@ -2004,7 +1823,7 @@
           "name": "POSTGRES_PASSWORD"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ"
         }
@@ -3137,61 +2956,6 @@
       "type": 1
     },
     {
-      "description": "[Duckdns](https://duckdns.org/) is a free service which will point a DNS (sub domains of duckdns.org) to an IP of your choice. The service is completely free, and doesn't require reactivation or forum posts to maintain its existence.",
-      "env": [
-        {
-          "default": "100",
-          "description": "for UserID",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1024",
-          "description": "for GroupID",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "America/Chicago",
-          "description": "Specify a timezone to use for example America/Chicago",
-          "label": "TZ",
-          "name": "TZ"
-        },
-        {
-          "default": "false",
-          "description": "Set to `true` to log to file (also need to map /config).",
-          "label": "LOG_FILE",
-          "name": "LOG_FILE"
-        },
-        {
-          "default": "subdomain1,subdomain2",
-          "description": "multiple subdomains allowed, comma separated, no spaces",
-          "label": "SUBDOMAINS",
-          "name": "SUBDOMAINS"
-        },
-        {
-          "default": "token",
-          "description": "DuckDNS token",
-          "label": "TOKEN",
-          "name": "TOKEN"
-        }
-      ],
-      "image": "linuxserver/duckdns:latest",
-      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/duckdns.png",
-      "name": "Duckdns",
-      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/duckdns/config</p>",
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "title": "Duckdns",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/volume1/docker/duckdns/config",
-          "container": "/config"
-        }
-      ]
-    },
-    {
       "categories": [
         "Backup",
         "Cloud",
@@ -3568,31 +3332,6 @@
     },
     {
       "categories": [
-        "filesystem",
-        "storage"
-      ],
-      "command": "--port 80 --database /data/database.db --root /srv",
-      "description": "A web file manager",
-      "image": "filebrowser/filebrowser:latest",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/filebrowser.png",
-      "note": "Default credentials: admin/admin",
-      "platform": "linux",
-      "ports": [
-        "80/tcp"
-      ],
-      "title": "File browser",
-      "type": 1,
-      "volumes": [
-        {
-          "container": "/data"
-        },
-        {
-          "container": "/srv"
-        }
-      ]
-    },
-    {
-      "categories": [
         "Other",
         "Tools"
       ],
@@ -3833,7 +3572,7 @@
           "name": "CAPTCHA_SOLVER"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ"
         }
@@ -4976,26 +4715,6 @@
       ]
     },
     {
-      "description": "Home Assistant is a free and open-source software for home automation that is designed to be the central control system for smart home devices with focus on local control and privacy.",
-      "image": "homeassistant/home-assistant:latest",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/homeassistant.png",
-      "name": "home-assistant",
-      "note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.home-assistant.io/\" target=\"_blank\">https://www.home-assistant.io/</a><br><b>Official Docker Documentation: </b><a href=\"https://www.home-assistant.io/installation/raspberrypi#install-home-assistant-container\" target=\"_blank\">https://www.home-assistant.io/installation/raspberrypi#install-home-assistant-container</a><br><br><br>",
-      "platform": "linux",
-      "ports": [
-        "8999:8123/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Home Assistant",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/HomeAssistant/assets",
-          "container": "/config"
-        }
-      ]
-    },
-    {
       "categories": [
         "Home Automation"
       ],
@@ -5201,46 +4920,6 @@
         {
           "bind": "/portainer/Files/AppData/Config/Homer/assets",
           "container": "/www/assets"
-        }
-      ]
-    },
-    {
-      "description": "[Htpcmanager](https://github.com/HTPC-Manager/HTPC-Manager) is a front end for many htpc related applications.",
-      "env": [
-        {
-          "default": "100",
-          "description": "for UserID",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1024",
-          "description": "for GroupID",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "America/Chicago",
-          "description": "Specify a timezone to use for example America/Chicago",
-          "label": "TZ",
-          "name": "TZ"
-        }
-      ],
-      "image": "linuxserver/htpcmanager:latest",
-      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/htpcmanager-icon.png",
-      "name": "Htpcmanager",
-      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/htpcmanager/config</p>",
-      "platform": "linux",
-      "ports": [
-        "8085:8085/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Htpcmanager",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/volume1/docker/htpcmanager/config",
-          "container": "/config"
         }
       ]
     },
@@ -5902,7 +5581,7 @@
           "name": "LOG_LEVEL"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ"
         }
@@ -7217,7 +6896,7 @@
           "name": "PGID"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ"
         },
@@ -8284,7 +7963,7 @@
           "name": "PGID"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ"
         },
@@ -8334,7 +8013,7 @@
           "name": "PGID"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ"
         },
@@ -8409,7 +8088,7 @@
           "name": "PGID"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ"
         },
@@ -8474,7 +8153,7 @@
           "name": "PGID"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ"
         }
@@ -8521,7 +8200,7 @@
           "name": "PGID"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ"
         }
@@ -8690,50 +8369,6 @@
       "restart_policy": "unless-stopped",
       "title": "Node Red",
       "type": 3
-    },
-    {
-      "description": "[Nzbhydra2](https://github.com/theotherp/nzbhydra2) is a meta search application for NZB indexers, the 'spiritual successor' to NZBmegasearcH, and an evolution of the original application [NZBHydra](https://github.com/theotherp/nzbhydra). It provides easy access to a number of raw and newznab based indexers. The application NZBHydra 2 is replacing NZBHydra 1 and supports migrating from V1. Be wary that there may be some compatibility issues for those migrating from V1 to V2, so ensure you back up your old configuration before moving over to the new version. **NOTE:** The last version that supports migration is `linuxserver/nzbhydra2:v2.10.2-ls49`",
-      "env": [
-        {
-          "default": "100",
-          "description": "for UserID",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1024",
-          "description": "for GroupID",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "America/Chicago",
-          "description": "Specify a timezone to use for example America/Chicago",
-          "label": "TZ",
-          "name": "TZ"
-        }
-      ],
-      "image": "linuxserver/nzbhydra2:latest",
-      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/hydra-icon.png",
-      "name": "Nzbhydra2",
-      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/nzbhydra2/config<br>mkdir -p /volume1/docker/nzbhydra2/downloads</p>",
-      "platform": "linux",
-      "ports": [
-        "5076:5076/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Nzbhydra2",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/volume1/docker/nzbhydra2/config",
-          "container": "/config"
-        },
-        {
-          "bind": "/volume1/docker/nzbhydra2/downloads",
-          "container": "/downloads"
-        }
-      ]
     },
     {
       "categories": [
@@ -9283,10 +8918,10 @@
           "description": "for GroupID"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ",
-          "description": "Specify a timezone to use for example America/Chicago"
+          "description": "Specify a timezone to use for example America/New_York"
         },
         {
           "default": "",
@@ -11281,55 +10916,6 @@
       ]
     },
     {
-      "description": "[Resilio-sync](https://www.resilio.com/individuals/) (formerly BitTorrent Sync) uses the BitTorrent protocol to sync files and folders between all of your devices. There are both free and paid versions, this container supports both. There is an official sync image but we created this one as it supports user mapping to simplify permissions for volumes.",
-      "env": [
-        {
-          "default": "100",
-          "description": "for UserID",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1024",
-          "description": "for GroupID",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "America/Chicago",
-          "description": "Specify a timezone to use for example America/Chicago",
-          "label": "TZ",
-          "name": "TZ"
-        }
-      ],
-      "image": "linuxserver/resilio-sync:latest",
-      "logo": "https://www.resilio.com/img/individual/freeproduct.jpg",
-      "name": "Resilio-sync",
-      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/resilio-sync/config<br>mkdir -p /volume1/docker/resilio-sync/downloads<br>mkdir -p /volume1/docker/resilio-sync/sync</p>",
-      "platform": "linux",
-      "ports": [
-        "55555:55555/tcp",
-        "8888:8888/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Resilio-sync",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/volume1/docker/resilio-sync/config",
-          "container": "/config"
-        },
-        {
-          "bind": "/volume1/docker/resilio-sync/downloads",
-          "container": "/downloads"
-        },
-        {
-          "bind": "/volume1/docker/resilio-sync/sync",
-          "container": "/sync"
-        }
-      ]
-    },
-    {
       "description": "[Rsnapshot](http://www.rsnapshot.org/) is a filesystem snapshot utility based on rsync. rsnapshot makes it easy to make periodic snapshots of local machines, and remote machines over ssh. The code makes extensive use of hard links whenever possible, to greatly reduce the disk space required.'",
       "env": [
         {
@@ -12704,7 +12290,7 @@
         {
           "name": "TZ",
           "label": "TZ",
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "description": "Specify a timezone to use for example Europe/London"
         }
       ],
@@ -13249,63 +12835,6 @@
         {
           "bind": "/portainer/Files/AppData/Config/UnifFiVideo/Recordings/",
           "container": "/recordings"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Networking"
-      ],
-      "description": "The [Unifi-controller](https://www.ubnt.com/enterprise/#unifi) software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.",
-      "env": [
-        {
-          "default": "100",
-          "description": "for UserID",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1024",
-          "description": "Optionally change the Java initial/minimum memory. Set to `default` to reset to default",
-          "label": "MEM_STARTUP",
-          "name": "MEM_STARTUP"
-        },
-        {
-          "default": "1024",
-          "description": "Optionally change the Java memory limit. Set to `default` to reset to default",
-          "label": "MEM_LIMIT",
-          "name": "MEM_LIMIT"
-        },
-        {
-          "default": "1024",
-          "description": "for GroupID",
-          "label": "PUID",
-          "name": "PUID"
-        }
-      ],
-      "image": "linuxserver/unifi-controller:latest",
-      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/unifi-banner.png",
-      "name": "Unifi-controller",
-      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/unifi-controller/config</p>",
-      "platform": "linux",
-      "ports": [
-        "10001:10001/udp",
-        "1900:1900/udp",
-        "3478:3478/udp",
-        "5514:5514/udp",
-        "6789:6789/tcp",
-        "8080:8080/tcp",
-        "8443:8443/tcp",
-        "8843:8843/tcp",
-        "8880:8880/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Unifi-controller",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/volume1/docker/unifi-controller/config",
-          "container": "/config"
         }
       ]
     },
@@ -14083,7 +13612,7 @@
           "name": "PGID"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ"
         },
@@ -14491,7 +14020,7 @@
           "name": "PGADMIN_DEFAULT_PASSWORD"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ"
         }
@@ -14555,7 +14084,7 @@
           "name": "PGID"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "Time Zone",
           "name": "TZ"
         }
@@ -14640,7 +14169,7 @@
           "name": "UMASK"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ"
         },
@@ -14691,7 +14220,7 @@
           "name": "PGID"
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "Time Zone",
           "name": "TZ"
         }
@@ -14791,7 +14320,7 @@
           "description": "If you have changed the default API port don't forget to change it here too."
         },
         {
-          "default": "America/Chicago",
+          "default": "America/New_York",
           "label": "TZ",
           "name": "TZ"
         },
