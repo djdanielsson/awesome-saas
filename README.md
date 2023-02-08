@@ -1,26 +1,3 @@
-<p align="center">
-<img align="center" width="50%" src="https://raw.githubusercontent.com/donPabloNow/awesome-saas/master/Images/unicorn_face_1024.gif"/>
-<img align="center" width="75%"  src="https://user-images.githubusercontent.com/6468571/156246747-ccbc7e2e-7216-4962-a892-334fb823618c.png" />
-</p>
-<h1>🦄 Awesome SAAS (Awesomsaas!)</h1>
-<h2>A carefully curated collection of over 300 tested instant (one-click) self-hosted applications</h2>
-<h3>Simply add the "template.json" repository to your preferred Container Orchestrator, such as Portainer. Bob's your uncle once you've successfully imported! Hundreds of fantastic programs are now available with a single mouse click.</h3>
-<a href="https://github.com/donpablonow/awesome-saas/blob/master/screenshot.png?raw=true" target="_blank">
-  <img height="auto" width="100%" src="https://camunda-community-hub.github.io/zeebe-portainer-templates/assets/demo.gif" />
-  <hr />
-  <img height="auto" width="49%" src="https://github.com/donpablonow/awesome-saas/blob/master/screenshot-1.jpg?raw=true" />
-  <img height="auto" width="49%" src="https://github.com/donpablonow/awesome-saas/blob/master/screenshot-2.jpg?raw=true" />
-  <img height="auto" width="49%" src="https://github.com/donpablonow/awesome-saas/blob/master/screenshot-3.jpg?raw=true" />
-  <img height="auto" width="49%" src="https://github.com/donpablonow/awesome-saas/blob/master/screenshot-4.jpg?raw=true" />
-</a>
-
-This is a template focused on helping people spin up selfhosted services using Portainer: [Latest Version](https://raw.githubusercontent.com/donpablonow/awesome-saas/master/Template/portainer-v2.json)
-
-`https://raw.githubusercontent.com/donpablonow/awesome-saas/master/Template/portainer-v2.json`
-
-<hr />
-
-
 ### Prerequisites
 
 1. A server/NAS with docker installed
