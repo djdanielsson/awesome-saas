@@ -8,12 +8,12 @@
     "yaml-validator": "^3.0.0"
   },
   "scripts": {
-    "pretest": "jsonlint Template/template.json --quiet",
+    "pretest": "jsonlint Template/portainer-v2-latest.json --quiet",
     "test": "yaml-validator Template/Stack/*"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SelfhostedPro/selfhosted_templates.git"
+    "url": "git+https://github.com/djdanielsson/awesome-saas.git"
   },
   "author": "Qballjos",
   "license": "GPLv3"

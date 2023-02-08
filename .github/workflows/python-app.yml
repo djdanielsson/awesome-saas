@@ -1,0 +1,74 @@
+---
+name: Python application
+
+on:
+  push:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.TOKEN }}
+        repository: djdanielsson/awesome-saas
+
+    - name: Run JSON Lint
+      env:
+        REPORT_ONLY: true
+        SHOW_ERRORS: true
+      run: bash <(curl -s https://raw.githubusercontent.com/CICDToolbox/json-lint/master/pipeline.sh)
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 requests
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+# TODO get python lint working
+#     - name: Lint with flake8
+#       run: |
+#         # stop the build if there are Python syntax errors or undefined names
+#         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+#         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+#         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    - name: Run python script
+      run: cd Template; python build_list.py
+    - name: Run python scriptv3
+      run: cd Template; python build_listv3.py
+
+    # - name: Get current date
+    #   id: date
+    #   run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v5
+      continue-on-error: true
+      with:
+        token: ${{ secrets.TOKEN }}
+        branch: auto_update # ${{ steps.date.outputs.date }}
+        reviewers: djdanielsson
+        assignees: djdanielsson
+
+    - name: Auto commit if PR fails
+      # if: ${{ failure() }}
+      continue-on-error: true
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        branch: auto_update # ${{ steps.date.outputs.date }}
+        # create_branch: true
+
+...
