@@ -1048,45 +1048,6 @@
     },
     {
       "categories": [
-        "Books",
-        "Cloud"
-      ],
-      "description": "COPS links to your Calibre library database and allows downloading and emailing of books directly from a web browser and provides a OPDS feed to connect to your devices.",
-      "env": [
-        {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        }
-      ],
-      "image": "linuxserver/cops:latest",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/cops-icon.png",
-      "name": "cops",
-      "platform": "linux",
-      "ports": [
-        "80/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "COPS",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Books",
-          "container": "/books"
-        },
-        {
-          "bind": "/portainer/Files/AppData/Config/Cops",
-          "container": "/config"
-        }
-      ]
-    },
-    {
-      "categories": [
         "Tools",
         "Web",
         "Webserver"
@@ -1730,6 +1691,45 @@
     },
     {
       "categories": [
+        "Books",
+        "Cloud"
+      ],
+      "description": "COPS links to your Calibre library database and allows downloading and emailing of books directly from a web browser and provides a OPDS feed to connect to your devices.",
+      "env": [
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        }
+      ],
+      "image": "linuxserver/cops:latest",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/cops-icon.png",
+      "name": "cops",
+      "platform": "linux",
+      "ports": [
+        "80/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "COPS",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Books",
+          "container": "/books"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Config/Cops",
+          "container": "/config"
+        }
+      ]
+    },
+    {
+      "categories": [
         "Downloaders",
         "Video"
       ],
@@ -1790,61 +1790,6 @@
           "container": "/data"
         }
       ]
-    },
-    {
-      "categories": [
-        "Tool"
-      ],
-      "description": "DaVinci Resolve Postgresql Server, Davinci requires a specific version of postgres db, this container will install the version needed",
-      "env": [
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "1000",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "database",
-          "label": "POSTGRES_DB",
-          "name": "POSTGRES_DB"
-        },
-        {
-          "default": "postgres",
-          "label": "POSTGRES_USER",
-          "name": "POSTGRES_USER"
-        },
-        {
-          "default": "DaVinci",
-          "label": "POSTGRES_PASSWORD",
-          "name": "POSTGRES_PASSWORD"
-        },
-        {
-          "default": "America/New_York",
-          "label": "TZ",
-          "name": "TZ"
-        }
-      ],
-      "image": "postgres:13",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/resolve.png",
-      "name": "DaVinci Postgres Server",
-      "platform": "linux",
-      "ports": [
-        "5432:5432/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "DaVinci Postgres Server",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/DavinciServer/",
-          "container": "/var/lib/postgresql/data"
-        }
-      ],
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/docs/davinci.md\" target=\"_blank\">https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/docs/davinci.md</a><br><b>Official Docker Documentation: </b><a href=\"https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/docs/davinci.md\" target=\"_blank\">https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/docs/davinci.md</a><br><br><br>"
     },
     {
       "categories": [
@@ -2012,6 +1957,61 @@
       },
       "title": "Datadog agent",
       "type": 2
+    },
+    {
+      "categories": [
+        "Tool"
+      ],
+      "description": "DaVinci Resolve Postgresql Server, Davinci requires a specific version of postgres db, this container will install the version needed",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "database",
+          "label": "POSTGRES_DB",
+          "name": "POSTGRES_DB"
+        },
+        {
+          "default": "postgres",
+          "label": "POSTGRES_USER",
+          "name": "POSTGRES_USER"
+        },
+        {
+          "default": "DaVinci",
+          "label": "POSTGRES_PASSWORD",
+          "name": "POSTGRES_PASSWORD"
+        },
+        {
+          "default": "America/New_York",
+          "label": "TZ",
+          "name": "TZ"
+        }
+      ],
+      "image": "postgres:13",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/resolve.png",
+      "name": "DaVinci Postgres Server",
+      "platform": "linux",
+      "ports": [
+        "5432:5432/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "DaVinci Postgres Server",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/DavinciServer/",
+          "container": "/var/lib/postgresql/data"
+        }
+      ],
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/docs/davinci.md\" target=\"_blank\">https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/docs/davinci.md</a><br><b>Official Docker Documentation: </b><a href=\"https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/docs/davinci.md\" target=\"_blank\">https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/docs/davinci.md</a><br><br><br>"
     },
     {
       "categories": [
@@ -3363,6 +3363,38 @@
         "Other",
         "Tools"
       ],
+      "description": "Web File Browser which can be used as a middleware or standalone app.",
+      "image": "filebrowser/filebrowser:latest",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/filebrowser.png",
+      "name": "filebrowser-latest",
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://filebrowser.org/\" target=\"_blank\">https://filebrowser.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://filebrowser.org/installation#docker\" target=\"_blank\">https://filebrowser.org/installation#docker</a><br><br><br><b>Youtube Video: </b><a href=https://www.youtube.com/watch?v=30MYRgCObu8&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=4 target=\"_blank\">Novaspirit Tech - Installing JDownloader and File Browser On The Pi Docker Server</a><br><br>The default user and password is admin/admin.",
+      "platform": "linux",
+      "ports": [
+        "8082:80/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "FileBrowser latest",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Downloads",
+          "container": "/srv"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Config/filebrowser/filebrowser.db",
+          "container": "/database/filebrowser.db"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Config/filebrowser/settings.json",
+          "container": "/config/settings.json"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Other",
+        "Tools"
+      ],
       "description": "[arm][s6-version] Web File Browser which can be used as a middleware or standalone app.",
       "image": "filebrowser/filebrowser:s6",
       "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/filebrowser.png",
@@ -3386,38 +3418,6 @@
       ],
       "restart_policy": "unless-stopped",
       "title": "FileBrowser S6",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Downloads",
-          "container": "/srv"
-        },
-        {
-          "bind": "/portainer/Files/AppData/Config/filebrowser/filebrowser.db",
-          "container": "/database/filebrowser.db"
-        },
-        {
-          "bind": "/portainer/Files/AppData/Config/filebrowser/settings.json",
-          "container": "/config/settings.json"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Other",
-        "Tools"
-      ],
-      "description": "Web File Browser which can be used as a middleware or standalone app.",
-      "image": "filebrowser/filebrowser:latest",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/filebrowser.png",
-      "name": "filebrowser-latest",
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://filebrowser.org/\" target=\"_blank\">https://filebrowser.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://filebrowser.org/installation#docker\" target=\"_blank\">https://filebrowser.org/installation#docker</a><br><br><br><b>Youtube Video: </b><a href=https://www.youtube.com/watch?v=30MYRgCObu8&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=4 target=\"_blank\">Novaspirit Tech - Installing JDownloader and File Browser On The Pi Docker Server</a><br><br>The default user and password is admin/admin.",
-      "platform": "linux",
-      "ports": [
-        "8082:80/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "FileBrowser latest",
       "type": 1,
       "volumes": [
         {
@@ -3588,6 +3588,52 @@
       "title": "FlareSolverr",
       "type": 1,
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Docker Documentation: </b><a href=\"https://github.com/FlareSolverr/FlareSolverr#installation\" target=\"_blank\">https://github.com/FlareSolverr/FlareSolverr#installation</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Other",
+        "Tools"
+      ],
+      "description": "A distraction-free, database-less note taking app that puts your content first.",
+      "env": [
+        {
+          "default": "password",
+          "label": "FLATNOTES_AUTH_TYPE",
+          "name": "FLATNOTES_AUTH_TYPE"
+        },
+        {
+          "default": "admin",
+          "label": "FLATNOTES_USERNAME",
+          "name": "FLATNOTES_USERNAME"
+        },
+        {
+          "default": "changeme",
+          "label": "FLATNOTES_PASSWORD",
+          "name": "FLATNOTES_PASSWORD"
+        },
+        {
+          "default": "aLongRandomSeriesOfCharacters",
+          "label": "FLATNOTES_SECRET_KEY",
+          "name": "FLATNOTES_SECRET_KEY"
+        }
+      ],
+      "image": "dullage/flatnotes:latest",
+      "logo": "https://raw.githubusercontent.com/spandan13/pi-hosted/master/images/flatnotes.png",
+      "name": "flatnotes",
+      "platform": "linux",
+      "ports": [
+        "8715:80/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "flatnotes",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/flatnotes/data",
+          "container": "/app/data"
+        }
+      ],
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/Dullage/flatnotes\" target=\"_blank\">https://github.com/Dullage/flatnotes</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/dullage/flatnotes\" target=\"_blank\">https://hub.docker.com/r/dullage/flatnotes</a><br><br><h3><b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/install_flatnotes.sh\" target=\"_blank\">Pre-installation script</a> must be RAN before you install: </b>wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/tools/install_flatnotes.sh | bash</h3><br><br>"
     },
     {
       "description": "[Fleet](https://github.com/linuxserver/fleet) provides an online web interface which displays a set of maintained images from one or more owned repositories.",
@@ -4246,42 +4292,6 @@
       "type": 1
     },
     {
-      "categories": [
-        "Music",
-        "Other",
-        "Video"
-      ],
-      "description": "HTPC Manaager, a front end for many htpc related applications. Hellowlol version.",
-      "env": [
-        {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        }
-      ],
-      "image": "linuxserver/htpcmanager:latest",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/htpcmanager-icon.png",
-      "name": "htpcmanager",
-      "platform": "linux",
-      "ports": [
-        "8085:8085/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "HTPC Manager",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/HTPCmanager",
-          "container": "/config"
-        }
-      ]
-    },
-    {
       "description": "[Habridge](http://bwssystems.com/#/habridge) emulates Philips Hue API to other home automation gateways such as an Amazon Echo/Dot Gen 1 (gen 2 has issues discovering ha-bridge) or other systems that support Philips Hue. The Bridge handles basic commands such as 'On', 'Off' and 'brightness' commands of the hue protocol. This bridge can control most devices that have a distinct API. In the cases of systems that require authorization and/or have APIs that cannot be handled in the current method, a module may need to be built. The Harmony Hub is such a module and so is the Nest module. The Bridge has helpers to build devices for the gateway for the Logitech Harmony Hub, Vera, Vera Lite or Vera Edge, Nest, Somfy Tahoma, Home Assistant, Domoticz, MQTT, HAL, Fibaro, HomeWizard, LIFX, OpenHAB, FHEM, Broadlink and the ability to proxy all of your real Hue bridges behind this bridge. This bridge was built to help put the Internet of Things together. For more information about how to use this software have a look at their Wiki [https://github.com/bwssytems/ha-bridge/wiki](https://github.com/bwssytems/ha-bridge/wiki)",
       "env": [
         {
@@ -4925,6 +4935,42 @@
     },
     {
       "categories": [
+        "Music",
+        "Other",
+        "Video"
+      ],
+      "description": "HTPC Manaager, a front end for many htpc related applications. Hellowlol version.",
+      "env": [
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        }
+      ],
+      "image": "linuxserver/htpcmanager:latest",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/htpcmanager-icon.png",
+      "name": "htpcmanager",
+      "platform": "linux",
+      "ports": [
+        "8085:8085/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "HTPC Manager",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/HTPCmanager",
+          "container": "/config"
+        }
+      ]
+    },
+    {
+      "categories": [
         "webserver"
       ],
       "description": "Open-source HTTP server",
@@ -5282,6 +5328,41 @@
     },
     {
       "categories": [
+        "HomeAutomation"
+      ],
+      "description": "IoBroker is a open source IoT platform written in JavaScript that easily connects smarthome components from different manufactures. With the help of plugins (called: adapters) ioBroker is able to communicate with a big variety of IoT hardware and services using different protocols and APIs.",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        }
+      ],
+      "image": "buanet/iobroker:latest",
+      "logo": "https://github.com/buanet/ioBroker.docker/raw/main/docs/img/iobroker_logo.png",
+      "name": "iobroker",
+      "platform": "linux",
+      "ports": [
+        "8081:8081/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "iobroker",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/iobrokerdata",
+          "container": "/opt/iobroker"
+        }
+      ],
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/buanet/ioBroker.docker\" target=\"_blank\">https://github.com/buanet/ioBroker.docker</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/buanet/ioBroker.docker\" target=\"_blank\">https://github.com/buanet/ioBroker.docker</a><br><br><br>"
+    },
+    {
+      "categories": [
         "P2P"
       ],
       "description": "[Ipfs](https://ipfs.io/) - A peer-to-peer hypermedia protocol designed to make the web faster, safer, and more open.",
@@ -5393,6 +5474,45 @@
         "Downloaders",
         "Tools"
       ],
+      "description": "Jackett works as a proxy server it translates queries from apps like Sonarr etc into tracker-site-specific http queries and parses the html response sending results back to the requesting software.[",
+      "env": [
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        }
+      ],
+      "image": "linuxserver/jackett:latest",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/jacket-icon.png",
+      "name": "jackett",
+      "platform": "linux",
+      "ports": [
+        "9117:9117/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "Jackett",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Downloads",
+          "container": "/downloads"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Config/Jackett",
+          "container": "/config"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Downloaders",
+        "Tools"
+      ],
       "description": "JDownloader docker image",
       "env": [
         {
@@ -5430,45 +5550,6 @@
         {
           "bind": "/portainer/Files/AppData/Config/JDownloader",
           "container": "/opt/JDownloader/cfg"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Downloaders",
-        "Tools"
-      ],
-      "description": "Jackett works as a proxy server it translates queries from apps like Sonarr etc into tracker-site-specific http queries and parses the html response sending results back to the requesting software.[",
-      "env": [
-        {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        }
-      ],
-      "image": "linuxserver/jackett:latest",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/jacket-icon.png",
-      "name": "jackett",
-      "platform": "linux",
-      "ports": [
-        "9117:9117/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Jackett",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Downloads",
-          "container": "/downloads"
-        },
-        {
-          "bind": "/portainer/Files/AppData/Config/Jackett",
-          "container": "/config"
         }
       ]
     },
@@ -5848,48 +5929,6 @@
     },
     {
       "categories": [
-        "Tools",
-        "Productivity"
-      ],
-      "description": "This project is a lightweight authentication server that provides an opinionated, simplified LDAP interface for authentication.",
-      "env": [
-        {
-          "default": "somesecretjwt",
-          "label": "LLDAP_JWT_SECRET",
-          "name": "LLDAP_JWT_SECRET"
-        },
-        {
-          "default": "someadminpassword",
-          "label": "LLDAP_LDAP_USER_PASS",
-          "name": "LLDAP_LDAP_USER_PASS"
-        },
-        {
-          "default": "dc=example,dc=com",
-          "label": "LLDAP_LDAP_BASE_DN",
-          "name": "LLDAP_LDAP_BASE_DN"
-        }
-      ],
-      "image": "nitnelave/lldap:stable",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/lldap.png",
-      "name": "LLDAP",
-      "platform": "linux",
-      "ports": [
-        "3890:3890/tcp",
-        "17170:17170/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "LLDAP",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/lldap/data",
-          "container": "/data"
-        }
-      ],
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/nitnelave/lldap\" target=\"_blank\">https://github.com/nitnelave/lldap</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/nitnelave/lldap\" target=\"_blank\">https://github.com/nitnelave/lldap</a><br><br><h3><b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/install_lldap.sh\" target=\"_blank\">Pre-installation script</a> must be RAN before you install: </b>wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/tools/install_lldap.sh | bash</h3><br><br>"
-    },
-    {
-      "categories": [
         "Books"
       ],
       "description": "LazyLibrarian is a program to follow authors and grab metadata for all your digital reading needs.",
@@ -6116,33 +6155,21 @@
         "Other",
         "Tools"
       ],
-      "description": "A Free and Open Source Speedtest for HTML5 and more.",
-      "env": [
-        {
-          "default": "1000",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        }
-      ],
-      "image": "linuxserver/librespeed:latest",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/speedtest.png",
-      "name": "librespeed",
-      "note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://librespeed.org/\" target=\"_blank\">https://librespeed.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-librespeed\" target=\"_blank\">https://docs.linuxserver.io/images/docker-librespeed</a><br><br><br>",
+      "description": "An alternative private front-end to Reddit",
+      "image": "spikecodes/libreddit:arm",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/libreddit.png",
+      "name": "libreddit",
+      "note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://libreddit.silkky.cloud/\" target=\"_blank\">https://libreddit.silkky.cloud/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/spikecodes/libreddit#2-docker\" target=\"_blank\">https://github.com/spikecodes/libreddit#2-docker</a><br><br><br>",
       "platform": "linux",
       "ports": [
-        "83:80/tcp"
+        "8088:8080/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "title": "LibreSpeed",
+      "title": "libreddit",
       "type": 1,
       "volumes": [
         {
-          "bind": "/portainer/Files/AppData/Config/LibreSpeed",
+          "bind": "/portainer/Files/AppData/Config/libreddit",
           "container": "/config"
         }
       ]
@@ -6187,6 +6214,85 @@
         {
           "bind": "/volume1/docker/libreoffice/config",
           "container": "/config"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Other",
+        "Tools"
+      ],
+      "description": "A Free and Open Source Speedtest for HTML5 and more.",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        }
+      ],
+      "image": "linuxserver/librespeed:latest",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/speedtest.png",
+      "name": "librespeed",
+      "note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://librespeed.org/\" target=\"_blank\">https://librespeed.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-librespeed\" target=\"_blank\">https://docs.linuxserver.io/images/docker-librespeed</a><br><br><br>",
+      "platform": "linux",
+      "ports": [
+        "83:80/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "LibreSpeed",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/LibreSpeed",
+          "container": "/config"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Downloaders",
+        "Music"
+      ],
+      "description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
+      "env": [
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        }
+      ],
+      "image": "linuxserver/lidarr:latest",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/lidarr.png",
+      "name": "lidarr",
+      "platform": "linux",
+      "ports": [
+        "8686:8686/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "lidarr",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Downloads",
+          "container": "/downloads"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Config/Lidarr",
+          "container": "/config"
+        },
+        {
+          "bind": "/portainer/Music",
+          "container": "/music"
         }
       ]
     },
@@ -6269,6 +6375,48 @@
       "title": "Lingva Translate",
       "type": 1,
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://lingva.ml/\" target=\"_blank\">https://lingva.ml/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/TheDavidDelta/lingva-translate\" target=\"_blank\">https://github.com/TheDavidDelta/lingva-translate</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Tools",
+        "Productivity"
+      ],
+      "description": "This project is a lightweight authentication server that provides an opinionated, simplified LDAP interface for authentication.",
+      "env": [
+        {
+          "default": "somesecretjwt",
+          "label": "LLDAP_JWT_SECRET",
+          "name": "LLDAP_JWT_SECRET"
+        },
+        {
+          "default": "someadminpassword",
+          "label": "LLDAP_LDAP_USER_PASS",
+          "name": "LLDAP_LDAP_USER_PASS"
+        },
+        {
+          "default": "dc=example,dc=com",
+          "label": "LLDAP_LDAP_BASE_DN",
+          "name": "LLDAP_LDAP_BASE_DN"
+        }
+      ],
+      "image": "nitnelave/lldap:stable",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/lldap.png",
+      "name": "LLDAP",
+      "platform": "linux",
+      "ports": [
+        "3890:3890/tcp",
+        "17170:17170/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "LLDAP",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/lldap/data",
+          "container": "/data"
+        }
+      ],
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/nitnelave/lldap\" target=\"_blank\">https://github.com/nitnelave/lldap</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/nitnelave/lldap\" target=\"_blank\">https://github.com/nitnelave/lldap</a><br><br><h3><b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/install_lldap.sh\" target=\"_blank\">Pre-installation script</a> must be RAN before you install: </b>wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/tools/install_lldap.sh | bash</h3><br><br>"
     },
     {
       "categories": [
@@ -6546,41 +6694,6 @@
     },
     {
       "categories": [
-        "Downloader"
-      ],
-      "description": "Web GUI for youtube-dl (using the yt-dlp fork) with playlist support. Allows you to download videos from YouTube and dozens of other sites (https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)",
-      "env": [
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "1000",
-          "label": "PGID",
-          "name": "PGID"
-        }
-      ],
-      "image": "alexta69/metube:latest",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/metube.png",
-      "name": "MeTube",
-      "platform": "linux",
-      "ports": [
-        "8081:8081/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "MeTube",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Downloads",
-          "container": "/downloads"
-        }
-      ],
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hub.docker.com/r/alexta69/metube\" target=\"_blank\">https://hub.docker.com/r/alexta69/metube</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/alexta69/metube\" target=\"_blank\">https://github.com/alexta69/metube</a><br><br><br>"
-    },
-    {
-      "categories": [
         "Other",
         "Tools"
       ],
@@ -6702,6 +6815,41 @@
           "container": "/tv"
         }
       ]
+    },
+    {
+      "categories": [
+        "Downloader"
+      ],
+      "description": "Web GUI for youtube-dl (using the yt-dlp fork) with playlist support. Allows you to download videos from YouTube and dozens of other sites (https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        }
+      ],
+      "image": "alexta69/metube:latest",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/metube.png",
+      "name": "MeTube",
+      "platform": "linux",
+      "ports": [
+        "8081:8081/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "MeTube",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Downloads",
+          "container": "/downloads"
+        }
+      ],
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hub.docker.com/r/alexta69/metube\" target=\"_blank\">https://hub.docker.com/r/alexta69/metube</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/alexta69/metube\" target=\"_blank\">https://github.com/alexta69/metube</a><br><br><br>"
     },
     {
       "categories": [
@@ -7115,31 +7263,6 @@
     },
     {
       "categories": [
-        "database"
-      ],
-      "description": "The most popular open-source database",
-      "env": [
-        {
-          "label": "Root password",
-          "name": "MYSQL_ROOT_PASSWORD"
-        }
-      ],
-      "image": "mysql:latest",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mysql.png",
-      "platform": "linux",
-      "ports": [
-        "3306/tcp"
-      ],
-      "title": "MySQL",
-      "type": 1,
-      "volumes": [
-        {
-          "container": "/var/lib/mysql"
-        }
-      ]
-    },
-    {
-      "categories": [
         "Books",
         "Downloaders"
       ],
@@ -7224,6 +7347,31 @@
       ]
     },
     {
+      "categories": [
+        "database"
+      ],
+      "description": "The most popular open-source database",
+      "env": [
+        {
+          "label": "Root password",
+          "name": "MYSQL_ROOT_PASSWORD"
+        }
+      ],
+      "image": "mysql:latest",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mysql.png",
+      "platform": "linux",
+      "ports": [
+        "3306/tcp"
+      ],
+      "title": "MySQL",
+      "type": 1,
+      "volumes": [
+        {
+          "container": "/var/lib/mysql"
+        }
+      ]
+    },
+    {
       "description": "[MySQL Workbench](https://www.mysql.com/products/workbench/) is a unified visual tool for database architects, developers, and DBAs. MySQL Workbench provides data modeling, SQL development, and comprehensive administration tools for server configuration, user administration, backup, and much more.",
       "env": [
         {
@@ -7268,131 +7416,39 @@
         "Other",
         "Tools"
       ],
-      "description": "The purpose of NUT Server is to monitor a UPS attached device",
+      "description": "n8n is an extendable workflow automation tool.",
       "env": [
         {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
+          "default": "admin",
+          "label": "N8N_BASIC_AUTH_PASSWORD",
+          "name": "N8N_BASIC_AUTH_PASSWORD"
         },
         {
-          "default": "1000",
-          "label": "PGID",
-          "name": "PGID"
+          "default": "admin",
+          "label": "N8N_BASIC_AUTH_USER",
+          "name": "N8N_BASIC_AUTH_USER"
         },
         {
-          "default": "none",
-          "label": "SERIAL",
-          "name": "SERIAL"
-        },
-        {
-          "default": "none",
-          "label": "NAME",
-          "name": "NAME"
-        },
-        {
-          "default": "none",
-          "label": "VENDOR ID",
-          "name": "VENDOR ID"
-        },
-        {
-          "default": "none",
-          "label": "API_PASSWORD",
-          "name": "API_PASSWORD"
-        },
-        {
-          "default": "none",
-          "label": "DESCRIPTION",
-          "name": "DESCRIPTION"
+          "default": "true",
+          "label": "N8N_BASIC_AUTH_ACTIVE",
+          "name": "N8N_BASIC_AUTH_ACTIVE"
         }
       ],
-      "image": "instantlinux/nut-upsd:latest",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/nut-server.png",
-      "name": "NUT Server",
+      "image": "n8nio/n8n:latest",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/n8n.jpg",
+      "name": "n8n",
+      "note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://n8n.io/\" target=\"_blank\">https://n8n.io/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.n8n.io/getting-started/installation/#docker\" target=\"_blank\">https://docs.n8n.io/getting-started/installation/#docker</a><br><br><br>Documentation is Available <a href='https://docs.n8n.io/'>here</a>",
       "platform": "linux",
       "ports": [
-        "3493:3493/tcp"
+        "5678:5678/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "title": "NUT Server",
-      "type": 1,
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://networkupstools.org\" target=\"_blank\">https://networkupstools.org</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/instantlinux/nut-upsd\" target=\"_blank\">https://hub.docker.com/r/instantlinux/nut-upsd</a><br><br><br>"
-    },
-    {
-      "categories": [
-        "Downloaders"
-      ],
-      "description": "NZBGet is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources. It supports all platforms including Windows, Mac, Linux and works on all devices including PC, NAS, WLAN routers and media players",
-      "env": [
-        {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        }
-      ],
-      "image": "linuxserver/nzbget:latest",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/nzbget-icon.png",
-      "name": "nzbget",
-      "platform": "linux",
-      "ports": [
-        "6789:6789/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "NZBGet",
+      "title": "n8n",
       "type": 1,
       "volumes": [
         {
-          "bind": "/portainer/Downloads",
-          "container": "/downloads"
-        },
-        {
-          "bind": "/portainer/Files/AppData/Config/Nzbget",
-          "container": "/config"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Downloaders",
-        "Other",
-        "Tools"
-      ],
-      "description": "NZBHydra is a meta search for NZB indexers and the \"spiritual successor\" to NZBmegasearcH. It provides easy access to a number of raw and newznab based indexers.",
-      "env": [
-        {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        }
-      ],
-      "image": "linuxserver/nzbhydra2:latest",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/hydra-icon.png",
-      "name": "nzbhydra2",
-      "platform": "linux",
-      "ports": [
-        "5076:5076/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "NZBHydra 2",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Downloads",
-          "container": "/downloads"
-        },
-        {
-          "bind": "/portainer/Files/AppData/Config/Nzbhydra2",
-          "container": "/config"
+          "bind": "/portainer/Files/AppData/Config/n8n",
+          "container": "/home/node/.n8n"
         }
       ]
     },
@@ -8374,7 +8430,127 @@
       "categories": [
         "Other"
       ],
-      "description": "OScam is a softcam, software to be used to decrypt digital television channels on a settopbox (receiver), as an alternative for a conditional access module\n  (CAM). OScam is, compared with other softcams (CCcam, mgcamd, etc.), open source. Hence, the name Open Source Conditional Access Module (OScam). OScam is based on the\n  not so well known softcam MpCS. The main features of OSCam are next to its softcam capabilities, that it is able to function as a cardserver.",
+      "description": "This is an OpenVPN client docker container that uses recommended NordVPN server. It makes routing containers traffic through OpenVPN easy.",
+      "env": [
+        {
+          "default": "user@email.com",
+          "label": "NordVPN user",
+          "name": "USER"
+        },
+        {
+          "default": "password",
+          "label": "NordVPN password",
+          "name": "PASS"
+        },
+        {
+          "default": "Spain;Hong Kong;IE;131",
+          "label": "Countries to connect to (see webpage readme)",
+          "name": "COUNTRY"
+        },
+        {
+          "default": "Standard VPN servers",
+          "label": "Group name filter to which to connect to",
+          "name": "GROUP"
+        },
+        {
+          "default": "10",
+          "label": "Range of servers to pick from the top",
+          "name": "RANDOM_TOP"
+        },
+        {
+          "default": "5 */3 * * *",
+          "label": "Define when to look again for new defined servers",
+          "name": "RECREATE_VPN_CRON"
+        },
+        {
+          "default": "https://www.google.com",
+          "label": "URL to check internet connection is working to",
+          "name": "CHECK_CONNECTION_URL"
+        },
+        {
+          "default": "192.168.1.0/24;192.168.2.0/24",
+          "label": "Subnet to define network access (read Local Network access to services connecting to the internet through the VPN readme to get the right subnet!)",
+          "name": "NETWORK"
+        },
+        {
+          "default": "--mute-replay-warnings",
+          "label": "Used to pass extra parameters to openvpn",
+          "name": "OPENVPN_OPTS"
+        }
+      ],
+      "image": "azinchen/nordvpn:latest",
+      "logo": "https://s3.us-east-2.amazonaws.com/ccp-prd-s3-uploads/2022/3/8/03500108885898f010e823eeb284e393b99e1ad5.png",
+      "name": "nord-vpn",
+      "platform": "linux",
+      "ports": [
+        "8080:80/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "nord-vpn",
+      "type": 1,
+      "privileged": true,
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/azinchen/nordvpn\" target=\"_blank\">https://github.com/azinchen/nordvpn</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/azinchen/nordvpn\" target=\"_blank\">https://hub.docker.com/r/azinchen/nordvpn</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Other",
+        "Tools"
+      ],
+      "description": "The purpose of NUT Server is to monitor a UPS attached device",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "none",
+          "label": "SERIAL",
+          "name": "SERIAL"
+        },
+        {
+          "default": "none",
+          "label": "NAME",
+          "name": "NAME"
+        },
+        {
+          "default": "none",
+          "label": "VENDOR ID",
+          "name": "VENDOR ID"
+        },
+        {
+          "default": "none",
+          "label": "API_PASSWORD",
+          "name": "API_PASSWORD"
+        },
+        {
+          "default": "none",
+          "label": "DESCRIPTION",
+          "name": "DESCRIPTION"
+        }
+      ],
+      "image": "instantlinux/nut-upsd:latest",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/nut-server.png",
+      "name": "NUT Server",
+      "platform": "linux",
+      "ports": [
+        "3493:3493/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "NUT Server",
+      "type": 1,
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://networkupstools.org\" target=\"_blank\">https://networkupstools.org</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/instantlinux/nut-upsd\" target=\"_blank\">https://hub.docker.com/r/instantlinux/nut-upsd</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Downloaders"
+      ],
+      "description": "NZBGet is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources. It supports all platforms including Windows, Mac, Linux and works on all devices including PC, NAS, WLAN routers and media players",
       "env": [
         {
           "default": "100",
@@ -8387,20 +8563,63 @@
           "name": "PUID"
         }
       ],
-      "image": "linuxserver/oscam:latest",
-      "logo": "http://i.imgur.com/8LadrLg.png",
-      "name": "oscam",
+      "image": "linuxserver/nzbget:latest",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/nzbget-icon.png",
+      "name": "nzbget",
       "platform": "linux",
       "ports": [
-        "10000:10000/tcp",
-        "8888:8888/tcp"
+        "6789:6789/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "title": "OScam",
+      "title": "NZBGet",
       "type": 1,
       "volumes": [
         {
-          "bind": "/portainer/Files/AppData/Config/OScam",
+          "bind": "/portainer/Downloads",
+          "container": "/downloads"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Config/Nzbget",
+          "container": "/config"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Downloaders",
+        "Other",
+        "Tools"
+      ],
+      "description": "NZBHydra is a meta search for NZB indexers and the \"spiritual successor\" to NZBmegasearcH. It provides easy access to a number of raw and newznab based indexers.",
+      "env": [
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        }
+      ],
+      "image": "linuxserver/nzbhydra2:latest",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/hydra-icon.png",
+      "name": "nzbhydra2",
+      "platform": "linux",
+      "ports": [
+        "5076:5076/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "NZBHydra 2",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Downloads",
+          "container": "/downloads"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Config/Nzbhydra2",
           "container": "/config"
         }
       ]
@@ -8580,47 +8799,6 @@
       "type": 2
     },
     {
-      "categories": [
-        "Other"
-      ],
-      "description": "OpenVPN Access Server is a full featured secure network tunneling VPN software solution that integrates OpenVPN server capabilities, enterprise management capabilities, simplified OpenVPN Connect UI, and OpenVPN Client software packages that accommodate Windows, MAC, Linux, Android, and iOS environments.",
-      "env": [
-        {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "label": "INTERFACE",
-          "name": "INTERFACE",
-          "set": "eth0"
-        }
-      ],
-      "image": "linuxserver/openvpn-as:latest",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/openvpn-as-icon.png",
-      "name": "openvpn-as",
-      "platform": "linux",
-      "ports": [
-        "1194:1194/udp",
-        "943:943/tcp",
-        "9443:9443/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "OpenVPN Access Server",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/OpenVPN-AS",
-          "container": "/config"
-        }
-      ]
-    },
-    {
       "description": "[Openssh-server](https://www.openssh.com/) is a sandboxed environment that allows ssh access without giving keys to the entire server. Giving ssh access via private key often means giving full access to the server. This container creates a limited and sandboxed environment that others can ssh into. The users only have access to the folders mapped and the processes running inside this container.",
       "env": [
         {
@@ -8710,6 +8888,47 @@
       "volumes": [
         {
           "bind": "/volume1/docker/openssh-server/config",
+          "container": "/config"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Other"
+      ],
+      "description": "OpenVPN Access Server is a full featured secure network tunneling VPN software solution that integrates OpenVPN server capabilities, enterprise management capabilities, simplified OpenVPN Connect UI, and OpenVPN Client software packages that accommodate Windows, MAC, Linux, Android, and iOS environments.",
+      "env": [
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "label": "INTERFACE",
+          "name": "INTERFACE",
+          "set": "eth0"
+        }
+      ],
+      "image": "linuxserver/openvpn-as:latest",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/openvpn-as-icon.png",
+      "name": "openvpn-as",
+      "platform": "linux",
+      "ports": [
+        "1194:1194/udp",
+        "943:943/tcp",
+        "9443:9443/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "OpenVPN Access Server",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/OpenVPN-AS",
           "container": "/config"
         }
       ]
@@ -8809,6 +9028,41 @@
       "volumes": [
         {
           "bind": "/portainer/Files/AppData/Config/Organizr",
+          "container": "/config"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Other"
+      ],
+      "description": "OScam is a softcam, software to be used to decrypt digital television channels on a settopbox (receiver), as an alternative for a conditional access module\n  (CAM). OScam is, compared with other softcams (CCcam, mgcamd, etc.), open source. Hence, the name Open Source Conditional Access Module (OScam). OScam is based on the\n  not so well known softcam MpCS. The main features of OSCam are next to its softcam capabilities, that it is able to function as a cardserver.",
+      "env": [
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        }
+      ],
+      "image": "linuxserver/oscam:latest",
+      "logo": "http://i.imgur.com/8LadrLg.png",
+      "name": "oscam",
+      "platform": "linux",
+      "ports": [
+        "10000:10000/tcp",
+        "8888:8888/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "OScam",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/OScam",
           "container": "/config"
         }
       ]
@@ -9121,6 +9375,57 @@
           "container": "/data"
         }
       ]
+    },
+    {
+      "categories": [
+        "Other",
+        "Tools"
+      ],
+      "description": "PGAdmin is a web-based GUI tool used to interact with the Postgres database sessions, both locally and remote servers as well. You can use PGAdmin to perform any sort of database administration required for a Postgres database.",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "",
+          "label": "PGADMIN_DEFAULT_EMAIL",
+          "name": "PGADMIN_DEFAULT_EMAIL"
+        },
+        {
+          "default": "",
+          "label": "PGADMIN_DEFAULT_PASSWORD",
+          "name": "PGADMIN_DEFAULT_PASSWORD"
+        },
+        {
+          "default": "America/New_York",
+          "label": "TZ",
+          "name": "TZ"
+        }
+      ],
+      "image": "dpage/pgadmin4:latest",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/pgadmin.png",
+      "name": "pgadmin",
+      "platform": "linux",
+      "ports": [
+        "5050:80/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "pgAdmin",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/pgAdmin",
+          "container": "/var/lib/pgadmin"
+        }
+      ],
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.pgadmin.org/\" target=\"_blank\">https://www.pgadmin.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html\" target=\"_blank\">https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html</a><br><br><br>"
     },
     {
       "categories": [
@@ -9439,6 +9744,30 @@
         {
           "bind": "/portainer/Files/AppData/Config/PiHole-Unbound/DNS",
           "container": "/etc/dnsmasq.d"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Other",
+        "Tools"
+      ],
+      "description": "This is a weather station designed to be used with a Raspberry Pi on the official 7 800x480 touchscreen. The weather station will require you to have API keys from Mapbox and ClimaCell (v4). Optionally, you can use an API key from LocationIQ to preform reverse geocoding.",
+      "image": "seanriggs/pi-weather-station:arm64",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/weather.png",
+      "name": "pi-weather-station",
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/SeanRiggs/pi-weather-station\" target=\"_blank\">https://github.com/SeanRiggs/pi-weather-station</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/SeanRiggs/pi-weather-station/blob/master/Docker%20Image/Docker-ReadMe.md\" target=\"_blank\">https://github.com/SeanRiggs/pi-weather-station/blob/master/Docker%20Image/Docker-ReadMe.md</a><br><br><br>MUST DO FIRST! - create volume call weatherdata",
+      "platform": "linux",
+      "ports": [
+        "8888:8080/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "pi-weather-station",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "weatherdata",
+          "container": "/app"
         }
       ]
     },
@@ -10004,6 +10333,46 @@
       ]
     },
     {
+      "categories": [
+        "Downloaders"
+      ],
+      "description": "Prowlarr is an indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps.",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "America/New_York",
+          "label": "Time Zone",
+          "name": "TZ"
+        }
+      ],
+      "image": "lscr.io/linuxserver/prowlarr:develop",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/prowlarr-banner.png",
+      "name": "prowlarr",
+      "platform": "linux",
+      "ports": [
+        "9696:9696/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "prowlarr",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/prowlarr",
+          "container": "/config"
+        }
+      ],
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://prowlarr.com\" target=\"_blank\">https://prowlarr.com</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/linuxserver/prowlarr\" target=\"_blank\">https://hub.docker.com/r/linuxserver/prowlarr</a><br><br><br>"
+    },
+    {
       "description": "[Pwndrop](https://github.com/kgretzky/pwndrop) is a self-deployable file hosting service for sending out red teaming payloads or securely sharing your private files over HTTP and WebDAV.",
       "env": [
         {
@@ -10249,6 +10618,46 @@
       ]
     },
     {
+      "categories": [
+        "Downloaders"
+      ],
+      "description": "The qBittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
+      "env": [
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        }
+      ],
+      "image": "linuxserver/qbittorrent:latest",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/qbittorrent-icon.png",
+      "name": "qbittorrent",
+      "platform": "linux",
+      "ports": [
+        "6881:6881/tcp",
+        "6881:6881/udp",
+        "8080:8080/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "qBittorrent",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Downloads",
+          "container": "/downloads"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Config/qBittorrent",
+          "container": "/config"
+        }
+      ]
+    },
+    {
       "description": "[QDirStat](https://github.com/shundhammer/qdirstat) Qt-based directory statistics: KDirStat without any KDE -- from the author of the original KDirStat.",
       "env": [
         {
@@ -10289,6 +10698,61 @@
         {
           "bind": "/volume1/docker/qdirstat/data",
           "container": "/data"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Downloaders"
+      ],
+      "description": "A docker image with qBittorrent and the Flood UI, also optional WireGuard VPN support. See the official documentation for WireGuard VPN support at https://hotio.dev/containers/qflood/",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "002",
+          "label": "UMASK",
+          "name": "UMASK"
+        },
+        {
+          "default": "America/New_York",
+          "label": "TZ",
+          "name": "TZ"
+        },
+        {
+          "default": "false",
+          "label": "FLOOD_AUTH",
+          "name": "FLOOD_AUTH"
+        }
+      ],
+      "image": "hotio/qflood:latest",
+      "logo": "https://raw.githubusercontent.com/jesec/flood/master/flood.svg",
+      "name": "qflood",
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hotio.dev/containers/qflood/\" target=\"_blank\">https://hotio.dev/containers/qflood/</a><br><b>Official Docker Documentation: </b><a href=\"https://hotio.dev/containers/qflood/\" target=\"_blank\">https://hotio.dev/containers/qflood/</a><br><br><br>The default qBittorrent username is admin and the default password is adminadmin.",
+      "platform": "linux",
+      "ports": [
+        "3000:3000/tcp",
+        "8080:8080/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "qFlood",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/qFlood",
+          "container": "/config"
+        },
+        {
+          "bind": "/portainer/Downloads",
+          "container": "/app/qBittorrent/downloads"
         }
       ]
     },
@@ -10421,46 +10885,6 @@
       "volumes": [
         {
           "bind": "/volume1/docker/quassel-web/config",
-          "container": "/config"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Other"
-      ],
-      "description": "Rdesktop is an Ubuntu based container containing full desktop environments in officially supported flavors accessible via RDP.",
-      "env": [
-        {
-          "default": "1000",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "America/Chicago",
-          "label": "TZ",
-          "name": "TZ"
-        }
-      ],
-      "image": "linuxserver/rdesktop:arm64v8-latest",
-      "logo": "https://raw.githubusercontent.com/novaspirit/pi-hosted/master/images/rdesktop.png",
-      "name": "rdesktop",
-      "note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"http://xrdp.org/\" target=\"_blank\">http://xrdp.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-rdesktop\" target=\"_blank\">https://docs.linuxserver.io/images/docker-rdesktop</a><br><br><br>",
-      "platform": "linux",
-      "ports": [
-        "3389:3389/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "RDesktop",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/RDesktop/config",
           "container": "/config"
         }
       ]
@@ -10668,6 +11092,46 @@
     },
     {
       "categories": [
+        "Other"
+      ],
+      "description": "Rdesktop is an Ubuntu based container containing full desktop environments in officially supported flavors accessible via RDP.",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "America/Chicago",
+          "label": "TZ",
+          "name": "TZ"
+        }
+      ],
+      "image": "linuxserver/rdesktop:arm64v8-latest",
+      "logo": "https://raw.githubusercontent.com/novaspirit/pi-hosted/master/images/rdesktop.png",
+      "name": "rdesktop",
+      "note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"http://xrdp.org/\" target=\"_blank\">http://xrdp.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-rdesktop\" target=\"_blank\">https://docs.linuxserver.io/images/docker-rdesktop</a><br><br><br>",
+      "platform": "linux",
+      "ports": [
+        "3389:3389/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "RDesktop",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/RDesktop/config",
+          "container": "/config"
+        }
+      ]
+    },
+    {
+      "categories": [
         "Other",
         "Tools"
       ],
@@ -10688,6 +11152,55 @@
           "container": "/usr/src/app"
         }
       ]
+    },
+    {
+      "categories": [
+        "Downloaders",
+        "Books"
+      ],
+      "description": "Readarr is an eBook and audiobook collection manager for Usenet and BitTorrent users.",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "America/New_York",
+          "label": "Time Zone",
+          "name": "TZ"
+        }
+      ],
+      "image": "lscr.io/linuxserver/readarr:develop",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/Readarr.png",
+      "name": "readarr",
+      "platform": "linux",
+      "ports": [
+        "8787:8787/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "readarr",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/readarr",
+          "container": "/config"
+        },
+        {
+          "bind": "/mnt/Books",
+          "container": "/books"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Config/readarr/downloads",
+          "container": "/downloads"
+        }
+      ],
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://readarr.com/\" target=\"_blank\">https://readarr.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://wiki.servarr.com/en/readarr\" target=\"_blank\">https://wiki.servarr.com/en/readarr</a><br><br><br>"
     },
     {
       "categories": [
@@ -11010,6 +11523,46 @@
       "categories": [
         "Downloaders"
       ],
+      "description": "Popular torrent client with a webui for ease of use.",
+      "env": [
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        }
+      ],
+      "image": "linuxserver/rutorrent:latest",
+      "logo": "https://raw.githubusercontent.com/linuxserver/beta-templates/master/lsiodev/img/rutorrent-icon.png",
+      "name": "rutorrent",
+      "platform": "linux",
+      "ports": [
+        "51413:51413/tcp",
+        "6881:6881/udp",
+        "80/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "ruTorrent",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Downloads",
+          "container": "/downloads"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Config/ruTorrent",
+          "container": "/config"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Downloaders"
+      ],
       "description": "SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.",
       "env": [
         {
@@ -11048,138 +11601,6 @@
           "container": "/config"
         }
       ]
-    },
-    {
-      "categories": [
-        "database"
-      ],
-      "description": "Microsoft SQL Server Developer for Windows containers",
-      "env": [
-        {
-          "label": "SA password",
-          "name": "sa_password"
-        },
-        {
-          "name": "ACCEPT_EULA",
-          "set": "Y"
-        }
-      ],
-      "image": "microsoft/mssql-server-windows-developer:latest",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
-      "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-      "platform": "windows",
-      "ports": [
-        "1433/tcp"
-      ],
-      "title": "SQL Server",
-      "type": 1,
-      "volumes": [
-        {
-          "container": "C:/temp/"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "database"
-      ],
-      "description": "Microsoft SQL Server Express for Windows containers",
-      "env": [
-        {
-          "label": "SA password",
-          "name": "sa_password"
-        },
-        {
-          "name": "ACCEPT_EULA",
-          "set": "Y"
-        }
-      ],
-      "image": "microsoft/mssql-server-windows-express:latest",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
-      "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-      "platform": "windows",
-      "ports": [
-        "1433/tcp"
-      ],
-      "title": "SQL Server Express",
-      "type": 1,
-      "volumes": [
-        {
-          "container": "C:/temp/"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Tools",
-        "Web"
-      ],
-      "description": "This container sets up an Nginx webserver and reverse proxy with php support and a built-in letsencrypt client that automates free SSL server certificate generation and renewal processes. It also contains fail2ban for intrusion prevention.\r\n  \r\n  Before running this container, make sure that the url and subdomains are properly forwarded to this container's host.\r\n  \r\n  - Port 443 on the internet side of the router should be forwarded to this container's port 443.\r\n  - If you need a dynamic dns provider, you can use the free provider duckdns.org where the url will be yoursubdomain.duckdns.org and the subdomains    can be www,ftp,cloud\r\n  - The container detects changes to url and subdomains, revokes existing certs and generates new ones during start. \r\n  - It also detects changes to the DHLEVEL parameter and replaces the dhparams file.\r\n  \r\n  - If you'd like to password protect your sites, you can use htpasswd. Run the following command on your host to generate the htpasswd file docker exec -it swag htpasswd -c /config/nginx/.htpasswd &lt;username&gt;",
-      "env": [
-        {
-          "default": "abc@example.com",
-          "label": "EMAIL",
-          "name": "EMAIL"
-        },
-        {
-          "default": "-Xms256m -Xmx512m",
-          "label": "URL",
-          "name": "URL"
-        },
-        {
-          "default": "www,",
-          "label": "SUBDOMAINS",
-          "name": "SUBDOMAINS"
-        },
-        {
-          "default": "false",
-          "label": "ONLY_SUBDOMAINS",
-          "name": "ONLY_SUBDOMAINS"
-        },
-        {
-          "default": "2048",
-          "label": "DHLEVEL",
-          "name": "DHLEVEL"
-        },
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "1000",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "http",
-          "label": "VALIDATION",
-          "name": "VALIDATION"
-        },
-        {
-          "default": "http",
-          "label": "DNSPLUGIN",
-          "name": "DNSPLUGIN"
-        }
-      ],
-      "image": "linuxserver/swag:latest",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/swag.png",
-      "name": "swag",
-      "platform": "linux",
-      "ports": [
-        "80:80/tcp",
-        "443:443/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "SWAG - Secure Web Application Gateway",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/swag",
-          "container": "/config"
-        }
-      ],
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/linuxserver/docker-swag\" target=\"_blank\">https://github.com/linuxserver/docker-swag</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/general/swag\" target=\"_blank\">https://docs.linuxserver.io/general/swag</a><br><br><br>"
     },
     {
       "categories": [
@@ -11816,6 +12237,66 @@
       ]
     },
     {
+      "categories": [
+        "database"
+      ],
+      "description": "Microsoft SQL Server Developer for Windows containers",
+      "env": [
+        {
+          "label": "SA password",
+          "name": "sa_password"
+        },
+        {
+          "name": "ACCEPT_EULA",
+          "set": "Y"
+        }
+      ],
+      "image": "microsoft/mssql-server-windows-developer:latest",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+      "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
+      "platform": "windows",
+      "ports": [
+        "1433/tcp"
+      ],
+      "title": "SQL Server",
+      "type": 1,
+      "volumes": [
+        {
+          "container": "C:/temp/"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "database"
+      ],
+      "description": "Microsoft SQL Server Express for Windows containers",
+      "env": [
+        {
+          "label": "SA password",
+          "name": "sa_password"
+        },
+        {
+          "name": "ACCEPT_EULA",
+          "set": "Y"
+        }
+      ],
+      "image": "microsoft/mssql-server-windows-express:latest",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+      "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
+      "platform": "windows",
+      "ports": [
+        "1433/tcp"
+      ],
+      "title": "SQL Server Express",
+      "type": 1,
+      "volumes": [
+        {
+          "container": "C:/temp/"
+        }
+      ]
+    },
+    {
       "description": "[DB Browser for SQLite](https://sqlitebrowser.org/) is a high quality, visual, open source tool to create, design, and edit database files compatible with SQLite.",
       "env": [
         {
@@ -12019,45 +12500,75 @@
     },
     {
       "categories": [
-        "Backup",
-        "Cloud",
-        "Other",
-        "Tools"
+        "Tools",
+        "Web"
       ],
-      "description": null,
+      "description": "This container sets up an Nginx webserver and reverse proxy with php support and a built-in letsencrypt client that automates free SSL server certificate generation and renewal processes. It also contains fail2ban for intrusion prevention.\r\n  \r\n  Before running this container, make sure that the url and subdomains are properly forwarded to this container's host.\r\n  \r\n  - Port 443 on the internet side of the router should be forwarded to this container's port 443.\r\n  - If you need a dynamic dns provider, you can use the free provider duckdns.org where the url will be yoursubdomain.duckdns.org and the subdomains    can be www,ftp,cloud\r\n  - The container detects changes to url and subdomains, revokes existing certs and generates new ones during start. \r\n  - It also detects changes to the DHLEVEL parameter and replaces the dhparams file.\r\n  \r\n  - If you'd like to password protect your sites, you can use htpasswd. Run the following command on your host to generate the htpasswd file docker exec -it swag htpasswd -c /config/nginx/.htpasswd &lt;username&gt;",
       "env": [
         {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
+          "default": "abc@example.com",
+          "label": "EMAIL",
+          "name": "EMAIL"
+        },
+        {
+          "default": "-Xms256m -Xmx512m",
+          "label": "URL",
+          "name": "URL"
+        },
+        {
+          "default": "www,",
+          "label": "SUBDOMAINS",
+          "name": "SUBDOMAINS"
+        },
+        {
+          "default": "false",
+          "label": "ONLY_SUBDOMAINS",
+          "name": "ONLY_SUBDOMAINS"
+        },
+        {
+          "default": "2048",
+          "label": "DHLEVEL",
+          "name": "DHLEVEL"
         },
         {
           "default": "1000",
           "label": "PUID",
           "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "http",
+          "label": "VALIDATION",
+          "name": "VALIDATION"
+        },
+        {
+          "default": "http",
+          "label": "DNSPLUGIN",
+          "name": "DNSPLUGIN"
         }
       ],
-      "image": "linuxserver/syncthing:latest",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/syncthing-icon.png",
-      "name": "syncthing",
+      "image": "linuxserver/swag:latest",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/swag.png",
+      "name": "swag",
       "platform": "linux",
       "ports": [
-        "21027:21027/udp",
-        "22000:22000/tcp",
-        "8384:8384/tcp"
+        "80:80/tcp",
+        "443:443/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "title": "SyncThing",
+      "title": "SWAG - Secure Web Application Gateway",
       "type": 1,
       "volumes": [
         {
-          "bind": "/portainer/Files/AppData/Config/Syncthing",
+          "bind": "/portainer/Files/AppData/Config/swag",
           "container": "/config"
-        },
-        {
-          "container": "/sync"
         }
-      ]
+      ],
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/linuxserver/docker-swag\" target=\"_blank\">https://github.com/linuxserver/docker-swag</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/general/swag\" target=\"_blank\">https://docs.linuxserver.io/general/swag</a><br><br><br>"
     },
     {
       "description": "[Synclounge](https://github.com/samcm/synclounge) is a third party tool that allows you to watch Plex in sync with your friends/family, wherever you are.",
@@ -12098,6 +12609,48 @@
       "restart_policy": "unless-stopped",
       "title": "Synclounge",
       "type": 1
+    },
+    {
+      "categories": [
+        "Backup",
+        "Cloud",
+        "Other",
+        "Tools"
+      ],
+      "description": null,
+      "env": [
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        }
+      ],
+      "image": "linuxserver/syncthing:latest",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/syncthing-icon.png",
+      "name": "syncthing",
+      "platform": "linux",
+      "ports": [
+        "21027:21027/udp",
+        "22000:22000/tcp",
+        "8384:8384/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "SyncThing",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/Syncthing",
+          "container": "/config"
+        },
+        {
+          "container": "/sync"
+        }
+      ]
     },
     {
       "categories": [
@@ -12721,27 +13274,6 @@
     },
     {
       "categories": [
-        "Monitor",
-        "Tools"
-      ],
-      "description": "Monitor your Unifi Controller using Grafana developed by oijkn for the Raspberry Pi Monitor.",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/unpoller-logo.png",
-      "name": "UnPoller Unifi Controller Monitor",
-      "note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://unpoller.com/\" target=\"_blank\">https://unpoller.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/novaspirit/pi-hosted/blob/master/docs/UnPoller-Monitor.md\" target=\"_blank\">https://github.com/novaspirit/pi-hosted/blob/master/docs/UnPoller-Monitor.md</a><br><b>Pi-Hosted dedicated documentation: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/UnPoller-Monitor.md\" target=\"_blank\">UnPoller-Monitor.md</a><br><br><b>Pre-installation script: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/unpoller-install.sh\" target=\"_blank\">unpoller-install.sh</a><br><br>",
-      "platform": "linux",
-      "ports": [
-        "8086:8086/tcp"
-      ],
-      "repository": {
-        "stackfile": "stack/unpoller-stack.yml",
-        "url": "https://github.com/pi-hosted/pi-hosted"
-      },
-      "restart_policy": "unless-stopped",
-      "title": "UnPoller Monitor",
-      "type": 3
-    },
-    {
-      "categories": [
         "Management",
         "Tools"
       ],
@@ -12880,6 +13412,27 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://docs.unmanic.app/\" target=\"_blank\">https://docs.unmanic.app/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.unmanic.app/docs/installation/docker\" target=\"_blank\">https://docs.unmanic.app/docs/installation/docker</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Monitor",
+        "Tools"
+      ],
+      "description": "Monitor your Unifi Controller using Grafana developed by oijkn for the Raspberry Pi Monitor.",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/unpoller-logo.png",
+      "name": "UnPoller Unifi Controller Monitor",
+      "note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://unpoller.com/\" target=\"_blank\">https://unpoller.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/novaspirit/pi-hosted/blob/master/docs/UnPoller-Monitor.md\" target=\"_blank\">https://github.com/novaspirit/pi-hosted/blob/master/docs/UnPoller-Monitor.md</a><br><b>Pi-Hosted dedicated documentation: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/UnPoller-Monitor.md\" target=\"_blank\">UnPoller-Monitor.md</a><br><br><b>Pre-installation script: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/unpoller-install.sh\" target=\"_blank\">unpoller-install.sh</a><br><br>",
+      "platform": "linux",
+      "ports": [
+        "8086:8086/tcp"
+      ],
+      "repository": {
+        "stackfile": "stack/unpoller-stack.yml",
+        "url": "https://github.com/pi-hosted/pi-hosted"
+      },
+      "restart_policy": "unless-stopped",
+      "title": "UnPoller Monitor",
+      "type": 3
     },
     {
       "categories": [
@@ -13555,42 +14108,58 @@
     },
     {
       "categories": [
-        "Downloaders",
-        "Other"
+        "Music"
       ],
-      "description": "YoutubeDL-Material is a Material Design frontend for youtube-dl. It's coded using Angular 9 for the frontend, and Node.js on the backend.",
-      "image": "tzahi12345/youtubedl-material:latest",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ytdlm.png",
-      "name": "youtubedl-material",
-      "platform": "linux",
-      "ports": [
-        "17442:17442/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "YouTubeDL-Material",
-      "type": 1,
-      "volumes": [
+      "description": "Self hosted Spotify tracking dashboard.",
+      "env": [
         {
-          "bind": "/portainer/Files/AppData/Config/YTDLM",
-          "container": "/app/appdata"
+          "default": "3081",
+          "label": "API Port",
+          "name": "__api_port__"
         },
         {
-          "bind": "/portainer/Files/AppData/Youtube/Audio",
-          "container": "/app/audio"
+          "default": "3080",
+          "label": "Client Port",
+          "name": "__client_port__"
         },
         {
-          "bind": "/portainer/Files/AppData/Youtube/Subscriptions",
-          "container": "/app/subscriptions"
+          "default": "http://192.168.X.Y:3080",
+          "label": "Client Endpoint",
+          "name": "__client_endpoint__",
+          "description": "If you have changed the default client port don't forget to change it here too."
         },
         {
-          "bind": "/portainer/Files/AppData/Youtube/Users",
-          "container": "/app/users"
+          "default": "http://192.168.X.Y:3081",
+          "label": "API Endpoint",
+          "name": "__api_endpoint__",
+          "description": "If you have changed the default API port don't forget to change it here too."
         },
         {
-          "bind": "/portainer/Files/AppData/Youtube/Video",
-          "container": "/app/video"
+          "default": "America/New_York",
+          "label": "TZ",
+          "name": "TZ"
+        },
+        {
+          "description": "Create a Spotify App and copy the Client ID: https://developer.spotify.com/dashboard/applications",
+          "label": "Spotify Client ID",
+          "name": "__your_spotify_client_id__"
+        },
+        {
+          "description": "Copy the Client Secret: https://developer.spotify.com/dashboard/applications",
+          "label": "Spotify Client Secret",
+          "name": "__your_spotify_secret__"
         }
-      ]
+      ],
+      "name": "Your Spotify",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/your-spotify.png",
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/Yooooomi/your_spotify\" target=\"_blank\">https://github.com/Yooooomi/your_spotify</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/Yooooomi/your_spotify#readme\" target=\"_blank\">https://github.com/Yooooomi/your_spotify#readme</a><br><br><br>Create a Spotify App here: https://developer.spotify.com/dashboard/applications. Don't forget adding Redirect URL: http://192.168.X.Y:3081/oauth/spotify/callback under edit settings of the dashboard.",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "stack/your-spotify.yml",
+        "url": "https://github.com/pi-hosted/pi-hosted"
+      },
+      "title": "your-spotify",
+      "type": 3
     },
     {
       "categories": [
@@ -13665,6 +14234,45 @@
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://yourls.org/\" target=\"_blank\">https://yourls.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://yourls.org/#Install\" target=\"_blank\">https://yourls.org/#Install</a><br><br><h3><b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/install_yourls.sh\" target=\"_blank\">Pre-installation script</a> must be RAN before you install: </b>wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/tools/install_yourls.sh | bash</h3><br><br>"
     },
     {
+      "categories": [
+        "Downloaders",
+        "Other"
+      ],
+      "description": "YoutubeDL-Material is a Material Design frontend for youtube-dl. It's coded using Angular 9 for the frontend, and Node.js on the backend.",
+      "image": "tzahi12345/youtubedl-material:latest",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ytdlm.png",
+      "name": "youtubedl-material",
+      "platform": "linux",
+      "ports": [
+        "17442:17442/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "YouTubeDL-Material",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/YTDLM",
+          "container": "/app/appdata"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Youtube/Audio",
+          "container": "/app/audio"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Youtube/Subscriptions",
+          "container": "/app/subscriptions"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Youtube/Users",
+          "container": "/app/users"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Youtube/Video",
+          "container": "/app/video"
+        }
+      ]
+    },
+    {
       "description": "This container needs special attention. Please check https://hub.docker.com/r/linuxserver/yq for details.",
       "env": [
         {
@@ -13737,614 +14345,6 @@
           "container": "/config"
         }
       ]
-    },
-    {
-      "categories": [
-        "Other",
-        "Tools"
-      ],
-      "description": "A distraction-free, database-less note taking app that puts your content first.",
-      "env": [
-        {
-          "default": "password",
-          "label": "FLATNOTES_AUTH_TYPE",
-          "name": "FLATNOTES_AUTH_TYPE"
-        },
-        {
-          "default": "admin",
-          "label": "FLATNOTES_USERNAME",
-          "name": "FLATNOTES_USERNAME"
-        },
-        {
-          "default": "changeme",
-          "label": "FLATNOTES_PASSWORD",
-          "name": "FLATNOTES_PASSWORD"
-        },
-        {
-          "default": "aLongRandomSeriesOfCharacters",
-          "label": "FLATNOTES_SECRET_KEY",
-          "name": "FLATNOTES_SECRET_KEY"
-        }
-      ],
-      "image": "dullage/flatnotes:latest",
-      "logo": "https://raw.githubusercontent.com/spandan13/pi-hosted/master/images/flatnotes.png",
-      "name": "flatnotes",
-      "platform": "linux",
-      "ports": [
-        "8715:80/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "flatnotes",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/flatnotes/data",
-          "container": "/app/data"
-        }
-      ],
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/Dullage/flatnotes\" target=\"_blank\">https://github.com/Dullage/flatnotes</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/dullage/flatnotes\" target=\"_blank\">https://hub.docker.com/r/dullage/flatnotes</a><br><br><h3><b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/install_flatnotes.sh\" target=\"_blank\">Pre-installation script</a> must be RAN before you install: </b>wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/tools/install_flatnotes.sh | bash</h3><br><br>"
-    },
-    {
-      "categories": [
-        "HomeAutomation"
-      ],
-      "description": "IoBroker is a open source IoT platform written in JavaScript that easily connects smarthome components from different manufactures. With the help of plugins (called: adapters) ioBroker is able to communicate with a big variety of IoT hardware and services using different protocols and APIs.",
-      "env": [
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "1000",
-          "label": "PGID",
-          "name": "PGID"
-        }
-      ],
-      "image": "buanet/iobroker:latest",
-      "logo": "https://github.com/buanet/ioBroker.docker/raw/main/docs/img/iobroker_logo.png",
-      "name": "iobroker",
-      "platform": "linux",
-      "ports": [
-        "8081:8081/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "iobroker",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/iobrokerdata",
-          "container": "/opt/iobroker"
-        }
-      ],
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/buanet/ioBroker.docker\" target=\"_blank\">https://github.com/buanet/ioBroker.docker</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/buanet/ioBroker.docker\" target=\"_blank\">https://github.com/buanet/ioBroker.docker</a><br><br><br>"
-    },
-    {
-      "categories": [
-        "Other",
-        "Tools"
-      ],
-      "description": "An alternative private front-end to Reddit",
-      "image": "spikecodes/libreddit:arm",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/libreddit.png",
-      "name": "libreddit",
-      "note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://libreddit.silkky.cloud/\" target=\"_blank\">https://libreddit.silkky.cloud/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/spikecodes/libreddit#2-docker\" target=\"_blank\">https://github.com/spikecodes/libreddit#2-docker</a><br><br><br>",
-      "platform": "linux",
-      "ports": [
-        "8088:8080/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "libreddit",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/libreddit",
-          "container": "/config"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Downloaders",
-        "Music"
-      ],
-      "description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
-      "env": [
-        {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        }
-      ],
-      "image": "linuxserver/lidarr:latest",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/lidarr.png",
-      "name": "lidarr",
-      "platform": "linux",
-      "ports": [
-        "8686:8686/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "lidarr",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Downloads",
-          "container": "/downloads"
-        },
-        {
-          "bind": "/portainer/Files/AppData/Config/Lidarr",
-          "container": "/config"
-        },
-        {
-          "bind": "/portainer/Music",
-          "container": "/music"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Other",
-        "Tools"
-      ],
-      "description": "n8n is an extendable workflow automation tool.",
-      "env": [
-        {
-          "default": "admin",
-          "label": "N8N_BASIC_AUTH_PASSWORD",
-          "name": "N8N_BASIC_AUTH_PASSWORD"
-        },
-        {
-          "default": "admin",
-          "label": "N8N_BASIC_AUTH_USER",
-          "name": "N8N_BASIC_AUTH_USER"
-        },
-        {
-          "default": "true",
-          "label": "N8N_BASIC_AUTH_ACTIVE",
-          "name": "N8N_BASIC_AUTH_ACTIVE"
-        }
-      ],
-      "image": "n8nio/n8n:latest",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/n8n.jpg",
-      "name": "n8n",
-      "note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://n8n.io/\" target=\"_blank\">https://n8n.io/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.n8n.io/getting-started/installation/#docker\" target=\"_blank\">https://docs.n8n.io/getting-started/installation/#docker</a><br><br><br>Documentation is Available <a href='https://docs.n8n.io/'>here</a>",
-      "platform": "linux",
-      "ports": [
-        "5678:5678/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "n8n",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/n8n",
-          "container": "/home/node/.n8n"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Other"
-      ],
-      "description": "This is an OpenVPN client docker container that uses recommended NordVPN server. It makes routing containers traffic through OpenVPN easy.",
-      "env": [
-        {
-          "default": "user@email.com",
-          "label": "NordVPN user",
-          "name": "USER"
-        },
-        {
-          "default": "password",
-          "label": "NordVPN password",
-          "name": "PASS"
-        },
-        {
-          "default": "Spain;Hong Kong;IE;131",
-          "label": "Countries to connect to (see webpage readme)",
-          "name": "COUNTRY"
-        },
-        {
-          "default": "Standard VPN servers",
-          "label": "Group name filter to which to connect to",
-          "name": "GROUP"
-        },
-        {
-          "default": "10",
-          "label": "Range of servers to pick from the top",
-          "name": "RANDOM_TOP"
-        },
-        {
-          "default": "5 */3 * * *",
-          "label": "Define when to look again for new defined servers",
-          "name": "RECREATE_VPN_CRON"
-        },
-        {
-          "default": "https://www.google.com",
-          "label": "URL to check internet connection is working to",
-          "name": "CHECK_CONNECTION_URL"
-        },
-        {
-          "default": "192.168.1.0/24;192.168.2.0/24",
-          "label": "Subnet to define network access (read Local Network access to services connecting to the internet through the VPN readme to get the right subnet!)",
-          "name": "NETWORK"
-        },
-        {
-          "default": "--mute-replay-warnings",
-          "label": "Used to pass extra parameters to openvpn",
-          "name": "OPENVPN_OPTS"
-        }
-      ],
-      "image": "azinchen/nordvpn:latest",
-      "logo": "https://s3.us-east-2.amazonaws.com/ccp-prd-s3-uploads/2022/3/8/03500108885898f010e823eeb284e393b99e1ad5.png",
-      "name": "nord-vpn",
-      "platform": "linux",
-      "ports": [
-        "8080:80/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "nord-vpn",
-      "type": 1,
-      "privileged": true,
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/azinchen/nordvpn\" target=\"_blank\">https://github.com/azinchen/nordvpn</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/azinchen/nordvpn\" target=\"_blank\">https://hub.docker.com/r/azinchen/nordvpn</a><br><br><br>"
-    },
-    {
-      "categories": [
-        "Other",
-        "Tools"
-      ],
-      "description": "PGAdmin is a web-based GUI tool used to interact with the Postgres database sessions, both locally and remote servers as well. You can use PGAdmin to perform any sort of database administration required for a Postgres database.",
-      "env": [
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "1000",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "",
-          "label": "PGADMIN_DEFAULT_EMAIL",
-          "name": "PGADMIN_DEFAULT_EMAIL"
-        },
-        {
-          "default": "",
-          "label": "PGADMIN_DEFAULT_PASSWORD",
-          "name": "PGADMIN_DEFAULT_PASSWORD"
-        },
-        {
-          "default": "America/New_York",
-          "label": "TZ",
-          "name": "TZ"
-        }
-      ],
-      "image": "dpage/pgadmin4:latest",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/pgadmin.png",
-      "name": "pgadmin",
-      "platform": "linux",
-      "ports": [
-        "5050:80/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "pgAdmin",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/pgAdmin",
-          "container": "/var/lib/pgadmin"
-        }
-      ],
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.pgadmin.org/\" target=\"_blank\">https://www.pgadmin.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html\" target=\"_blank\">https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html</a><br><br><br>"
-    },
-    {
-      "categories": [
-        "Other",
-        "Tools"
-      ],
-      "description": "This is a weather station designed to be used with a Raspberry Pi on the official 7 800x480 touchscreen. The weather station will require you to have API keys from Mapbox and ClimaCell (v4). Optionally, you can use an API key from LocationIQ to preform reverse geocoding.",
-      "image": "seanriggs/pi-weather-station:arm64",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/weather.png",
-      "name": "pi-weather-station",
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/SeanRiggs/pi-weather-station\" target=\"_blank\">https://github.com/SeanRiggs/pi-weather-station</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/SeanRiggs/pi-weather-station/blob/master/Docker%20Image/Docker-ReadMe.md\" target=\"_blank\">https://github.com/SeanRiggs/pi-weather-station/blob/master/Docker%20Image/Docker-ReadMe.md</a><br><br><br>MUST DO FIRST! - create volume call weatherdata",
-      "platform": "linux",
-      "ports": [
-        "8888:8080/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "pi-weather-station",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "weatherdata",
-          "container": "/app"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Downloaders"
-      ],
-      "description": "Prowlarr is an indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps.",
-      "env": [
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "1000",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "America/New_York",
-          "label": "Time Zone",
-          "name": "TZ"
-        }
-      ],
-      "image": "lscr.io/linuxserver/prowlarr:develop",
-      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/prowlarr-banner.png",
-      "name": "prowlarr",
-      "platform": "linux",
-      "ports": [
-        "9696:9696/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "prowlarr",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/prowlarr",
-          "container": "/config"
-        }
-      ],
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://prowlarr.com\" target=\"_blank\">https://prowlarr.com</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/linuxserver/prowlarr\" target=\"_blank\">https://hub.docker.com/r/linuxserver/prowlarr</a><br><br><br>"
-    },
-    {
-      "categories": [
-        "Downloaders"
-      ],
-      "description": "The qBittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
-      "env": [
-        {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        }
-      ],
-      "image": "linuxserver/qbittorrent:latest",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/qbittorrent-icon.png",
-      "name": "qbittorrent",
-      "platform": "linux",
-      "ports": [
-        "6881:6881/tcp",
-        "6881:6881/udp",
-        "8080:8080/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "qBittorrent",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Downloads",
-          "container": "/downloads"
-        },
-        {
-          "bind": "/portainer/Files/AppData/Config/qBittorrent",
-          "container": "/config"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Downloaders"
-      ],
-      "description": "A docker image with qBittorrent and the Flood UI, also optional WireGuard VPN support. See the official documentation for WireGuard VPN support at https://hotio.dev/containers/qflood/",
-      "env": [
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "1000",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "002",
-          "label": "UMASK",
-          "name": "UMASK"
-        },
-        {
-          "default": "America/New_York",
-          "label": "TZ",
-          "name": "TZ"
-        },
-        {
-          "default": "false",
-          "label": "FLOOD_AUTH",
-          "name": "FLOOD_AUTH"
-        }
-      ],
-      "image": "hotio/qflood:latest",
-      "logo": "https://raw.githubusercontent.com/jesec/flood/master/flood.svg",
-      "name": "qflood",
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hotio.dev/containers/qflood/\" target=\"_blank\">https://hotio.dev/containers/qflood/</a><br><b>Official Docker Documentation: </b><a href=\"https://hotio.dev/containers/qflood/\" target=\"_blank\">https://hotio.dev/containers/qflood/</a><br><br><br>The default qBittorrent username is admin and the default password is adminadmin.",
-      "platform": "linux",
-      "ports": [
-        "3000:3000/tcp",
-        "8080:8080/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "qFlood",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/qFlood",
-          "container": "/config"
-        },
-        {
-          "bind": "/portainer/Downloads",
-          "container": "/app/qBittorrent/downloads"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Downloaders",
-        "Books"
-      ],
-      "description": "Readarr is an eBook and audiobook collection manager for Usenet and BitTorrent users.",
-      "env": [
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "1000",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "America/New_York",
-          "label": "Time Zone",
-          "name": "TZ"
-        }
-      ],
-      "image": "lscr.io/linuxserver/readarr:develop",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/Readarr.png",
-      "name": "readarr",
-      "platform": "linux",
-      "ports": [
-        "8787:8787/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "readarr",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/readarr",
-          "container": "/config"
-        },
-        {
-          "bind": "/mnt/Books",
-          "container": "/books"
-        },
-        {
-          "bind": "/portainer/Files/AppData/Config/readarr/downloads",
-          "container": "/downloads"
-        }
-      ],
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://readarr.com/\" target=\"_blank\">https://readarr.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://wiki.servarr.com/en/readarr\" target=\"_blank\">https://wiki.servarr.com/en/readarr</a><br><br><br>"
-    },
-    {
-      "categories": [
-        "Downloaders"
-      ],
-      "description": "Popular torrent client with a webui for ease of use.",
-      "env": [
-        {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        }
-      ],
-      "image": "linuxserver/rutorrent:latest",
-      "logo": "https://raw.githubusercontent.com/linuxserver/beta-templates/master/lsiodev/img/rutorrent-icon.png",
-      "name": "rutorrent",
-      "platform": "linux",
-      "ports": [
-        "51413:51413/tcp",
-        "6881:6881/udp",
-        "80/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "ruTorrent",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Downloads",
-          "container": "/downloads"
-        },
-        {
-          "bind": "/portainer/Files/AppData/Config/ruTorrent",
-          "container": "/config"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Music"
-      ],
-      "description": "Self hosted Spotify tracking dashboard.",
-      "env": [
-        {
-          "default": "3081",
-          "label": "API Port",
-          "name": "__api_port__"
-        },
-        {
-          "default": "3080",
-          "label": "Client Port",
-          "name": "__client_port__"
-        },
-        {
-          "default": "http://192.168.X.Y:3080",
-          "label": "Client Endpoint",
-          "name": "__client_endpoint__",
-          "description": "If you have changed the default client port don't forget to change it here too."
-        },
-        {
-          "default": "http://192.168.X.Y:3081",
-          "label": "API Endpoint",
-          "name": "__api_endpoint__",
-          "description": "If you have changed the default API port don't forget to change it here too."
-        },
-        {
-          "default": "America/New_York",
-          "label": "TZ",
-          "name": "TZ"
-        },
-        {
-          "description": "Create a Spotify App and copy the Client ID: https://developer.spotify.com/dashboard/applications",
-          "label": "Spotify Client ID",
-          "name": "__your_spotify_client_id__"
-        },
-        {
-          "description": "Copy the Client Secret: https://developer.spotify.com/dashboard/applications",
-          "label": "Spotify Client Secret",
-          "name": "__your_spotify_secret__"
-        }
-      ],
-      "name": "Your Spotify",
-      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/your-spotify.png",
-      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/Yooooomi/your_spotify\" target=\"_blank\">https://github.com/Yooooomi/your_spotify</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/Yooooomi/your_spotify#readme\" target=\"_blank\">https://github.com/Yooooomi/your_spotify#readme</a><br><br><br>Create a Spotify App here: https://developer.spotify.com/dashboard/applications. Don't forget adding Redirect URL: http://192.168.X.Y:3081/oauth/spotify/callback under edit settings of the dashboard.",
-      "platform": "linux",
-      "repository": {
-        "stackfile": "stack/your-spotify.yml",
-        "url": "https://github.com/pi-hosted/pi-hosted"
-      },
-      "title": "your-spotify",
-      "type": 3
     }
   ],
   "version": "2"

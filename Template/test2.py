@@ -23,7 +23,7 @@ for i in data2["templates"]:
     values.append(i)
 jsonFile.close()
 #print(values)
-sortedValues = sorted(values, key=lambda d: d['title'])
+sortedValues = sorted(values, key=lambda d: (d['title']).lower())
 with open("test.json", "w") as json_file:
   json_file.write(str(sortedValues))
 
