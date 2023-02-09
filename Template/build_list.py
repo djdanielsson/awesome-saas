@@ -34,11 +34,11 @@ print(totalSize)
 # Sort based on title
 sortedValues = sorted(values, key=lambda d: (d['title']).lower())
 # Write json file
-with open('test.json', 'w', encoding='utf-8') as f:
+with open('portainer-v2-latest.json', 'w', encoding='utf-8') as f:
     json.dump(sortedValues, f, ensure_ascii=False, indent=2)
 
 # Now re-open new file so it can be just a string and replace all timzeones to correct one
-jsonFile2 = open('test.json', 'r')
+jsonFile2 = open('portainer-v2-latest.json', 'r')
 newData = re.sub(r'Europe\/\w*|America\/\w*', 'America/Chicago', str(jsonFile2.read()))
-with open("test.json", "w") as text_file:
+with open("portainer-v2-latest.json", "w") as text_file:
   text_file.write(newData)
