@@ -58,6 +58,10 @@ jobs:
         token: ${{ secrets.TOKEN }}
         branch: auto_update # ${{ steps.date.outputs.date }}
 
+    - name: Test
+      if: ${{ failure() }}
+      run: touch tmp.txt
+
     - name: Auto commit if PR fails
       id: auto_commit
       if: ${{ failure() }}
