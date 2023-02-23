@@ -18,6 +18,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.TOKEN }}
+        repository: djdanielsson/awesome-saas
 
     - name: Run JSON Lint
       env:
