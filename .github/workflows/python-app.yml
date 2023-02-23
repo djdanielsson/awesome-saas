@@ -53,4 +53,5 @@ jobs:
       uses: peter-evans/create-pull-request@v4
       with:
         token: ${{ secrets.TOKEN }}
+        push-to-fork: djdanielsson/awesome-saas
         branch: ${{ steps.date.outputs.date }}
