@@ -1,10 +1,8 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
-
+---
 name: Python application
 
 on:
-  push:
+  # push:
   schedule:
     - cron: "0 0 * * *"
 
@@ -62,5 +60,5 @@ jobs:
       uses: peter-evans/create-pull-request@v4
       with:
         token: ${{ secrets.TOKEN }}
-        # push-to-fork: djdanielsson/awesome-saas
         branch: ${{ steps.date.outputs.date }}
+...
