@@ -54,12 +54,14 @@ jobs:
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
+      continue-on-error: true
       with:
         token: ${{ secrets.TOKEN }}
         branch: auto_update # ${{ steps.date.outputs.date }}
 
     - name: Auto commit if PR fails
-      if: ${{ failure() }}
+      # if: ${{ failure() }}
+      continue-on-error: true
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         branch: auto_update # ${{ steps.date.outputs.date }}
