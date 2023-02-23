@@ -11,3 +11,9 @@ jobs:
         node-version: '14.x'
     - run: npm install
     - run: npm test
+
+    - name: Run JSON Lint
+      env:
+        REPORT_ONLY: true
+        SHOW_ERRORS: true
+      run: bash <(curl -s https://raw.githubusercontent.com/CICDToolbox/json-lint/master/pipeline.sh)
