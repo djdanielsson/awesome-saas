@@ -58,27 +58,11 @@ jobs:
         token: ${{ secrets.TOKEN }}
         branch: auto_update # ${{ steps.date.outputs.date }}
 
-    - name: Test
-      if: ${{ failure() }}
-      run: echo -e "test" >> README.md
-
     - name: Auto commit if PR fails
-      id: auto_commit
       if: ${{ failure() }}
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         branch: auto_update # ${{ steps.date.outputs.date }}
-        create_branch: true
-
-    - name: Create Pull Request
-      if: steps.auto_commit.outcome == 'success'
-      run: |
-        curl \
-          -X POST \
-          -H "Accept: application/vnd.github+json" \
-          -H "Authorization: Bearer ${{ secrets.TOKEN }}"\
-          -H "X-GitHub-Api-Version: 2022-11-28" \
-          https://api.github.com/repos/djdanielsson/awesome-saas/pulls \
-          -d '{"title":"Auto PR","body":"Please check to see if these changes break in portainer before merging.","head":"auto_update","base":"main"}'
+        # create_branch: true
 
 ...
