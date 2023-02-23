@@ -60,7 +60,7 @@ jobs:
 
     - name: Test
       if: ${{ failure() }}
-      run: touch tmp.txt
+      run: echo -e "test" >> README.md
 
     - name: Auto commit if PR fails
       id: auto_commit
