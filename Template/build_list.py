@@ -6,10 +6,10 @@ import string
 import re
 
 template_urls = [
-  'https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v2-amd64.json',
-  'https://raw.githubusercontent.com/donspablo/awesome-saas/master/Template/portainer-v2.json',
-  'https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Template/portainer-v2.json',
-  'https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Template/template.json'
+    'https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v2-amd64.json',
+    'https://raw.githubusercontent.com/donspablo/awesome-saas/master/Template/portainer-v2.json',
+    'https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Template/portainer-v2.json',
+    'https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Template/template.json'
 ]
 
 templates = []
@@ -27,7 +27,8 @@ def get_data(url):
     print(size)
     for template in data["templates"]:
       title = template["title"].replace(" ", "").replace("-", "").lower()
-      if title not in unique_names:
+      description = template.get("description")  # Get the description field, returns None if not present
+      if title not in unique_names and description is not None and "[DEPRECATED]" not in description:
         unique_names.append(title)
         templates.append(template)
 
@@ -49,7 +50,7 @@ final_data = {
 
 # Write json file
 with open('portainer-v2-latest.json', 'w', encoding='utf-8') as file:
-    json.dump(final_data, file, ensure_ascii=False, indent=2)
+  json.dump(final_data, file, ensure_ascii=False, indent=2)
 
 # Replace timezones in the new file
 with open("portainer-v2-latest.json", "r") as file:
