@@ -41,9 +41,15 @@ print(total_size)
 # Sort based on title
 sorted_templates = sorted(templates, key=lambda d: d['title'].lower())
 
+# Create a new dictionary with the required structure
+final_data = {
+  "version": "2",
+  "templates": sorted_templates
+}
+
 # Write json file
 with open('portainer-v2-latest.json', 'w', encoding='utf-8') as file:
-  json.dump(sorted_templates, file, ensure_ascii=False, indent=2)
+    json.dump(final_data, file, ensure_ascii=False, indent=2)
 
 # Replace timezones in the new file
 with open("portainer-v2-latest.json", "r") as file:
