@@ -1,5 +1,6 @@
-[
-  {
+{
+  "templates": [
+    {
     "categories": [
       "Other"
     ],
@@ -15007,4 +15008,4 @@
     ],
     "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://wiki.znc.in/ZNC\" target=\"_blank\">https://wiki.znc.in/ZNC</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-znc\" target=\"_blank\">https://docs.linuxserver.io/images/docker-znc</a><br><br><br>"
   }
-]
+]}
