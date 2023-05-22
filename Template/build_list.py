@@ -1,44 +1,53 @@
 import json
 import requests
 import os
-import random, string
+import random
+import string
 import re
 
-files = ['https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v2-amd64.json', 'https://raw.githubusercontent.com/donspablo/awesome-saas/master/Template/portainer-v2.json', 'https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Template/portainer-v2.json', 'https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Template/template.json']
-values = [];
-uniqueNames = [];
+template_urls = [
+  'https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v2-amd64.json',
+  'https://raw.githubusercontent.com/donspablo/awesome-saas/master/Template/portainer-v2.json',
+  'https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Template/portainer-v2.json',
+  'https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Template/template.json'
+]
 
-def getData(url):
+templates = []
+unique_names = []
+
+def get_data(url):
   myfile = requests.get(url)
-  randoms = string.ascii_lowercase
-  fileName = os.path.basename(url)
-  open("/tmp/" + randoms + fileName, 'wb').write(myfile.content)
-  jsonFile = open("/tmp/" + randoms + fileName, 'r')
-  data = json.load(jsonFile)
-
-  size=len(data["templates"])
-  print(size)
-  for i in data["templates"]:
-    if(((str(i["title"])).replace(" ", "").replace("-", "")).lower() not in uniqueNames):
-      uniqueNames.append(((str(i["title"])).replace(" ", "").replace("-", "")).lower());
-      values.append(i)
-  jsonFile.close()
+  randoms = ''.join(random.choices(string.ascii_lowercase, k=5))
+  filename = os.path.basename(url)
+  with open(f"/tmp/{randoms}{filename}", 'wb') as file:
+    file.write(myfile.content)
+  with open(f"/tmp/{randoms}{filename}", 'r') as json_file:
+    data = json.load(json_file)
+    size = len(data["templates"])
+    print(size)
+    for template in data["templates"]:
+      title = template["title"].replace(" ", "").replace("-", "").lower()
+      if title not in unique_names:
+        unique_names.append(title)
+        templates.append(template)
 
 # Call function
-for urlz in files:
-  getData(urlz)
+for url in template_urls:
+  get_data(url)
 
-valueSize = values
-totalSize = len(valueSize)
-print(totalSize)
+total_size = len(templates)
+print(total_size)
+
 # Sort based on title
-sortedValues = sorted(values, key=lambda d: (d['title']).lower())
-# Write json file
-with open('portainer-v2-latest.json', 'w', encoding='utf-8') as f:
-    json.dump(sortedValues, f, ensure_ascii=False, indent=2)
+sorted_templates = sorted(templates, key=lambda d: d['title'].lower())
 
-# Now re-open new file so it can be just a string and replace all timzeones to correct one
-jsonFile2 = open('portainer-v2-latest.json', 'r')
-newData = re.sub(r'Europe\/\w*|America\/\w*', 'America/Chicago', str(jsonFile2.read()))
-with open("portainer-v2-latest.json", "w") as text_file:
-  text_file.write(newData)
+# Write json file
+with open('portainer-v2-latest.json', 'w', encoding='utf-8') as file:
+  json.dump(sorted_templates, file, ensure_ascii=False, indent=2)
+
+# Replace timezones in the new file
+with open("portainer-v2-latest.json", "r") as file:
+  new_data = re.sub(r'Europe\/\w*|America\/\w*', 'America/Chicago', file.read())
+  with open("portainer-v2-latest.json", "w") as text_file:
+    text_file.write(new_data)
+
