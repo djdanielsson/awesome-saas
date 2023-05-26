@@ -34,7 +34,10 @@ def get_data(url):
 
 # Call function
 for url in template_urls:
-  get_data(url)
+  try:
+    get_data(url)
+  except:
+    continue
 
 total_size = len(templates)
 print(total_size)
