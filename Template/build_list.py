@@ -9,7 +9,8 @@ template_urls = [
     'https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v2-amd64.json',
     'https://raw.githubusercontent.com/donspablo/awesome-saas/master/Template/portainer-v2.json',
     'https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Template/template.json',
-    'https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Template/template.json'
+    'https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Template/template.json',
+    'https://raw.githubusercontent.com/Lissy93/portainer-templates/main/templates.json'
 ]
 
 templates = []
