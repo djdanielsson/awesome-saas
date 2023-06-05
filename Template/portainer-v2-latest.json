@@ -3,6 +3,21 @@
   "templates": [
     {
       "categories": [
+        "Finance"
+      ],
+      "description": "Actual is a super fast privacy-focused app for managing your finances. ",
+      "logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPcAAABOCAYAAAD8SYDuAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAABARSURBVHgB7Z1NbBvHFcffLEVJkftBJ00TtAdtkKJ1bKeW0QDOJTF9SnKK3aCApaIwfUiTm+RTLwG8AtICOck6Fj2YRlE5bZBaPiU5lXYvMdBCdONITi+mW7QI6jhRG0S2JXGn781yV+RqZz/4Ie2S7wdQJrncXXK9/3lv3rx5I6ADrONLBRjLHwdpHAIhiwCiACBNSCWiBhJq+KQKwr4O9kbFevtwDRimTxGQEBK03JMvCdt42RF0hpGigkK/YC0cLAPD9BmJxD07tXJWivoMiqIA/UUNlT7LImf6iVjitk5+VATDOI9PTehvarAhT1jvHKwCw2QcI+oDZK1R2H+C/hc2YUJeLKnfzDAZR2u5nWDZ6ByAXYLBpGwtHDgNDJNR9OKe+ngJ/5mAwaYKa+vHrMXDq8AwGSPQLbemVqh/PejCJiZgbHgOGCaDbBO3098cWFc8iBL3wZks0uKWW1M30FqLJWC2Y9vHrLefrgDDZASf5RaXgAnGGQpkmMzgiRutdgkGY7irXUxr6iMLGCYjNFluwf3KSIxpNUTIMBlAiZutdmwK8qF8CRgmAziWWxingImFAONlYJgMIKyTSyYYw7eAic/a+l5ObGHSjgFGvghMMmgOO8OkHHTLJWeiJUVy9h6TfgwQuUOQUh4bH4HCt/KQOoRxFBgm5Rgg01kW6dDzBXj9V0/C0VcehfQheTiMST0ULTchhUw8X/D+TaH1NoFhUk5ksYbdwHxqDz7GvNfptN4Mk26GIIX4xUzW+8q7d2D1sw1gtpidXDkljfq5sJp2OC5vnV14ahaYzKOGrcXI+W2FSYU4Z/1u/xn/51NnuckFb7baLkdeehiYVqSwrahilRJsS9XAY7KPMTQTWHFYypmg/+PUWW6dC66s9x8/g/tf1YHBVnzybzTWbsb6sAFF/FuBDNBIqmqZ5yAAanJtfX7gE4eoIdfVTjKE6X8rVeImq+0G0ohPb9+Hx8dH1fPRsRwceeFhFPgdYBCRS5AGq9KLLcgCxvC2YpyS/jyU34t/Z4CJTarccr/V/v3cP6G2sua9fhZd89E9ORh0rJKamVZKsIuZBdfcOrligs4bEYJz+hOSGnH7rXb16iqs3tlQgTQX13oPPOttpL8KwSmzA0ZqxO232tevOt2r2spXbL230YYVE4Jn/g0YqRC3EyHf470mMTcLmq33FirgBKC3wlLUNFsKqXfN6/c586+LpCKgNnG0AIVHt7LQrrz7n5btrvV2h8jIel/74PPBjJyHzeKz4TIY9Sp+KLiqjuOaV6BDvMUgpTiEBy2CsAtOJFeuqsaFHsK+HGclVV90vBjyUdOaXL6kzuFir8/6j0/fTYyNTuMQoOm9KQV+rwfzcVZ17XR/7zjYkApj6KiUcgIj3BOdXKN2SYW4Dz231WBTokqz1XYh622+Ma6eD3TknAprSKnZKBfBHqqAYevETa552xHnJiGisL1z0s3feKrG3PFGppmG2JAYw7S4RTlIhB40dhs3OCjkcd++t8E/CjA2fB6Fedy3H/4ZoZl8xyCKseE56S/tTfuLYTrmE1G7K+9I5M7SeDQeZ6u+cCfXqE123S2nCSJhVtuF+94NccmwZZNzaAWeqoFatTSQtl1zyoaDXJ7KXpcgGSUa3kKrG9yV6P6KscHTceMvN637nPnm1PJ42I7WT5fn1Lp6yZe2pmt0S13jLrLr4i7+eCuQRla7evW/2s8OfN87zCWX0hU2Yl/QHyN5Sa3ZqeVpKexyB0I08Ya/1O2bN00oYUvZ0Tg8XWNtI9gGuyruuFbbhaz3p7cfeK8HznqH1bqTsCVoO7RffTxJBVey9BLkOegCePOeawQE+wpVYLRDYXsIeb5bFXZ3VdxJrLbLtffves8HyXrHccm9zzoro9Q0HyzA6FD8SjLRizFggEjOY4syq/7VR+udc9PEh2ZkzsI/ZfUI35casEXvs/Swh8qQCkLKgqNHhX9OY5/6CedhH8P3LoQcrABjQ11pKHYtoJbUarvc/Mv/4IWfPaaETQxM5Dy2S+5Crrkuap6bhhhR88iS1yTmexuWL+d7xlm8QXduWSTL5O7T+N5qqWSVoSakrlhnzbp44ASkjIgc/0Xr4kH/d67ho4LXaJXq4AfuJXNdqfSza5b72Rcf8Z7rIuTNjOMwGIl6ev77nrAJen7ouW9C3yNgWrut2SV3CXPNGwKD6JOGLVRRxht3Jmgyh7XwtIVfYF63Y1/Vfh+pVxzPBb0Koaw0DkUqAVfBNs5o9xvetLTbRHeqI+2K5aaElcfHR7zX1StOqqmf0TEDjrz0SGQ1Fmoorr3/OfQrjksuQlzpLZfc2wddc7S8KLzAIFihUcG1DNpzqqi6qduON274HHG6edeHAxskIURq6/YlxSqrxi2xG0374RCYbrMJXWBXxL0t1fTPW40/CfrQ83th3zNfa8laC4Pce3Lz3ZTVfkOK/HGh3Rjkknsb0aILjeungnNl0J5TTLR3Tge6ec9O3jgjBAQJeR4GHFoWWo2D95AdF7e/GIM7QYTcbrLQ+575hhJ4EPfXbDUNlPrnFDWfnv+e56JTcK5Z3HQMmi4a5e5nAbR0yVxyFxtdRUPjzgs50dz3DTjnUf0p4TLEYPbiwa5E2bOK8rjq+QLkYUIKKAjboHFyEwy7KKXd81TbHRd3UDGGX/xmn1bQBAn0EwykVdHC3/9qq7W79t7n3vFc6716Zx2K+B5Z/ftrdXjr1U8gy1g/WSJ33NR+QBgh7spmDf1j3UZ33bNgAQp05zWZcAKMGjDb8NJybeMoCVjlBTRua5Uk56b1SQE7wY6K2z+tk/C/diErfe29u45l19RO+xD72VR+ybXex1/7Tst2ep+8hExb7/xQKXS7kHPW5LLOOpuhuzrrnmmsK1kWzU0o6/3Z/+mARqKPJZz88R0TcBg7Im6yyj9Ad/vZF8PHpEnQ1atfoJX+MlKQTt+8oCx5c/Tcj7l/T8Zd88iFB822o6u+YSmmPayplfMqHz0Fgm6mp+KmfvS+Z76O1nlvpNtNySmUgdbsdrd7zCSNRJqJjFh3Ab1rTu6+ZoJKQL2uQaURGCvF+Chdzxpe0ivoEFUbc/K7lmoaRNfF7Q5f0fBUO/3osGPGXaDg8q//BTdR2JnH6P3SylrX3LZvY787cB/sivc8GNQLeuGlhApboogFjoGvbSz6z2uVlhZxqDBb4n58/KGWtNIgSNgX3qxBFGSl3eCYDrdv3tz3PoINS1+IO3x+c3fQuOZos6so7cDGJbyvvoXqh8oA6yTrs40U2Z0lnzeBkks0NPLeTYhJhGe1GJZRFzHO3RW6Lm7lWmOU2hUaiY9uleZ+cViqKQma+slhlp+OSWmoNPTV7Ha7kXMKomU9kBbDJV9tPOJiarc4ucxW81tCyqrOcqsGAYUQNv+YtqsJJ4GHENdhN0ot59V8cK24hTF6KsnYc2gugG2HjuWrIpfr0FN60uemIapxFKjrdr/2yyc9cQelmsZNXAlz5f2R86OvfBtqMbyD1BLmkktRsy7ujywc0AxaiUug6+MF5DJHZLhBYwKIvviBr/Z46/n0AusYQVVOdAFGYxobnXJQo4S/dYIWcIBEp5LaEYUhI3crdOf13q/x3hNxV6hCSqNKStgEkW4Gx8hbaB737gPrXdRvsmMlkbTugpbEMIJvKLTEVIjgjYX9t1s3UM600E8AobJH8sGZZrGonPU9I2dRYCXQsj1dNgbm2cnlmdmL+8O7A7KOXoFR1GzFcefhJTzOrNi0K5DbwMZryFTlkBIKW51KilWdc7MJdZoMYwVtc5YFgjldvLI9VNJRufmdng+F+ad1Ul+YBBgVHCNRqky0f9yPDLi59Iv1jnTJN/Vpo1pGN6toLbSWOPBmHN48Bw9GTmmH2qjskZEnkVe82mb0ngxd4risS12l98O8BUFj+lMfn3K24/nW1o9tC5CFZeU5FOg4kCdVOgk+PlecjhcrYBjadQHjLDYiq+Leg7I3A86tzybqM20VvhAYbdcuOQIlvDZFUFNwxSx6dos9nRXmt9okOspGI8EHCZusNFVbeevnN1XAjQQeV9jO/o71dnGtd+aIcsnfOZjYrXUmOIiK/rgBrjntI5XoIeT7FBq1zUrqEXbT0nztqAknwoj6bRN4IFP9GzAvXQXqRMjvDEPNJ7fj571TgwlSG/dQjcjY8BfW1PItetBz5SG0W9HGjoxTmODUZ5ujFz0Vtz9qHuR6O273qhLzW6/eVC59EkH7IetNInch6509ZEh/rA2XfOu4+n1VkGx7fTUSi5RSP3UxCXU4EzXhBOr12CuSUkAreIPd3veVduxzE9T44WhAjH2oMfJ5P6oCamjRhu1ENCZNmOQl9Ezcfqvth6zyB7/9FOZn/o7j0v/uWt+YhF29slXRhSaPZKkUkzP5P8z6yUVol+GNxdCbwwju56sJILJ+IrJSip5V2BQnrD/sj/zuzhBZPJHppo5aC+jZ2PI0JMLG4bmDZUiIc20SitQpbXwMEuJ4Una834VeTc/E3VyMwYWs9Ifv31VWmh7KynZgpXVc++Cu5+JT45GpKi1CFLXbyCXvYHxY3Rxhbq/UzwSzLv5wUd2QSW9kCvLYxuE4wvbOtfC0pbyFyMZEP8fdEao8HKNBchoeVWAinM21B4F1wKyLB0txGyRVdgmvY6QHo8H5f4jR0IpcoScBNX8xhnaCY51AU0jJxc8k9tA5MDaDrasQ7Vttl7o4DUa91M7xGzdkyTq5YuGBimBQCiW5m8rTwH/dum0SXXm4Lu5tlNvNCCOLiK5lGUZxyEigR2HAVllhtUiAvI1diXLYMZQFB3jCqSVONcKb5pbbQFH1Ctx7UGn5jlSXzdjcfjCZq4b9Fmoc8LqU1XXJwSlQWXyuB0YLEcAV8rpaGmeqHydo5p6PiL61EjglydDvUt6WaCq5jNcFaKj0wKLACFtXA/LEvh99HV5+/bsqc+xDsqI7IOidxlo4kK5ZAgzjoyeW++Zfv4SbWbWcDNMnUJ+7BkxSasAwKcdoWViNiYekZAKGSTcG3qhXgEnKdWCYlINuuehdEn+/0suJDwzTJQwnsYFJRlsTHxhmRzGcxIY2c3EHkRg1uxkmDagMNWl3kq88YITVCWeYFKHELUY2yjET0gcblf6ZPP+YYXYDJW5nOqAc+CVeIkk4a4hhdpOWFEprcvlWt1YY7DvaKG3EMLtJ66ywqIn5g4ywU7c2NMOE0SLuJHNpBwt7tjHDiGEyQ+DMJmvyRhmHx3peED8TSHnBma/LMNkiuFjDyMYMAGdhUSYaC5vJKoHiVqshLBw43EbVjf6Bfvu99cSlcBgmLUQWHLCmPrKoTCsMFNTHji67wzBpJlY1EVqNAaRxqe+HyVThuvrpXVnHimG6TKJSQdbJGyUQaMX7T+SrVK+arTXTT7RVB0yJXBWBC6nUmQWkrEiAy50U8mOYtNJRkT/r5Iqpqj0KmFCVJaXA171dLL4Dal4VSlr8PGDNZIbpJ/4Po+cuMuwZqbUAAAAASUVORK5CYII=",
+      "name": "actual",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/actual.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Actual",
+      "type": 3
+    },
+    {
+      "categories": [
         "Other"
       ],
       "description": "AdGuard Home is a network-wide software for blocking ads & tracking. After you set it up, it’ll cover ALL your home devices, and you don’t need any client-side software for that. With the rise of Internet-Of-Things and connected devices, it becomes more and more important to be able to control your whole network.",
@@ -375,6 +390,38 @@
     },
     {
       "categories": [
+        "Productivity",
+        "Development",
+        "Low-code"
+      ],
+      "description": "Appsmith (www.appsmith.com) is the first open-source low code tool that helps developers build dashboards and admin panels very quickly.",
+      "logo": "https://cdn-images.himalayas.app/vr60veq4neiptamhqm6qxwi3toi3",
+      "name": "appsmith",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/appsmith.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Appsmith",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Development"
+      ],
+      "description": "Appwrite is a self-hosted backend-as-a-service platform that provides developers with all the core APIs required to build any application.",
+      "logo": "https://appwrite.io/images/appwrite.svg",
+      "name": "appwrite",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/appwrite.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Appwrite",
+      "type": 3
+    },
+    {
+      "categories": [
         "Other",
         "Tools",
         "Games"
@@ -471,6 +518,21 @@
     },
     {
       "categories": [
+        "Downloaders"
+      ],
+      "description": "A perfect Aria2 Docker image. Out of the box, just add download tasks and don't need to think about anything else.",
+      "logo": "https://imgcdn.p3terx.com/post/20201113041845.jpg",
+      "name": "aria2-pro",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/aria2pro.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Aria2 Pro",
+      "type": 3
+    },
+    {
+      "categories": [
         "Downloader"
       ],
       "description": "AriaNg is a modern web frontend making aria2 easier to use. AriaNg is written in pure html & javascript, thus it does not need any compilers or runtime environment. You can just put AriaNg in your web server and open it in your browser. AriaNg uses responsive layout, and supports any desktop or mobile devices.",
@@ -550,6 +612,52 @@
         {
           "bind": "/volume1/docker/audacity/config",
           "container": "/config"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Library Server"
+      ],
+      "description": "Audiobook Server",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        }
+      ],
+      "image": "ghcr.io/advplyr/audiobookshelf:latest",
+      "logo": "https://raw.githubusercontent.com/mycroftwilde/portainer_templates/master/Images/AudioBookshelfLogo.png",
+      "name": "Audiobookshelf",
+      "platform": "linux",
+      "ports": [
+        "13378:80/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "Audiobookshelf",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/Audiobookshelf",
+          "container": "/config"
+        },
+        {
+          "bind": "/path/to/audiobooks",
+          "container": "/audiobooks"
+        },
+        {
+          "bind": "/path/to/podcasts",
+          "container": "/podcasts"
+        },
+        {
+          "bind": "/path/to/Metadata",
+          "container": "/metadata"
         }
       ]
     },
@@ -643,6 +751,22 @@
       "type": 3
     },
     {
+      "categories": [
+        "Downloaders",
+        "Multimedia"
+      ],
+      "description": "Autobrr is the modern download automation tool for torrents.",
+      "logo": "https://autobrr.com/img/logo.png",
+      "name": "autobrr",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/autobrr.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Autobrr",
+      "type": 3
+    },
+    {
       "description": "[Babybuddy](https://github.com/babybuddy/babybuddy) is a buddy for babies! Helps caregivers track sleep, feedings, diaper changes, tummy time and more to learn about and predict baby's needs without (as much) guess work.",
       "env": [
         {
@@ -669,6 +793,39 @@
           "container": "/config"
         }
       ]
+    },
+    {
+      "categories": [
+        "Calendar",
+        "Productivity"
+      ],
+      "description": "Baïkal is a lightweight CalDAV+CardDAV server. It offers an extensive web interface with easy management of users, address books and calendars.",
+      "logo": "https://sabre.io/img/logo.png",
+      "name": "baikal",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/baikal.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Baikal",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Productivity",
+        "Development",
+        "No-code"
+      ],
+      "description": "Open source no-code database and Airtable alternative.Create your own online database without technical experience. Our user friendly no-code tool gives you the powers of a developer without leaving your browser.",
+      "logo": "https://].io/_nuxt/img/logo.1421f77.svg",
+      "name": "Baserow",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/baserow.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Baserow",
+      "type": 3
     },
     {
       "categories": [
@@ -825,6 +982,53 @@
           "container": "/config"
         }
       ]
+    },
+    {
+      "type": 1,
+      "title": "Blender",
+      "name": "Blender",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/blender/config</p>",
+      "description": "[Blender](https://www.blender.org/) is a free and open-source 3D computer graphics software toolset used for creating animated films, visual effects, art, 3D printed models, motion graphics, interactive 3D applications, virtual reality, and computer games. **This image does not support GPU rendering out of the box only accelerated workspace experience**",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/blender-logo.png",
+      "image": "linuxserver/blender:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        },
+        {
+          "name": "SUBFOLDER",
+          "label": "SUBFOLDER",
+          "default": "/",
+          "description": "Specify a subfolder to use with reverse proxies, IE `/subfolder/`"
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp",
+        "3001:3001/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/blender/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
     },
     {
       "categories": [
@@ -1037,6 +1241,21 @@
       "type": 3
     },
     {
+      "categories": [
+        "Smart Home"
+      ],
+      "description": "BroadlinkManager is a Flask powerd, easy to use system that hepls you to work with Broadlink Devices.",
+      "logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/broadlink.png",
+      "name": "broadlink-manager",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/broadlink-manager.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Broadlink Manager",
+      "type": 3
+    },
+    {
       "description": "[Budge](https://github.com/linuxserver/budge) is an open source 'budgeting with envelopes' personal finance app.",
       "env": [
         {
@@ -1076,6 +1295,64 @@
           "container": "/config"
         }
       ]
+    },
+    {
+      "categories": [
+        "Productivity",
+        "Development",
+        "Low-code",
+        "No-code"
+      ],
+      "description": "Budibase allows no-code users to build apps quickly, with more functionality available with a little bit of inline code.",
+      "logo": "https://files.readme.io/593b386-budibase-logo-website.svg",
+      "name": "budibase",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/budibase.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Budibase",
+      "type": 3
+    },
+    {
+      "type": 1,
+      "title": "Build-agent",
+      "name": "Build-agent",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/build-agent/config</p>",
+      "description": "This container needs special attention. Please check https://hub.docker.com/r/linuxserver/build-agent for details.",
+      "platform": "linux",
+      "logo": "",
+      "image": "linuxserver/build-agent:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        }
+      ],
+      "ports": [
+        "80:80/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/build-agent/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
     },
     {
       "categories": [
@@ -1234,6 +1511,86 @@
     },
     {
       "categories": [
+        "Podcast"
+      ],
+      "description": "Castopod is a free and open-source hosting platform made for podcasters.",
+      "logo": "https://pbs.twimg.com/profile_images/1313854745161932800/w_qe6Qq6_400x400.png",
+      "name": "castopod",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/castopod.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Castopod",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Network"
+      ],
+      "description": "Self-hosted website change detection monitoring.",
+      "image": "dgtlmoon/changedetection.io",
+      "logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/changedetection-custom.png",
+      "name": "changedetection",
+      "platform": "linux",
+      "restart_policy": "always",
+      "title": "Change Detection",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/changedetection",
+          "container": "/datastore"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Changedetection.io",
+      "name": "Changedetection.io",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/changedetection.io/config</p>",
+      "description": "[Changedetection.io](https://github.com/dgtlmoon/changedetection.io) provides free, open-source web page monitoring, notification and change detection.",
+      "platform": "linux",
+      "logo": "https://github.com/linuxserver/docker-templates/raw/master/linuxserver.io/img/changedetection-icon.png",
+      "image": "linuxserver/changedetection.io:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        },
+        {
+          "name": "BASE_URL",
+          "label": "BASE_URL",
+          "default": "",
+          "description": "Specify the full URL (including protocol) when running behind a reverse proxy"
+        }
+      ],
+      "ports": [
+        "5000:5000/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/changedetection.io/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": [
         "Other",
         "Tools",
         "Photo"
@@ -1295,6 +1652,21 @@
     },
     {
       "categories": [
+        "Employee"
+      ],
+      "description": "ChiefOnboarding is a free and open source employee onboarding platform. You can onboarding new hires through Slack or the dashboard.",
+      "logo": "https://chiefonboarding.com/wp-content/uploads/2022/07/ChiefOnBoarding-768x138.png",
+      "name": "chiefonboarding",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/chiefonboarding.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Chiefonboarding",
+      "type": 3
+    },
+    {
+      "categories": [
         "Other",
         "Tools"
       ],
@@ -1315,6 +1687,53 @@
           "container": "/config"
         }
       ]
+    },
+    {
+      "type": 1,
+      "title": "Chromium",
+      "name": "Chromium",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/chromium/config</p>",
+      "description": "[Chromium](https://www.chromium.org/chromium-projects/) is an open-source browser project that aims to build a safer, faster, and more stable way for all users to experience the web.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/chromium-logo.png",
+      "image": "linuxserver/chromium:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        },
+        {
+          "name": "CHROME_CLI",
+          "label": "CHROME_CLI",
+          "default": "https://www.linuxserver.io/",
+          "description": "Specify one or multiple Chromium CLI flags, this string will be passed to the application in full."
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp",
+        "3001:3001/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/chromium/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
     },
     {
       "categories": [
@@ -1346,6 +1765,46 @@
       "title": "Chrony NTP",
       "type": 1,
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/cturra/docker-ntp\" target=\"_blank\">https://github.com/cturra/docker-ntp</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/cturra/docker-ntp/blob/main/README.md\" target=\"_blank\">https://github.com/cturra/docker-ntp/blob/main/README.md</a><br><br><br>"
+    },
+    {
+      "type": 1,
+      "title": "Ci",
+      "name": "Ci",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/ci/config</p>",
+      "description": "This container needs special attention. Please check https://hub.docker.com/r/linuxserver/ci for details.",
+      "platform": "linux",
+      "logo": "",
+      "image": "linuxserver/ci:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        }
+      ],
+      "ports": [
+        "80:80/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/ci/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
     },
     {
       "categories": [
@@ -1382,6 +1841,67 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://docs.clamav.net/\" target=\"_blank\">https://docs.clamav.net/</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/mkodockx/docker-clamav\" target=\"_blank\">https://hub.docker.com/r/mkodockx/docker-clamav</a><br><br><h3><b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/install_clamav.sh\" target=\"_blank\">Pre-installation script</a> must be RAN before you install: </b>wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/tools/install_clamav.sh | bash</h3><br><br>"
+    },
+    {
+      "type": 1,
+      "name": "cloudcmd",
+      "title": "Cloud Commander",
+      "description": "Cloud Commander a file manager for the web with console and editor.",
+      "logo": "https://mediadepot.github.io/templates/img/cloudcmd-logo.png",
+      "image": "coderaiser/cloudcmd",
+      "categories": [
+        "Documents:",
+        "Network:Other",
+        "Tools:"
+      ],
+      "ports": [
+        "8000/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/media/host/opt/mediadepot",
+          "bind": "/opt/mediadepot/apps"
+        },
+        {
+          "container": "/media/host/media/storage",
+          "bind": "/media/storage"
+        },
+        {
+          "container": "/media/host/media/temp",
+          "bind": "/media/temp"
+        }
+      ],
+      "env": [],
+      "labels": [
+        {
+          "name": "traefik.enable",
+          "value": "true"
+        },
+        {
+          "name": "traefik.http.services.cloudcmd.loadbalancer.server.port",
+          "value": "8000"
+        },
+        {
+          "name": "traefik.http.routers.cloudcmd.entrypoints",
+          "value": "websecure"
+        },
+        {
+          "name": "traefik.http.routers.cloudcmd.tls.certresolver",
+          "value": "mydnschallenge"
+        },
+        {
+          "name": "traefik.http.routers.cloudcmd.middlewares",
+          "value": "authme"
+        },
+        {
+          "name": "traefik.http.middlewares.authme.forwardauth.address",
+          "value": "http://authelia:9091/api/verify?rd=https://login.${DEPOT_DOMAIN_NAME}/"
+        },
+        {
+          "name": "traefik.http.middlewares.authme.forwardauth.trustforwardheader",
+          "value": "true"
+        }
+      ]
     },
     {
       "categories": [
@@ -1590,6 +2110,21 @@
     },
     {
       "categories": [
+        "ebooks"
+      ],
+      "description": "Codex is a web server comic book browser and reader.",
+      "logo": "https://github.com/ajslater/codex/raw/main/codex/static_src/img/logo.svg",
+      "name": "codex",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/codex.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Codex",
+      "type": 3
+    },
+    {
+      "categories": [
         "Productivity"
       ],
       "description": "Codiad is a web-based IDE framework with a small footprint and minimal requirements.\n  ",
@@ -1785,6 +2320,24 @@
     },
     {
       "categories": [
+        "Dashboard",
+        "Crypto",
+        "Finance"
+      ],
+      "description": "Cryptofolio is an open-source, and self-hosted solution for tracking your cryptocurrency holdings. It features a web interface, an Android mobile app, and a cross-platform desktop application for Windows, macOS, and Linux.",
+      "image": "xtrendence/cryptofolio:latest",
+      "logo": "https://i.imgur.com/5v8lzea.png",
+      "name": "cryptofolio",
+      "platform": "linux",
+      "ports": [
+        "7280:80/tcp"
+      ],
+      "restart_policy": "always",
+      "title": "Cryptofolio",
+      "type": 1
+    },
+    {
+      "categories": [
         "Music"
       ],
       "description": "DAAP (iTunes) media server with support for AirPlay devices, Apple Remote (and compatibles), MPD and internet radio.",
@@ -1864,6 +2417,21 @@
           "container": "/config"
         }
       ]
+    },
+    {
+      "categories": [
+        "System"
+      ],
+      "description": "Dashdot is a modern server dashboard, running on the latest tech, designed with glassmorphism in mind. It is intended to be used for smaller VPS and private servers.",
+      "logo": "https://getdashdot.com/img/logo512.png",
+      "name": "dashdot",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/dashdot.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Dashdot",
+      "type": 3
     },
     {
       "categories": [
@@ -2381,6 +2949,21 @@
       ]
     },
     {
+      "categories": [
+        "Docker"
+      ],
+      "description": "Docker Container Stats is a web interface for viewing historical and current statistics per docker container (cpu, mem, net i/o, block i/o) - in a docker container.",
+      "logo": "",
+      "name": "Docker Container Stats",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/docker-container-stats.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Docker Container Stats",
+      "type": 3
+    },
+    {
       "description": "This container needs special attention. Please check https://hub.docker.com/r/linuxserver/docker-compose for details.",
       "env": [
         {
@@ -2417,6 +3000,61 @@
         {
           "bind": "/volume1/docker/docker-compose/config",
           "container": "/config"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Wiki",
+        "Knowledge Base"
+      ],
+      "description": "Documize Community is an open source, modern, self-hosted, enterprise-grade knowledge management solution.",
+      "logo": "",
+      "name": "documize",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/documize.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Documize",
+      "type": 3
+    },
+    {
+      "type": 1,
+      "title": "Dokku",
+      "description": "Dokku setup as a container",
+      "categories": [
+        "PaaS"
+      ],
+      "platform": "linux",
+      "logo": "",
+      "image": "dokku/dokku",
+      "ports": [
+        "22/tcp",
+        "80/tcp",
+        "443/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/mnt/dokku",
+          "bind": "/var/lib/dokku"
+        },
+        {
+          "container": "/var/run/docker.sock",
+          "bind": "/var/run/docker.sock"
+        }
+      ],
+      "env": [
+        {
+          "name": "DOKKU_HOSTNAME",
+          "label": "Dokku hostname",
+          "description": "Global hostname to be registered by Dokku"
+        },
+        {
+          "name": "DOKKU_HOST_ROOT",
+          "label": "Dokku host root",
+          "default": "/var/lib/dokku/home/dokku",
+          "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'"
         }
       ]
     },
@@ -2731,6 +3369,22 @@
     },
     {
       "categories": [
+        "Management Utility Server"
+      ],
+      "description": "draw.io (formerly Diagramly) is free online diagram software. You can use it as a flowchart maker, network diagram software, to create UML online, as an ER diagram tool, to design database schema, to build BPMN online, as a circuit diagram maker, and more. draw.io can import .vsdx, Gliffy™ and Lucidchart™ files.",
+      "image": "jgraph/drawio:latest",
+      "logo": "https://raw.githubusercontent.com/qwerty00007/portainer_templates/master/Images/draw.io.png",
+      "name": "draw.io",
+      "platform": "linux",
+      "ports": [
+        "8080:8080/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "draw.io",
+      "type": 1
+    },
+    {
+      "categories": [
         "Other",
         "Tools"
       ],
@@ -2753,6 +3407,106 @@
       "title": "Droid Docker VNC",
       "restart_policy": "unless-stopped",
       "type": 3
+    },
+    {
+      "type": 1,
+      "name": "droppy",
+      "title": "Droppy",
+      "description": "Droppy is a self-hosted file storage server",
+      "logo": "https://mediadepot.github.io/templates/img/filebrowser-icon.png",
+      "image": "silverwind/droppy:latest",
+      "categories": [
+        "Tools:",
+        "Network:Web",
+        "Network:Other",
+        "Tools:"
+      ],
+      "ports": [
+        "8989/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/files/tvshows",
+          "bind": "/media/storage/tvshows"
+        },
+        {
+          "container": "/files/movies",
+          "bind": "/media/storage/movies"
+        },
+        {
+          "container": "/files/music",
+          "bind": "/media/storage/music"
+        },
+        {
+          "container": "/files/photos",
+          "bind": "/media/storage/photos"
+        },
+        {
+          "container": "/files/ebooks",
+          "bind": "/media/storage/ebooks"
+        },
+        {
+          "container": "/files/documents",
+          "bind": "/media/storage/documents"
+        },
+        {
+          "container": "/files/software",
+          "bind": "/media/storage/software"
+        },
+        {
+          "container": "/files/downloads",
+          "bind": "/media/storage/downloads"
+        },
+        {
+          "container": "/files/blackhole",
+          "bind": "/media/temp/blackhole"
+        },
+        {
+          "container": "/files/processing",
+          "bind": "/media/temp/processing"
+        },
+        {
+          "container": "/config",
+          "bind": "/opt/mediadepot/apps/droppy"
+        }
+      ],
+      "env": [
+        {
+          "name": "GID",
+          "label": "GID",
+          "default": "15000",
+          "preset": true
+        },
+        {
+          "name": "UID",
+          "label": "UID",
+          "default": "15000",
+          "preset": true
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago"
+        }
+      ],
+      "labels": [
+        {
+          "name": "traefik.enable",
+          "value": "true"
+        },
+        {
+          "name": "traefik.http.services.droppy.loadbalancer.server.port",
+          "value": "8989"
+        },
+        {
+          "name": "traefik.http.routers.droppy.entrypoints",
+          "value": "websecure"
+        },
+        {
+          "name": "traefik.http.routers.droppy.tls.certresolver",
+          "value": "mydnschallenge"
+        }
+      ]
     },
     {
       "categories": [
@@ -2852,6 +3606,67 @@
       "title": "Duck DNS",
       "type": 1,
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.duckdns.org/\" target=\"_blank\">https://www.duckdns.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-duckdns\" target=\"_blank\">https://docs.linuxserver.io/images/docker-duckdns</a><br><br><br>"
+    },
+    {
+      "type": 1,
+      "name": "duplicacy",
+      "title": "Duplicacy",
+      "description": "Duplicacy backs up your files to many cloud storages with client-side encryption and the highest level of deduplication",
+      "logo": "https://mediadepot.github.io/templates/img/duplicacy-icon.png",
+      "image": "mediadepot/duplicacy:latest",
+      "categories": [
+        "Utility:Backup"
+      ],
+      "ports": [
+        "3875/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/opt/mediadepot/apps/duplicacy/config"
+        },
+        {
+          "container": "/logs",
+          "bind": "/opt/mediadepot/apps/duplicacy/logs"
+        },
+        {
+          "container": "/cache",
+          "bind": "/opt/mediadepot/apps/duplicacy/cache"
+        },
+        {
+          "container": "/source/apps",
+          "bind": "/opt/mediadepot/apps/"
+        },
+        {
+          "container": "/source/storage",
+          "bind": "/media/storage/"
+        }
+      ],
+      "env": [
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago"
+        }
+      ],
+      "labels": [
+        {
+          "name": "traefik.enable",
+          "value": "true"
+        },
+        {
+          "name": "traefik.http.services.duplicacy.loadbalancer.server.port",
+          "value": "3875"
+        },
+        {
+          "name": "traefik.http.routers.duplicacy.entrypoints",
+          "value": "websecure"
+        },
+        {
+          "name": "traefik.http.routers.duplicacy.tls.certresolver",
+          "value": "mydnschallenge"
+        }
+      ]
     },
     {
       "categories": [
@@ -2966,6 +3781,38 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://mosquitto.org/\" target=\"_blank\">https://mosquitto.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://mosquitto.org/\" target=\"_blank\">https://mosquitto.org/</a><br><br><h3><b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/install_mosquitto.sh\" target=\"_blank\">Pre-installation script</a> must be RAN before you install: </b>wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/tools/install_mosquitto.sh | bash</h3><br><br>"
+    },
+    {
+      "type": 1,
+      "title": "EdgeConnector 840D",
+      "description": "Access Siemens SINUMERIK 840D sl/pl controllers and provide data via OPC UA and MQTT",
+      "categories": [
+        "edge"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
+      "image": "softingindustrial/edgeconnector-840d",
+      "ports": [
+        "443/tcp",
+        "8099/tcp",
+        "4897/tcp"
+      ]
+    },
+    {
+      "type": 1,
+      "title": "EdgeConnector Modbus",
+      "description": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
+      "categories": [
+        "edge"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
+      "image": "softingindustrial/edgeconnector-modbus:latest",
+      "ports": [
+        "443/tcp",
+        "8099/tcp",
+        "4897/tcp"
+      ]
     },
     {
       "categories": [
@@ -3185,6 +4032,300 @@
       ]
     },
     {
+      "categories": [
+        "Tools"
+      ],
+      "description": "Eufy Security Web Socket. Edit container and add username & password.",
+      "env": [
+        {
+          "default": "InputUSER-email",
+          "label": "USERNAME",
+          "name": "USERNAME"
+        },
+        {
+          "default": "InputPWD",
+          "label": "PASSWORD",
+          "name": "PASSWORD"
+        }
+      ],
+      "image": "bropat/eufy-security-ws:latest",
+      "logo": "https://github.com/bropat/eufy-security-ws/raw/master/docs/_media/eufy-security-ws.png",
+      "name": "eufy-security-ws",
+      "platform": "linux",
+      "ports": [
+        "3993:3000/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "Eufy Security WS",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/eufy-security-ws",
+          "container": "/data"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Productivity",
+        "Drawing"
+      ],
+      "description": "Virtual whiteboard for sketching hand-drawn like diagrams. Collaborative and end-to-end encrypted.",
+      "logo": "https://github.com/excalidraw/excalidraw/raw/master/public/og-image-sm.png",
+      "name": "excalidraw",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/excalidraw.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Excalidraw",
+      "type": 3
+    },
+    {
+      "type": 1,
+      "title": "Fail2ban",
+      "name": "Fail2ban",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/fail2ban/config<br>mkdir -p /volume1/docker/fail2ban/var/log:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/airsonic:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/apache2:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/authelia:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/emby:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/filebrowser:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/homeassistant:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/lighttpd:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/nextcloud:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/nginx:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/nzbget:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/overseerr:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/prowlarr:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/radarr:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/sabnzbd:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/sonarr:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/unificontroller:ro<br>mkdir -p /volume1/docker/fail2ban/remotelogs/vaultwarden:ro</p>",
+      "description": "[Fail2ban](http://www.fail2ban.org/) is a daemon to ban hosts that cause multiple authentication errors.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/fail2ban-logo.png",
+      "image": "linuxserver/fail2ban:latest",
+      "network": "host",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        },
+        {
+          "name": "VERBOSITY",
+          "label": "VERBOSITY",
+          "default": "-vv",
+          "description": "Set the container log verbosity. Valid options are -v, -vv, -vvv, -vvvv, or leaving the value blank or not setting the variable."
+        }
+      ],
+      "ports": [
+        "80:80/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/fail2ban/config"
+        },
+        {
+          "container": "/var/log:ro",
+          "bind": "/volume1/docker/fail2ban/var/log:ro"
+        },
+        {
+          "container": "/remotelogs/airsonic:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/airsonic:ro"
+        },
+        {
+          "container": "/remotelogs/apache2:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/apache2:ro"
+        },
+        {
+          "container": "/remotelogs/authelia:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/authelia:ro"
+        },
+        {
+          "container": "/remotelogs/emby:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/emby:ro"
+        },
+        {
+          "container": "/remotelogs/filebrowser:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/filebrowser:ro"
+        },
+        {
+          "container": "/remotelogs/homeassistant:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/homeassistant:ro"
+        },
+        {
+          "container": "/remotelogs/lighttpd:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/lighttpd:ro"
+        },
+        {
+          "container": "/remotelogs/nextcloud:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/nextcloud:ro"
+        },
+        {
+          "container": "/remotelogs/nginx:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/nginx:ro"
+        },
+        {
+          "container": "/remotelogs/nzbget:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/nzbget:ro"
+        },
+        {
+          "container": "/remotelogs/overseerr:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/overseerr:ro"
+        },
+        {
+          "container": "/remotelogs/prowlarr:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/prowlarr:ro"
+        },
+        {
+          "container": "/remotelogs/radarr:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/radarr:ro"
+        },
+        {
+          "container": "/remotelogs/sabnzbd:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/sabnzbd:ro"
+        },
+        {
+          "container": "/remotelogs/sonarr:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/sonarr:ro"
+        },
+        {
+          "container": "/remotelogs/unificontroller:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/unificontroller:ro"
+        },
+        {
+          "container": "/remotelogs/vaultwarden:ro",
+          "bind": "/volume1/docker/fail2ban/remotelogs/vaultwarden:ro"
+        }
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
+      "type": 3,
+      "title": "FDO",
+      "description": "FDO",
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/fdo/docker-stack.yml"
+      },
+      "env": [
+        {
+          "name": "owner_api_user",
+          "label": "API Username"
+        },
+        {
+          "name": "owner_api_password",
+          "label": "API Password"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Feed2toot",
+      "name": "Feed2toot",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/feed2toot/config</p>",
+      "description": "[Feed2toot](https://gitlab.com/chaica/feed2toot) automatically parses rss feeds, identifies new posts and posts them on the Mastodon social network.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/feed2toot-banner.png",
+      "image": "linuxserver/feed2toot:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        },
+        {
+          "name": "FEED_LIMIT",
+          "label": "FEED_LIMIT",
+          "default": "5",
+          "description": "Limit number of RSS entries published at each execution."
+        }
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/feed2toot/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": [
+        "Dashboard Server"
+      ],
+      "description": "Fenrus is a Node application and requires NodeJS to run. Once NodeJS is installed you can run Fenrus",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "label": "PORT",
+          "name": "PORT"
+        }
+      ],
+      "logo": "https://user-images.githubusercontent.com/958400/154829266-62206846-c6ef-4718-9910-2b83eb6aa41c.png",
+      "name": "Fenrus",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/fenrus.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Fenrus",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Messenger"
+      ],
+      "description": "Ferdi is a messaging browser that allows you to combine your favourite messaging services into one application",
+      "logo": "https://raw.githubusercontent.com/getferdi/server/master/logo.png",
+      "name": "ferdi-server",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/ferdiserver.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Ferdi Server",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Messenger"
+      ],
+      "description": "Ferdium is a messaging browser that allows you to combine your favourite messaging services into one application",
+      "logo": "https://github.com/ferdium/ferdium-server/raw/main/logo.png",
+      "name": "ferdium",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/ferdium.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Ferdium",
+      "type": 3
+    },
+    {
       "description": "This container needs special attention. Please check https://hub.docker.com/r/linuxserver/ffmpeg for details.",
       "env": [
         {
@@ -3330,6 +4471,53 @@
     },
     {
       "categories": [
+        "Downloaders"
+      ],
+      "description": "Peer-to-peer file transfers in your browser",
+      "logo": "https://raw.githubusercontent.com/kern/filepizza/master/src/static/images/wordmark.png",
+      "name": "filepizza",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/filepizza.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Filepizza",
+      "type": 3
+    },
+    {
+      "type": 3,
+      "name": "filerun",
+      "title": "Filerun",
+      "description": "access your files anywhere through self-hosted secure cloud storage, file backup and sharing for your photos, videos, files and more.",
+      "logo": "https://mediadepot.github.io/templates/img/filerun-logo.png",
+      "categories": [
+        "Documents:",
+        "Network:Other",
+        "Tools:"
+      ],
+      "env": [],
+      "repository": {
+        "url": "https://github.com/mediadepot/templates",
+        "stackfile": "stacks/filerun/docker-compose.yml"
+      }
+    },
+    {
+      "categories": [
+        "Files"
+      ],
+      "description": "A Dropbox-like file manager that let you manage your data anywhere it is located.",
+      "logo": "https://downloads.filestash.app/brand/logo_white.svg",
+      "name": "filestash",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/filestash.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Filestash",
+      "type": 3
+    },
+    {
+      "categories": [
         "Downloaders",
         "File hosting"
       ],
@@ -3408,6 +4596,21 @@
     },
     {
       "categories": [
+        "Multimedia"
+      ],
+      "description": "Fireshare: Share your game clips, videos, or other media via unique links.",
+      "logo": "https://github.com/ShaneIsrael/fireshare/raw/main/app/client/src/assets/logo.png",
+      "name": "fireshare",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/fireshare.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Fireshare",
+      "type": 3
+    },
+    {
+      "categories": [
         "Other",
         "Tools"
       ],
@@ -3440,6 +4643,28 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/pawelmalak/flame\" target=\"_blank\">https://github.com/pawelmalak/flame</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/pawelmalak/flame#with-docker-recommended\" target=\"_blank\">https://github.com/pawelmalak/flame#with-docker-recommended</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Dashboard Server"
+      ],
+      "description": "Flame is self-hosted startpage for your server. Its design is inspired (heavily) by SUI. Flame is very easy to setup and use. With built-in editors, it allows you to setup your very own application hub in no time - no file editing necessary.",
+      "image": "pawelmalak/flame",
+      "logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/flame.png",
+      "name": "flame-dashboard",
+      "platform": "linux",
+      "ports": [
+        "5005:5005/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "Flame-Dashboard",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/flame-dashboard",
+          "container": "/app/data"
+        }
+      ]
     },
     {
       "categories": [
@@ -3592,6 +4817,41 @@
       ]
     },
     {
+      "type": 1,
+      "title": "Floating License Server",
+      "description": "License Server for Softing edgeConnector products",
+      "categories": [
+        "edge"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
+      "image": "softingindustrial/floating-license-server:latest",
+      "ports": [
+        "6200/tcp"
+      ],
+      "interactive": true,
+      "volumes": [
+        {
+          "container": "/licsrv/licenses"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Downloaders"
+      ],
+      "description": "A docker image with qBittorrent and the Flood UI, also optional WireGuard VPN support.",
+      "logo": "https://hotio.dev/img/image-logos/flood.svg",
+      "name": "flood",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/flood.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Flood",
+      "type": 3
+    },
+    {
       "categories": [
         "tools"
       ],
@@ -3679,6 +4939,40 @@
     },
     {
       "categories": [
+        "Dashboard Server"
+      ],
+      "description": "Freeboard is a turn-key HTML-based 'engine' for dashboards. Besides a nice looking layout engine, it provides a plugin architecture for creating datasources (which fetch data) and widgets (which display data)— freeboard then does all the work to connect the two together.",
+      "logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/freeboard.jpg",
+      "name": "freeboard",
+      "repository": {
+        "stackfile": "Template/Stack/freeboard.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "platform": "linux",
+      "ports": [
+        "8000:80/tcp"
+      ],
+      "restart_policy": "always",
+      "title": "Freeboard",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Helpdesk"
+      ],
+      "description": "FreeScout is the super lightweight free open source help desk and shared inbox written in PHP (Laravel framework) – self hosted clone of HelpScout.",
+      "logo": "https://raw.githubusercontent.com/freescout-helpdesk/freescout/master/public/img/logo-300.png",
+      "name": "freescout",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/freescout.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Freescout",
+      "type": 3
+    },
+    {
+      "categories": [
         "Other"
       ],
       "description": "A free, self-hostable rss aggregator…",
@@ -3711,6 +5005,80 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.freshrss.org/\" target=\"_blank\">https://www.freshrss.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/FreshRSS/FreshRSS/tree/edge/Docker\" target=\"_blank\">https://github.com/FreshRSS/FreshRSS/tree/edge/Docker</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Smart Home"
+      ],
+      "description": "A complete and local NVR designed for Home Assistant with AI object detection. Uses OpenCV and Tensorflow to perform realtime object detection locally for IP cameras.",
+      "logo": "https://raw.githubusercontent.com/blakeblackshear/frigate/master/docs/static/img/frigate.png",
+      "name": "frigatenvr",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/frigatenvr.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Frigate NVR",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Audio",
+        "Multimedia"
+      ],
+      "description": "A social platform to enjoy and share music.Funkwhale is a community-driven project that lets you listen and share music and audio within a decentralized, open network.",
+      "logo": "https://funkwhale.audio/img/with-text-500.4aff7861.png",
+      "name": "funkwhale",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/funkwhale.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Funkwhale",
+      "type": 3
+    },
+    {
+      "type": 1,
+      "name": "gaps",
+      "title": "Gaps",
+      "description": "Gaps searches through your Plex Server or local folders for all movies, then queries for known movies in the same collection.",
+      "logo": "https://mediadepot.github.io/templates/img/plex-icon.png",
+      "image": "housewrecker/gaps:latest",
+      "categories": [
+        "Tools:",
+        "Network:Web",
+        "Network:Other",
+        "Tools:"
+      ],
+      "ports": [
+        "8484/tcp"
+      ],
+      "volumes": [],
+      "env": [
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago"
+        }
+      ],
+      "labels": [
+        {
+          "name": "traefik.enable",
+          "value": "true"
+        },
+        {
+          "name": "traefik.http.services.gaps.loadbalancer.server.port",
+          "value": "8484"
+        },
+        {
+          "name": "traefik.http.routers.gaps.entrypoints",
+          "value": "websecure"
+        },
+        {
+          "name": "traefik.http.routers.gaps.tls.certresolver",
+          "value": "mydnschallenge"
+        }
+      ]
     },
     {
       "categories": [
@@ -3939,6 +5307,47 @@
       "type": 3
     },
     {
+      "type": 1,
+      "title": "Github-desktop",
+      "name": "Github-desktop",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/github-desktop/config</p>",
+      "description": "[Github Desktop](https://desktop.github.com/) is an open source Electron-based GitHub app. It is written in TypeScript and uses React.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/github-desktop-icon.png",
+      "image": "linuxserver/github-desktop:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp",
+        "3001:3001/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/github-desktop/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
       "categories": [
         "development",
         "project-management"
@@ -3968,6 +5377,62 @@
       ]
     },
     {
+      "type": 1,
+      "title": "Gitqlient",
+      "name": "Gitqlient",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/gitqlient/config</p>",
+      "description": "[GitQlient](https://github.com/francescmm/GitQlient) is a multi-platform Git client originally forked from QGit. Nowadays it goes beyond of just a fork and adds a lot of new functionality.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/gitqlient-icon.png",
+      "image": "linuxserver/gitqlient:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp",
+        "3001:3001/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/gitqlient/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
+      "categories": [
+        "Monitoring"
+      ],
+      "description": "Glances is an open-source system cross-platform monitoring tool. It allows real-time monitoring of various aspects of your system such as CPU, memory, disk, network usage etc.",
+      "logo": "https://raw.githubusercontent.com/nicolargo/glances/develop/docs/_static/glances-responsive-webdesign.png",
+      "name": "glances",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/glances.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Glances",
+      "type": 3
+    },
+    {
       "categories": [
         "Proxy"
       ],
@@ -3983,6 +5448,21 @@
       "title": "Go-Socks5-Proxy",
       "type": 1,
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hub.docker.com/r/serjs/go-socks5-proxy\" target=\"_blank\">https://hub.docker.com/r/serjs/go-socks5-proxy</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/serjs/go-socks5-proxy\" target=\"_blank\">https://hub.docker.com/r/serjs/go-socks5-proxy</a><br><br><br><b>Youtube Video: </b><a href=https://www.youtube.com/watch?v=IWj1-j2QWvo target=\"_blank\">Novaspirit Tech - Route Docker Traffic Through VPN Container</a><br><br>"
+    },
+    {
+      "categories": [
+        "Cloud"
+      ],
+      "description": "Gokapi is a lightweight server to share files, which expire after a set amount of downloads or days. It is similar to the discontinued Firefox Send, with the difference that only the admin is allowed to upload files",
+      "logo": "https://noted.lol/content/images/2023/02/gokapi-self-hosted-main.png",
+      "name": "gokapi",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/gokapi.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Gokapi",
+      "type": 3
     },
     {
       "categories": [
@@ -4247,6 +5727,21 @@
           "container": "/config"
         }
       ]
+    },
+    {
+      "categories": [
+        "Productivity"
+      ],
+      "description": "Hasty Paste is a fast and minimal paste bin, written in Python using Quart.",
+      "logo": "",
+      "name": "hasty-paste",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/hasty-paste.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Hasty-Paste",
+      "type": 3
     },
     {
       "description": "[Headphones](https://github.com/rembo10/headphones) is an automated music downloader for NZB and Torrent, written in Python. It supports SABnzbd, NZBget, Transmission, µTorrent and Blackhole.",
@@ -4556,6 +6051,46 @@
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://heimdall.site/\" target=\"_blank\">https://heimdall.site/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-heimdall\" target=\"_blank\">https://docs.linuxserver.io/images/docker-heimdall</a><br><br><br>"
     },
     {
+      "type": 1,
+      "title": "Hishtory-server",
+      "name": "Hishtory-server",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p>",
+      "description": "[hiSHtory](https://github.com/ddworken/hishtory) is a better shell history. It stores your shell history in context (what directory you ran the command in, whether it succeeded or failed, how long it took, etc). This is all stored locally and end-to-end encrypted for syncing to to all your other computers.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/hishtory-server-icon.png",
+      "image": "linuxserver/hishtory-server:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        },
+        {
+          "name": "HISHTORY_POSTGRES_DB",
+          "label": "HISHTORY_POSTGRES_DB",
+          "default": "postgresql://${HISHTORY_DB_USER}:${HISHTORY_DB_PASS}@hishtory-db:5432/hishtory?sslmode=disable",
+          "description": "Postgres DB [Connection URI](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING). Special characters must be [URL encoded](https://en.wikipedia.org/wiki/URL_encoding)."
+        }
+      ],
+      "ports": [
+        "8080:8080/tcp"
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
       "categories": [
         "Tools",
         "Web",
@@ -4761,6 +6296,21 @@
     },
     {
       "categories": [
+        "Tools"
+      ],
+      "description": "Your Budgets, Calendars, Meals, Inventory, Tasks, and so much more in one simple app.For everyone in your household.On all of your devices.In the cloud or self-hosted",
+      "logo": "https://homechart.app/images/homechart.min.776793e5e4334866f0799e8a84b8448efb1b06cb2762b2bb20f99068ac36136c.png",
+      "name": "homechart",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/homechart.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Homechart",
+      "type": 3
+    },
+    {
+      "categories": [
         "Dashboard"
       ],
       "description": "Homepage helps you organize your self-hosted services by making them accessible from a single place",
@@ -4901,6 +6451,109 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/huginn/huginn\" target=\"_blank\">https://github.com/huginn/huginn</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/huginn/huginn/tree/master/docker\" target=\"_blank\">https://github.com/huginn/huginn/tree/master/docker</a><br><br><br>"
+    },
+    {
+      "category": [
+        "Downloaders",
+        "Other",
+        "Tools"
+      ],
+      "description": "NZBHydra is a meta search for NZB indexers and the \"spiritual successor\" to NZBmegasearcH. It provides easy access to a number of raw and newznab based indexers.",
+      "env": [
+        {
+          "label": "PUID",
+          "name": "PUID",
+          "set": "1000"
+        },
+        {
+          "label": "PGID",
+          "name": "PGID",
+          "set": "1000"
+        },
+        {
+          "label": "TZ",
+          "name": "TZ",
+          "set": "America/Chicago"
+        }
+      ],
+      "image": "linuxserver/hydra2:latest",
+      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/hydra-icon.png",
+      "platform": "linux",
+      "ports": [
+        "5076/tcp"
+      ],
+      "title": "hydra2",
+      "type": 1,
+      "volumes": [
+        {
+          "container": "/config"
+        },
+        {
+          "container": "/downloads"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Finance"
+      ],
+      "description": "I hate money is a web application made to ease shared budget management. It keeps track of who bought what, when, and for whom; and helps to settle the bills.",
+      "logo": "",
+      "name": "ihatemoney",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/ihatemoney.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "I hate money",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Photos",
+        "AI"
+      ],
+      "description": "Immich is a high performance self-hosted photo and video backup solution.",
+      "logo": "https://github.com/immich-app/immich/raw/main/design/immich-logo.svg",
+      "name": "immich",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/immich.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Immich",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Database"
+      ],
+      "description": "InfluxDB is an open source time series database for recording metrics, events, and analytics.",
+      "logo": "https://www.niagaramarketplace.com/media/catalog/product/cache/f7420c7cfd302c73440e50c5a6066c3c/m/a/marketplace_icons_13_.png",
+      "name": "influxdb2",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/influxdb2.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Influxdb",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Database",
+        "Metrics"
+      ],
+      "description": "InfluxDB is an open source time series database for recording metrics, events, and analytics. Telegraf is an agent for collecting metrics and writing them to InfluxDB or other outputs.",
+      "logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/influxdb_telegraf.jpg",
+      "name": "influxdb-telegraf",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/influxdb2_telegraf.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Influxdb & Telegraf",
+      "type": 3
     },
     {
       "categories": [
@@ -5254,6 +6907,21 @@
     },
     {
       "categories": [
+        "Network"
+      ],
+      "description": "IPerf3 Docker Build for Network Performance and Bandwidth Testing",
+      "logo": "",
+      "name": "iperf",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/iperf.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "iperf",
+      "type": 3
+    },
+    {
+      "categories": [
         "P2P"
       ],
       "description": "[Ipfs](https://ipfs.io/) - A peer-to-peer hypermedia protocol designed to make the web faster, safer, and more open.",
@@ -5534,6 +7202,21 @@
     },
     {
       "categories": [
+        "Entertainment"
+      ],
+      "description": "Jellyseerr is a free and open source fork of Overseerr for managing requests for your media library. It integrates with your existing services, such as Sonarr, Radarr, and Jellyfin!",
+      "logo": "https://raw.githubusercontent.com/Fallenbagel/jellyseerr/develop/public/logo_full.svg",
+      "name": "jellyseer",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/jellyseer.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Jellyseer",
+      "type": 3
+    },
+    {
+      "categories": [
         "Video",
         "Music",
         "Other"
@@ -5674,6 +7357,48 @@
           "container": "/var/www/html"
         }
       ]
+    },
+    {
+      "categories": [
+        "Notes Server"
+      ],
+      "description": "Joplin is an open-source note-taking app",
+      "env": [
+        {
+          "default": "22300",
+          "label": "PORT",
+          "name": "PORT"
+        },
+        {
+          "default": "http://joplin.yourdomain.tld:22300",
+          "label": "URL",
+          "name": "URL"
+        }
+      ],
+      "logo": "https://raw.githubusercontent.com/laurent22/joplin/master/Assets/SquareIcon512.png",
+      "note": "Joplin is an open-source note-taking app",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/joplin.yml",
+        "url": "https://github.com/mycroftwilde/portainer_templates"
+      },
+      "title": "Joplin",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Dashboard"
+      ],
+      "description": "Jump is yet another self-hosted startpage for your server designed to be simple, stylish, fast and secure.",
+      "logo": "",
+      "name": "jump",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/jump.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Jump",
+      "type": 3
     },
     {
       "description": "[Kanzi](https://lexigr.am/), formerly titled Kodi-Alexa, this custom skill is the ultimate voice remote control for navigating Kodi. It can do anything you can think of (100+ intents). This container also contains lexigram-cli to setup Kanzi with an Amazon Developer Account and automatically deploy it to Amazon.",
@@ -5849,6 +7574,91 @@
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.kavitareader.com/#home\" target=\"_blank\">https://www.kavitareader.com/#home</a><br><b>Official Docker Documentation: </b><a href=\"https://wiki.kavitareader.com/en/install/docker-install\" target=\"_blank\">https://wiki.kavitareader.com/en/install/docker-install</a><br><br><br>"
     },
     {
+      "type": 1,
+      "title": "Kdenlive",
+      "name": "Kdenlive",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/kdenlive/config</p>",
+      "description": "[Kdenlive](https://kdenlive.org/) is a powerful free and open source cross-platform video editing program made by the KDE community. Feature rich and production ready.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/kdenlive-logo.png",
+      "image": "linuxserver/kdenlive:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        },
+        {
+          "name": "SUBFOLDER",
+          "label": "SUBFOLDER",
+          "default": "/",
+          "description": "Specify a subfolder to use with reverse proxies, IE `/subfolder/`"
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp",
+        "3001:3001/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/kdenlive/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
+      "type": 3,
+      "name": "klaxon",
+      "title": "Klaxon",
+      "description": "Klaxon is a free, quick to set up and easy to use robot that checks websites regularly so you don't have to.",
+      "logo": "https://mediadepot.github.io/templates/img/klaxon-logo.png",
+      "categories": [
+        "Documents:",
+        "Network:Other",
+        "Tools:"
+      ],
+      "env": [
+        {
+          "name": "SMTP_PROVIDER",
+          "label": "SMTP_PROVIDER",
+          "default": "SENDGRID"
+        },
+        {
+          "name": "SENDGRID_USERNAME",
+          "label": "SENDGRID_USERNAME",
+          "default": ""
+        },
+        {
+          "name": "SENDGRID_PASSWORD",
+          "label": "SENDGRID_PASSWORD",
+          "default": ""
+        },
+        {
+          "name": "ADMIN_EMAILS",
+          "label": "ADMIN_EMAILS",
+          "default": ""
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/mediadepot/templates",
+        "stackfile": "stacks/klaxon/docker-compose.yml"
+      }
+    },
+    {
       "categories": [
         "Other",
         "3d-printers",
@@ -5908,6 +7718,37 @@
           "container": "/config"
         }
       ]
+    },
+    {
+      "categories": [
+        "Tools"
+      ],
+      "description": "Koillection is a self-hosted collection manager created to keep track of physical (mostly) collections of any kind like books, DVDs, stamps, games..",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "label": "PORT",
+          "name": "PORT"
+        }
+      ],
+      "logo": "https://user-images.githubusercontent.com/20560781/80213166-0e560e00-8639-11ea-944e-4f79fdbcef55.png",
+      "name": "Koillection",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/koillection.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Koillection",
+      "type": 3
     },
     {
       "categories": [
@@ -5983,6 +7824,21 @@
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://lazylibrarian.gitlab.io/\" target=\"_blank\">https://lazylibrarian.gitlab.io/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-lazylibrarian\" target=\"_blank\">https://docs.linuxserver.io/images/docker-lazylibrarian</a><br><br><br>"
     },
     {
+      "categories": [
+        "Docker"
+      ],
+      "description": "Lazytainer monitors network traffic to containers. If there is traffic, the container runs, otherwise the container is stopped/paused.",
+      "logo": "",
+      "name": "lazytainer",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/lazytainer.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Lazytainer",
+      "type": 3
+    },
+    {
       "description": "[Ldap-auth](https://github.com/nginxinc/nginx-ldap-auth) software is for authenticating users who request protected resources from servers proxied by nginx. It includes a daemon (ldap-auth) that communicates with an authentication server, and a webserver daemon that generates an authentication cookie based on the user’s credentials. The daemons are written in Python for use with a Lightweight Directory Access Protocol (LDAP) authentication server (OpenLDAP or Microsoft Windows Active Directory 2003 and 2012).",
       "env": [
         {
@@ -6022,6 +7878,21 @@
       "restart_policy": "unless-stopped",
       "title": "Ldap-auth",
       "type": 1
+    },
+    {
+      "categories": [
+        "Productivity"
+      ],
+      "description": "Leantime is an open source project management solution to make your ideas reality.",
+      "logo": "https://s3-us-west-2.amazonaws.com/leantime-website/wp-content/uploads/2022/07/24022056/logo-large.png",
+      "name": "leantime",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/leantime.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Leantime",
+      "type": 3
     },
     {
       "categories": [
@@ -6234,6 +8105,59 @@
       ]
     },
     {
+      "category": [
+        "Music"
+      ],
+      "description": "Libresonic is a free, web-based media streamer, providing ubiqutious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room. /music = Location of music. /media = Location of other media. /podcasts = Location of podcasts. /playlists = Location for playlists storage. CONTEXT_PATH is for setting url-base in reverse proxy setups - (optional) Default user/pass is admin/admin",
+      "env": [
+        {
+          "label": "CONTEXT_PATH",
+          "name": "CONTEXT_PATH",
+          "set": ""
+        },
+        {
+          "label": "PUID",
+          "name": "PUID",
+          "set": "1000"
+        },
+        {
+          "label": "PGID",
+          "name": "PGID",
+          "set": "1000"
+        },
+        {
+          "label": "TZ",
+          "name": "TZ",
+          "set": "America/Chicago"
+        }
+      ],
+      "image": "linuxserver/libresonic:latest",
+      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/libresonic.png",
+      "platform": "linux",
+      "ports": [
+        "4040/tcp"
+      ],
+      "title": "libresonic",
+      "type": 1,
+      "volumes": [
+        {
+          "container": "/music"
+        },
+        {
+          "container": "/playlists"
+        },
+        {
+          "container": "/podcasts"
+        },
+        {
+          "container": "/media"
+        },
+        {
+          "container": "/config"
+        }
+      ]
+    },
+    {
       "categories": [
         "Other",
         "Tools"
@@ -6395,6 +8319,44 @@
     },
     {
       "categories": [
+        "Social"
+      ],
+      "description": "LittleLink is an open source DIY self-hosted alternative to services like Linktree and many.link. ",
+      "logo": "https://littlelink.io/images/avatar@2x.png",
+      "name": "littlelink-server",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/littlelink.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "ports": [
+        "3000:3000/tcp"
+      ],
+      "title": "Littlelink Server",
+      "type": 3
+    },
+    {
+      "type": 2,
+      "title": "LiveSwitch",
+      "description": "A basic LiveSwitch stack with gateway, caching, database and media server",
+      "categories": [
+        "media"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/liveswitch/docker-stack.yml"
+      },
+      "env": [
+        {
+          "name": "POSTGRES_PASSWORD",
+          "label": "Postgres password"
+        }
+      ]
+    },
+    {
+      "categories": [
         "Tools",
         "Productivity"
       ],
@@ -6434,6 +8396,132 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/nitnelave/lldap\" target=\"_blank\">https://github.com/nitnelave/lldap</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/nitnelave/lldap\" target=\"_blank\">https://github.com/nitnelave/lldap</a><br><br><h3><b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/install_lldap.sh\" target=\"_blank\">Pre-installation script</a> must be RAN before you install: </b>wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/tools/install_lldap.sh | bash</h3><br><br>"
+    },
+    {
+      "type": 1,
+      "name": "logzio-logs-collector",
+      "title": "Logzio Logs Collector",
+      "description": "Docker container that uses Filebeat to collect logs from other Docker containers and forward those logs to your Logz.io account.",
+      "logo": "https://mediadepot.github.io/templates/img/logzio-icon.png",
+      "image": "logzio/docker-collector-logs",
+      "categories": [
+        "Tools:"
+      ],
+      "ports": [],
+      "privileged": true,
+      "volumes": [
+        {
+          "container": "/var/run/docker.sock",
+          "bind": "/var/run/docker.sock",
+          "readonly": true
+        },
+        {
+          "container": "/var/lib/docker/containers",
+          "bind": "/var/lib/docker/containers"
+        }
+      ],
+      "env": [
+        {
+          "name": "LOGZIO_TOKEN",
+          "label": "LOGZIO_TOKEN",
+          "default": "REPLACE-LOGZIO-TOKEN-HERE"
+        },
+        {
+          "name": "LOGZIO_URL",
+          "label": "LOGZIO_URL",
+          "default": "listener.logz.io:5015"
+        }
+      ],
+      "labels": []
+    },
+    {
+      "type": 1,
+      "name": "logzio-metrics-collector",
+      "title": "Logzio Metrics Collector",
+      "description": "Docker Metrics Collector is a container that runs Metricbeat with the modules you enable at runtime.",
+      "logo": "https://mediadepot.github.io/templates/img/logzio-icon.png",
+      "image": "logzio/docker-collector-metrics",
+      "categories": [
+        "Tools:"
+      ],
+      "ports": [],
+      "privileged": true,
+      "volumes": [
+        {
+          "container": "/var/run/docker.sock",
+          "bind": "/var/run/docker.sock",
+          "readonly": true
+        },
+        {
+          "container": "/hostfs/sys/fs/cgroup",
+          "bind": "/sys/fs/cgroup",
+          "readonly": true
+        },
+        {
+          "container": "/hostfs/proc",
+          "bind": "/proc",
+          "readonly": true
+        },
+        {
+          "container": "/hostfs",
+          "bind": "/",
+          "readonly": true
+        }
+      ],
+      "env": [
+        {
+          "name": "LOGZIO_TOKEN",
+          "label": "LOGZIO_TOKEN",
+          "default": "REPLACE-LOGZIO-TOKEN-HERE"
+        },
+        {
+          "name": "LOGZIO_MODULES",
+          "label": "LOGZIO_MODULES",
+          "default": "system,docker"
+        }
+      ],
+      "labels": []
+    },
+    {
+      "type": 1,
+      "title": "Lollypop",
+      "name": "Lollypop",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/lollypop/config</p>",
+      "description": "[Lollypop](https://wiki.gnome.org/Apps/Lollypop) is a lightweight modern music player designed to work excellently on the GNOME desktop environment.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/lollypop-icon.png",
+      "image": "linuxserver/lollypop:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp",
+        "3001:3001/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/lollypop/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
     },
     {
       "categories": [
@@ -6582,6 +8670,61 @@
     },
     {
       "categories": [
+        "Dashboard Server"
+      ],
+      "description": "MagicMirror2 Server",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        }
+      ],
+      "image": "karsten13/magicmirror:latest",
+      "logo": "https://github.com/MichMich/MagicMirror/raw/master/.github/header.png",
+      "name": "MagicMirror2",
+      "platform": "linux",
+      "ports": [
+        "8080:8080/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "command": "/bin/bash -c \"npm run server\" && exit 777",
+      "title": "MagicMirror2",
+      "type": 1,
+      "volumes": [
+        {
+          "container": "/opt/magic_mirror/config"
+        },
+        {
+          "container": "/opt/magic_mirror/modules"
+        },
+        {
+          "container": "/opt/magic_mirror/css"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "email"
+      ],
+      "description": "Mailpile is an e-mail client!/search engine and a personal webmail server/easy way to encrypt your e-mail/easy way to encrypt your e-mail ",
+      "logo": "https://www.mailpile.is/img/icon-512x512.png",
+      "name": "mailpile",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/mailpile.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Mailpile",
+      "type": 3
+    },
+    {
+      "categories": [
         "Music"
       ],
       "description": "Simple self-hosted music scrobble database to create personal listening statistics. No recommendations, no social network, no nonsense.",
@@ -6673,6 +8816,39 @@
     },
     {
       "categories": [
+        "Social"
+      ],
+      "description": "Mastodon is a free, open-source social network server based on ActivityPub where users can follow friends and discover new ones..",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/mastodon-banner.png",
+      "name": "mastodon",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/mastodon.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Mastodon",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Analytics"
+      ],
+      "description": "Google Analytics alternative that protects your data and your customers' privacy",
+      "logo": "https://gallery.ncnet.nl/upload/2020/05/22/20200522171613-9205fa32.png",
+      "name": "matomo",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/matomo.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "ports": [
+        "8282:80/tcp"
+      ],
+      "title": "Matomo",
+      "type": 3
+    },
+    {
+      "categories": [
         "marketing"
       ],
       "description": "Open-source marketing automation platform",
@@ -6700,6 +8876,21 @@
           "container": "/var/www/html"
         }
       ]
+    },
+    {
+      "type": 3,
+      "name": "mayan",
+      "title": "Mayan EDMS",
+      "description": "Mayan EDMS is an electronic vault for your documents.",
+      "logo": "https://mediadepot.github.io/templates/img/mayan-logo.png",
+      "categories": [
+        "Documents:",
+        "Tools:"
+      ],
+      "repository": {
+        "url": "https://github.com/mediadepot/templates",
+        "stackfile": "stacks/mayan/docker-compose.yml"
+      }
     },
     {
       "categories": [
@@ -6862,6 +9053,63 @@
     },
     {
       "categories": [
+        "Search"
+      ],
+      "description": "Meilisearch is a **RESTful search API**. It aims to be a **ready-to-go solution** for everyone who wants a **fast and relevant search experience** for their end-users",
+      "logo": "https://docs.meilisearch.com/logo.svg",
+      "name": "Meilisearch",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/meilisearch.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Meilisearch",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Management Utility Server"
+      ],
+      "description": "Remote Management Server",
+      "env": [
+        {
+          "default": "/portainer/Files/AppData/MeshCentral/Config",
+          "label": "Config Container Bind",
+          "name": "CONFIG"
+        },
+        {
+          "default": "/portainer/Files/AppData/MeshCentral/Files",
+          "label": "Files Container Bind",
+          "name": "FILES"
+        },
+        {
+          "default": "/portainer/Files/AppData/MeshCentral/Backup",
+          "label": "Backup Container Bind",
+          "name": "BACK"
+        },
+        {
+          "default": "443",
+          "label": "Container Port 443",
+          "name": "PORT4"
+        },
+        {
+          "default": "80",
+          "label": "Container Port 80",
+          "name": "PORT8"
+        }
+      ],
+      "logo": "https://raw.githubusercontent.com/mycroftwilde/portainer_templates/master/Images/meshc.png",
+      "note": "MeshCentral",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/mesh.yml",
+        "url": "https://github.com/mycroftwilde/portainer_templates"
+      },
+      "title": "MeshCentral",
+      "type": 3
+    },
+    {
+      "categories": [
         "Downloader"
       ],
       "description": "Web GUI for youtube-dl (using the yt-dlp fork) with playlist support. Allows you to download videos from YouTube and dozens of other sites (https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)",
@@ -6920,6 +9168,21 @@
       },
       "title": "Microsoft OMS Agent",
       "type": 2
+    },
+    {
+      "categories": [
+        "Multimedia"
+      ],
+      "description": "Your media enjoyed through a minimal lightweight media server.",
+      "logo": "https://github.com/midarrlabs/midarr-server/raw/master/priv/static/logo.svg",
+      "name": "midarr",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/midarr.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Midarr",
+      "type": 3
     },
     {
       "categories": [
@@ -6986,6 +9249,21 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.minetest.net/\" target=\"_blank\">https://www.minetest.net/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-minetest\" target=\"_blank\">https://docs.linuxserver.io/images/docker-minetest</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Feed Reader"
+      ],
+      "description": "Miniflux is a minimalist and opinionated feed reader.",
+      "logo": "",
+      "name": "miniflux",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/miniflux.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Miniflux",
+      "type": 3
     },
     {
       "categories": [
@@ -7154,6 +9432,91 @@
     },
     {
       "categories": [
+        "Learning"
+      ],
+      "description": "Moodle is a learning platform designed to provide educators, administrators and learners with a single robust, secure and integrated system to create personalised learning environments.",
+      "logo": "https://download.moodle.org/theme/moodleorgcleaned/pix/moodle_logo_TM.svg",
+      "name": "moodle",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/moodle.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Moodle",
+      "type": 3
+    },
+    {
+      "type": 1,
+      "name": "syncserver",
+      "title": "Mozilla Syncserver",
+      "description": "Run-Your-Own Firefox Sync Server",
+      "logo": "https://mediadepot.github.io/templates/img/firefox-logo.png",
+      "image": "mozilla/syncserver:latest",
+      "categories": [
+        "Tools:"
+      ],
+      "ports": [
+        "5000/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/data",
+          "bind": "/opt/mediadepot/apps/syncserver"
+        }
+      ],
+      "env": [
+        {
+          "name": "SYNCSERVER_PUBLIC_URL",
+          "label": "SYNCSERVER_PUBLIC_URL",
+          "default": "https://syncserver.depot.lan"
+        },
+        {
+          "name": "SYNCSERVER_SECRET_FILE",
+          "label": "SYNCSERVER_SECRET_FILE",
+          "default": "/data/secret_key"
+        },
+        {
+          "name": "SYNCSERVER_SQLURI",
+          "label": "SYNCSERVER_SQLURI",
+          "default": "sqlite:////data/syncserver.db"
+        },
+        {
+          "name": "SYNCSERVER_BATCH_UPLOAD_ENABLED",
+          "label": "SYNCSERVER_BATCH_UPLOAD_ENABLED",
+          "default": "true"
+        },
+        {
+          "name": "SYNCSERVER_FORCE_WSGI_ENVIRON",
+          "label": "SYNCSERVER_FORCE_WSGI_ENVIRON",
+          "default": "false"
+        },
+        {
+          "name": "PORT",
+          "label": "PORT",
+          "default": "5000"
+        }
+      ],
+      "labels": [
+        {
+          "name": "traefik.enable",
+          "value": "true"
+        },
+        {
+          "name": "traefik.http.services.syncservere.loadbalancer.server.port",
+          "value": "5000"
+        },
+        {
+          "name": "traefik.http.routers.syncserver.entrypoints",
+          "value": "websecure"
+        },
+        {
+          "name": "traefik.http.routers.syncserver.tls.certresolver",
+          "value": "mydnschallenge"
+        }
+      ]
+    },
+    {
+      "categories": [
         "Other",
         "Music"
       ],
@@ -7191,6 +9554,53 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://mstream.io/\" target=\"_blank\">https://mstream.io/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-mstream\" target=\"_blank\">https://docs.linuxserver.io/images/docker-mstream</a><br><br><br>"
+    },
+    {
+      "type": 1,
+      "title": "Mullvad-browser",
+      "name": "Mullvad-browser",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/mullvad-browser/config</p>",
+      "description": "The [Mullvad Browser](https://mullvad.net/en/browser) is a privacy-focused web browser developed in a collaboration between Mullvad VPN and the Tor Project. It’s designed to minimize tracking and fingerprinting. You could say it’s a Tor Browser to use without the Tor Network. Instead, you can use it with a trustworthy VPN.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/mullvad-browser-logo.png",
+      "image": "linuxserver/mullvad-browser:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        },
+        {
+          "name": "LOCAL_NET",
+          "label": "LOCAL_NET",
+          "default": "192.168.0.0/16",
+          "description": "If using a VPN, set this to your local LAN IP range using CIDR notation. Without it you will be unable to access the web interface. If you have multiple ranges or a complex LAN setup you will need to manage this yourself in the wg0.conf, see the App Setup section for details."
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp",
+        "3001:3001/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/mullvad-browser/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
     },
     {
       "categories": [
@@ -7643,6 +10053,52 @@
       "type": 1
     },
     {
+      "categories": [
+        "Music Server"
+      ],
+      "description": "Navidrome is an open source web-based music collection server and streamer. It gives you freedom to listen to your music collection from any browser or mobile device. It's like your personal Spotify!",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "label": "PORT",
+          "name": "PORT"
+        }
+      ],
+      "logo": "https://github.com/navidrome/navidrome/raw/master/resources/logo-192x192.png",
+      "name": "Navidrome",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/navidrome.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Navidrome",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Other"
+      ],
+      "description": "Simple room management system for n.eko. Self hosted rabb.it alternative. --Please add .env file as stated in neko.yml",
+      "logo": "https://raw.githubusercontent.com/m1k1o/neko/master/docs/_media/logo.png",
+      "name": "neko",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/neko.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Neko",
+      "type": 3
+    },
+    {
       "description": "[Netbootxyz](https://netboot.xyz) is a way to PXE boot various operating system installers or utilities from one place within the BIOS without the need of having to go retrieve the media to run the tool. iPXE is used to provide a user friendly menu from within the BIOS that lets you easily choose the operating system you want along with any specific types of versions or bootable flags.",
       "env": [
         {
@@ -8010,6 +10466,33 @@
       ]
     },
     {
+      "type": 2,
+      "title": "NextcloudStack",
+      "description": "Nextcloud setup with a MySQL database",
+      "note": "Deploys a Nextcloud instance connected to a MySQL database.",
+      "categories": [
+        "Cloud"
+      ],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/mikestraney/portainer-templates/master/Images/nextcloud-icon.png",
+      "repository": {
+        "url": "https://github.com/mikestraney/portainer-templates",
+        "stackfile": "stacks/nextcloud/docker-stack.yml"
+      },
+      "env": [
+        {
+          "label": "MYSQL_PASSWORD",
+          "name": "mypassword",
+          "description": "password for sql"
+        },
+        {
+          "label": "MYSQL_ROOT_PASSWORD",
+          "name": "myrpassword",
+          "description": "root password for sql"
+        }
+      ]
+    },
+    {
       "categories": [
         "Web",
         "Proxy"
@@ -8339,6 +10822,23 @@
     },
     {
       "categories": [
+        "Productivity",
+        "Development",
+        "No-code"
+      ],
+      "description": "Turns any MySQL, PostgreSQL, SQL Server, SQLite & MariaDB into a smart-spreadsheet.",
+      "logo": "https://github.com/nocodb/nocodb/raw/develop/packages/nc-gui/assets/img/icons/512x512.png",
+      "name": "NocoDB",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/nocodb.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "NocoDB",
+      "type": 3
+    },
+    {
+      "categories": [
         "Other",
         "Web",
         "Tools"
@@ -8370,6 +10870,19 @@
       "title": "Node Red",
       "type": 3,
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://nodered.org/\" target=\"_blank\">https://nodered.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://nodered.org/docs/getting-started/docker\" target=\"_blank\">https://nodered.org/docs/getting-started/docker</a><br><br><br>"
+    },
+    {
+      "type": 1,
+      "title": "NodeJS",
+      "description": "JavaScript-based platform for server-side and networking applications",
+      "categories": [
+        "development"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/node.png",
+      "image": "node:latest",
+      "interactive": true,
+      "command": "/bin/bash"
     },
     {
       "categories": [
@@ -8490,6 +11003,28 @@
       "title": "NUT Server",
       "type": 1,
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://networkupstools.org\" target=\"_blank\">https://networkupstools.org</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/instantlinux/nut-upsd\" target=\"_blank\">https://hub.docker.com/r/instantlinux/nut-upsd</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Network"
+      ],
+      "description": "Network UPS Tools server",
+      "image": "upshift/nut-upsd",
+      "logo": "",
+      "name": "nuts",
+      "platform": "linux",
+      "ports": [
+        "3493:3493/tcp"
+      ],
+      "restart_policy": "always",
+      "title": "NUTS",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/nuts",
+          "container": "/app"
+        }
+      ]
     },
     {
       "categories": [
@@ -8731,6 +11266,121 @@
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://ombi.io/\" target=\"_blank\">https://ombi.io/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-ombi\" target=\"_blank\">https://docs.linuxserver.io/images/docker-ombi</a><br><br><br>"
     },
     {
+      "type": 1,
+      "title": "OPC Router",
+      "description": "No-code middleware for industrial applications. The OPC Router connects PLCs, PCS, SCADA, MES, SQL databases and servers, label printers, e-mail servers and erp-systems via OPC UA, MQTT, REST, CSV and many others without any programming effort",
+      "note": "More information about the <a href=\"https://www.opc-router.com/terms-of-use-and-eula/?utm_source=DockerHub_runtime&utm_medium=click&utm_campaign=TermsOfUseAndEula\" target=\"_blank\">EULA</a>.",
+      "categories": [
+        "edge"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/opc-router.png",
+      "image": "opcrouter/runtime:latest",
+      "ports": [
+        "27017/tcp"
+      ],
+      "env": [
+        {
+          "name": "OR_DATABASE_USERNAME",
+          "label": "Remote management user"
+        },
+        {
+          "name": "MONGO_INITDB_ROOT_USERNAME",
+          "label": "Remote management password"
+        },
+        {
+          "name": "OR_DATABASE_PASSWORD",
+          "label": "Database root user"
+        },
+        {
+          "name": "MONGO_INITDB_ROOT_PASSWORD",
+          "label": "Database root password"
+        },
+        {
+          "name": "OR_I_ACCEPT_EULA",
+          "label": "Accept EULA",
+          "select": [
+            {
+              "text": "Yes, I accept",
+              "value": "true",
+              "default": true
+            }
+          ]
+        }
+      ],
+      "volumes": [
+        {
+          "container": "/data/db"
+        },
+        {
+          "container": "/root/.dotnet/corefx/cryptography/x509stores/"
+        }
+      ]
+    },
+    {
+      "type": 3,
+      "title": "OpenAMT",
+      "description": "OpenAMT Cloud Toolkit",
+      "note": "MPS password needs to be 8-32 characters including one uppercase, one lowercase letters, one base-10 digit and one special character.",
+      "categories": [
+        "Cloud"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/openamt/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "POSTGRES_USER",
+          "label": "Database user"
+        },
+        {
+          "name": "POSTGRES_PASSWORD",
+          "label": "Database password"
+        },
+        {
+          "name": "MPS_USER",
+          "label": "MPS user"
+        },
+        {
+          "name": "MPS_PASSWORD",
+          "label": "MPS password"
+        },
+        {
+          "name": "MPS_COMMON_NAME",
+          "label": "MPS URL",
+          "description": "Used to connect to the MPS API."
+        },
+        {
+          "name": "MPS_SECRET",
+          "label": "MPS Secret",
+          "description": "Strong secret key used to log into MPS."
+        },
+        {
+          "name": "VAULT_SECRET",
+          "label": "Vault secret",
+          "description": "Secret token used to log into Vault (don't include '.' character)."
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Finance"
+      ],
+      "description": "OpenBudgeteer is a budgeting app based on the Bucket Budgeting Principle and inspired by YNAB and Buckets.",
+      "logo": "https://github.com/TheAxelander/OpenBudgeteer/raw/master/assets/banner.png",
+      "name": "openbudgeteer",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/openbudgeteer.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "OpenBudgeteer",
+      "type": 3
+    },
+    {
       "categories": [
         "serverless"
       ],
@@ -8882,6 +11532,49 @@
       ]
     },
     {
+      "category": [
+        "Other"
+      ],
+      "description": "OpenVPN Access Server is a full featured secure network tunneling VPN software solution that integrates OpenVPN server capabilities, enterprise management capabilities, simplified OpenVPN Connect UI, and OpenVPN Client software packages that accommodate Windows, MAC, Linux, Android, and iOS environments.",
+      "env": [
+        {
+          "label": "INTERFACE",
+          "name": "INTERFACE",
+          "set": "eth0"
+        },
+        {
+          "label": "PGID",
+          "name": "PGID",
+          "set": "1000"
+        },
+        {
+          "label": "PUID",
+          "name": "PUID",
+          "set": "1000"
+        },
+        {
+          "label": "TZ",
+          "name": "TZ",
+          "set": "America/Chicago"
+        }
+      ],
+      "image": "linuxserver/openvpn-as:latest",
+      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/openvpn-as-icon.png",
+      "platform": "linux",
+      "ports": [
+        "943/tcp",
+        "9443/tcp",
+        "1194/udp"
+      ],
+      "title": "openvpn-as",
+      "type": 1,
+      "volumes": [
+        {
+          "container": "/config"
+        }
+      ]
+    },
+    {
       "description": "[Openvscode-server](https://github.com/gitpod-io/openvscode-server) provides a version of VS Code that runs a server on a remote machine and allows access through a modern web browser.",
       "env": [
         {
@@ -8944,6 +11637,53 @@
           "container": "/config"
         }
       ]
+    },
+    {
+      "type": 1,
+      "title": "Opera",
+      "name": "Opera",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/opera/config</p>",
+      "description": "[Opera](https://www.opera.com/) is a multi-platform web browser developed by its namesake company Opera. The browser is based on Chromium, but distinguishes itself from other Chromium-based browsers (Chrome, Edge, etc.) through its user interface and other features.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/opera-icon.png",
+      "image": "linuxserver/opera:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        },
+        {
+          "name": "OPERA_CLI",
+          "label": "OPERA_CLI",
+          "default": "https://www.linuxserver.io/",
+          "description": "Specify one or multiple Chromium CLI flags, this string will be passed to the application in full."
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp",
+        "3001:3001/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/opera/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
     },
     {
       "categories": [
@@ -9018,6 +11758,38 @@
     },
     {
       "categories": [
+        "Identity Management",
+        "Security"
+      ],
+      "description": "Ory Kratos with Oathkeeper (ORY Oathkeeper is an Identity & Access Proxy (IAP) and Access Control Decision API that authorizes HTTP requests based on sets of Access Rules.) ",
+      "logo": "https://raw.githubusercontent.com/ory/meta/master/static/banners/oathkeeper.svg",
+      "name": "Ory Kratos Oathkeeper",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/ory-kratos-oathkeeper.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Ory Kratos (Oathkeeper)",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Identity Management",
+        "Access proxy"
+      ],
+      "description": "Ory Kratos with Oathkeeper is _the_ developer-friendly, security-hardened and battle-test Identity, User Management and Authentication system for the Cloud.",
+      "logo": "https://raw.githubusercontent.com/ory/meta/master/static/banners/kratos.svg",
+      "name": "Ory Kratos",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/ory-kratos-standalone.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Ory Kratos (Standalone)",
+      "type": 3
+    },
+    {
+      "categories": [
         "Other"
       ],
       "description": "OScam is a softcam, software to be used to decrypt digital television channels on a settopbox (receiver), as an alternative for a conditional access module\n  (CAM). OScam is, compared with other softcams (CCcam, mgcamd, etc.), open source. Hence, the name Open Source Conditional Access Module (OScam). OScam is based on the\n  not so well known softcam MpCS. The main features of OSCam are next to its softcam capabilities, that it is able to function as a cardserver.",
@@ -9051,6 +11823,206 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://trac.streamboard.tv/oscam/\" target=\"_blank\">https://trac.streamboard.tv/oscam/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-oscam\" target=\"_blank\">https://docs.linuxserver.io/images/docker-oscam</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Productivity",
+        "Social"
+      ],
+      "description": "Open source collaborative knowledge base for modern teams",
+      "env": [
+        {
+          "default": "production",
+          "label": "NODE_ENV",
+          "name": "NODE_ENV"
+        },
+        {
+          "default": "",
+          "label": "SECRET_KEY",
+          "name": "SECRET_KEY"
+        },
+        {
+          "default": "",
+          "label": "UTILS_SECRET",
+          "name": "UTILS_SECRET"
+        },
+        {
+          "default": "",
+          "label": "DATABASE_URL",
+          "name": "DATABASE_URL"
+        },
+        {
+          "default": "",
+          "label": "DATABASE_URL_TEST",
+          "name": "DATABASE_URL_TEST"
+        },
+        {
+          "default": "",
+          "label": "DATABASE_CONNECTION_POOL_MIN",
+          "name": "DATABASE_CONNECTION_POOL_MIN"
+        },
+        {
+          "default": "",
+          "label": "DATABASE_CONNECTION_POOL_MAX",
+          "name": "DATABASE_CONNECTION_POOL_MAX"
+        },
+        {
+          "default": "",
+          "label": "REDIS_URL",
+          "name": "REDIS_URL"
+        },
+        {
+          "default": "",
+          "label": "URL",
+          "name": "URL"
+        },
+        {
+          "default": "3000",
+          "label": "PORT",
+          "name": "PORT"
+        },
+        {
+          "default": "",
+          "label": "COLLABORATION_URL",
+          "name": "COLLABORATION_URL"
+        },
+        {
+          "default": "",
+          "label": "GOOGLE_CLIENT_ID",
+          "name": "GOOGLE_CLIENT_ID"
+        },
+        {
+          "default": "",
+          "label": "GOOGLE_CLIENT_SECRET",
+          "name": "GOOGLE_CLIENT_SECRET"
+        },
+        {
+          "default": "",
+          "label": "SSL_KEY",
+          "name": "SSL_KEY"
+        },
+        {
+          "default": "",
+          "label": "SSL_CERT",
+          "name": "SSL_CERT"
+        },
+        {
+          "default": "true",
+          "label": "FORCE_HTTPS",
+          "name": "FORCE_HTTPS"
+        },
+        {
+          "default": "true",
+          "label": "ENABLE_UPDATES",
+          "name": "ENABLE_UPDATES"
+        },
+        {
+          "default": "1",
+          "label": "WEB_CONCURRENCY",
+          "name": "WEB_CONCURRENCY"
+        },
+        {
+          "default": "5120000",
+          "label": "MAXIMUM_IMPORT_SIZE",
+          "name": "MAXIMUM_IMPORT_SIZE"
+        },
+        {
+          "default": "http",
+          "label": "DEBUG",
+          "name": "DEBUG"
+        },
+        {
+          "default": "info",
+          "label": "LOG_LEVEL",
+          "name": "LOG_LEVEL"
+        },
+        {
+          "default": "",
+          "label": "GOOGLE_ANALYTICS_ID",
+          "name": "GOOGLE_ANALYTICS_ID"
+        },
+        {
+          "default": "",
+          "label": "SENTRY_DSN",
+          "name": "SENTRY_DSN"
+        },
+        {
+          "default": "",
+          "label": "SENTRY_TUNNEL",
+          "name": "SENTRY_TUNNEL"
+        },
+        {
+          "default": "",
+          "label": "SMTP_HOST",
+          "name": "SMTP_HOST"
+        },
+        {
+          "default": "",
+          "label": "SMTP_PORT",
+          "name": "SMTP_PORT"
+        },
+        {
+          "default": "",
+          "label": "SMTP_USERNAME",
+          "name": "SMTP_USERNAME"
+        },
+        {
+          "default": "",
+          "label": "SMTP_PASSWORD",
+          "name": "SMTP_PASSWORD"
+        },
+        {
+          "default": "",
+          "label": "SMTP_FROM_EMAIL",
+          "name": "SMTP_FROM_EMAIL"
+        },
+        {
+          "default": "",
+          "label": "SMTP_REPLY_EMAIL",
+          "name": "SMTP_REPLY_EMAIL"
+        },
+        {
+          "default": "",
+          "label": "SMTP_TLS_CIPHERS",
+          "name": "SMTP_TLS_CIPHERS"
+        },
+        {
+          "default": "true",
+          "label": "SMTP_SECURE",
+          "name": "SMTP_SECURE"
+        },
+        {
+          "default": "en_US",
+          "label": "DEFAULT_LANGUAGE",
+          "name": "DEFAULT_LANGUAGE"
+        },
+        {
+          "default": "true",
+          "label": "RATE_LIMITER_ENABLED",
+          "name": "RATE_LIMITER_ENABLED"
+        },
+        {
+          "default": "1000",
+          "label": "RATE_LIMITER_REQUESTS",
+          "name": "RATE_LIMITER_REQUESTS"
+        },
+        {
+          "default": "60",
+          "label": "RATE_LIMITER_DURATION_WINDOW",
+          "name": "RATE_LIMITER_DURATION_WINDOW"
+        }
+      ],
+      "logo": "https://avatars.githubusercontent.com/u/1765001",
+      "name": "outline",
+      "note": "Open source collaborative knowledge base for modern teams",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "sources/stacks/outline.yml",
+        "url": "https://github.com/lissy93/portainer-templates"
+      },
+      "restart_policy": "unless-stopped",
+      "title": "Outline",
+      "type": 3
     },
     {
       "categories": [
@@ -9149,6 +12121,64 @@
       },
       "title": "Owncloud",
       "type": 3
+    },
+    {
+      "type": 1,
+      "title": "Pairdrop",
+      "name": "Pairdrop",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p>",
+      "description": "[PairDrop](https://github.com/schlagmichdoch/PairDrop) is a sublime alternative to AirDrop that works on all platforms. Send images, documents or text via peer to peer connection to devices in the same local network/Wi-Fi or to paired devices.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/schlagmichdoch/PairDrop/master/public/images/android-chrome-512x512.png",
+      "image": "linuxserver/pairdrop:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        },
+        {
+          "name": "RATE_LIMIT",
+          "label": "RATE_LIMIT",
+          "default": "false",
+          "description": "Set to `true` to limit clients to 100 requests per 5 min"
+        },
+        {
+          "name": "WS_FALLBACK",
+          "label": "WS_FALLBACK",
+          "default": "false",
+          "description": "Set to `true` to enable websocket fallback if the peer to peer WebRTC connection is not available to the client (see App Setup notes)."
+        },
+        {
+          "name": "RTC_CONFIG",
+          "label": "RTC_CONFIG",
+          "default": "",
+          "description": "Path to a json file containing custom STUN/TURN config (see App Setup notes)"
+        },
+        {
+          "name": "DEBUG_MODE",
+          "label": "DEBUG_MODE",
+          "default": "false",
+          "description": "Set to `true` to debug the http server configuration by logging clients IP addresses used by PairDrop to STDOUT. [See here for more info](https://github.com/schlagmichdoch/PairDrop/blob/master/docs/host-your-own.md#debug-mode). Do not use in production!"
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp"
+      ],
+      "restart_policy": "unless-stopped"
     },
     {
       "categories": [
@@ -9849,6 +12879,40 @@
       ]
     },
     {
+      "categories": [
+        "Network Server"
+      ],
+      "description": "WIFI / LAN intruder detector",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "100",
+          "label": "PGID",
+          "name": "PGID"
+        }
+      ],
+      "image": "jokobsk/pi.alert",
+      "logo": "https://raw.githubusercontent.com/pucherot/Pi.Alert/main/docs/img/1_devices.jpg",
+      "name": "pi.alert",
+      "platform": "linux",
+      "ports": [
+        "20211:20211/udp"
+      ],
+      "restart_policy": "always",
+      "title": "Pi.alert",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/pi.alert",
+          "container": "/config"
+        }
+      ]
+    },
+    {
       "description": "[Pidgin](https://pidgin.im/) is a chat program which lets you log into accounts on multiple chat networks simultaneously. This means that you can be chatting with friends on XMPP and sitting in an IRC channel at the same time.",
       "env": [
         {
@@ -10086,6 +13150,77 @@
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.plex.tv/\" target=\"_blank\">https://www.plex.tv/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-plex\" target=\"_blank\">https://docs.linuxserver.io/images/docker-plex</a><br><br><br>"
     },
     {
+      "type": 1,
+      "name": "plex",
+      "title": "Plex Media Server",
+      "description": "Plex organizes your video, music, and photo collections and streams them to all of your screens.",
+      "logo": "https://mediadepot.github.io/templates/img/plex-icon.png",
+      "image": "linuxserver/plex:latest",
+      "network": "host",
+      "categories": [
+        "MediaServer:Video",
+        "MediaServer:Music",
+        "MediaServer:Photos"
+      ],
+      "privileged": true,
+      "ports": [],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/opt/mediadepot/apps/plex"
+        },
+        {
+          "container": "/data/tvshows",
+          "bind": "/media/storage/tvshows"
+        },
+        {
+          "container": "/data/movies",
+          "bind": "/media/storage/movies"
+        },
+        {
+          "container": "/data/music",
+          "bind": "/media/storage/music"
+        },
+        {
+          "container": "/transcode"
+        }
+      ],
+      "env": [
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "15000",
+          "preset": true
+        },
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "15000",
+          "preset": true
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago"
+        },
+        {
+          "name": "VERSION",
+          "label": "VERSION",
+          "default": "latest"
+        }
+      ],
+      "labels": [
+        {
+          "name": "traefik.enable",
+          "value": "true"
+        },
+        {
+          "name": "traefik.http.services.plex.loadbalancer.server.port",
+          "value": "32400"
+        }
+      ]
+    },
+    {
       "categories": [
         "Downloaders",
         "Other",
@@ -10230,6 +13365,21 @@
       },
       "title": "Portainer Agent",
       "type": 2
+    },
+    {
+      "categories": [
+        "Mail"
+      ],
+      "description": "Full stack mailserver solution with  TLS support. POP3s, SMTP(s), IMAPs, RSPAMD, Clamav, Roundcube(HTTPS), SPF, DKIM with simple installation and web administration.",
+      "logo": "",
+      "name": "poste.io",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/posteio.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Poste.io",
+      "type": 3
     },
     {
       "categories": [
@@ -10468,6 +13618,135 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://prowlarr.com\" target=\"_blank\">https://prowlarr.com</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/linuxserver/prowlarr\" target=\"_blank\">https://hub.docker.com/r/linuxserver/prowlarr</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Social"
+      ],
+      "description": "Use Tiktok with an alternative frontend, inspired by Nitter.",
+      "logo": "",
+      "name": "proxitok",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/proxitok.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "ProxiTok",
+      "type": 3
+    },
+    {
+      "type": 1,
+      "name": "pureftp",
+      "title": "Pure-FTP Server",
+      "description": "Pure-FTPd is a free (BSD), secure, production-quality and standard-conformant FTP server. ",
+      "logo": "https://mediadepot.github.io/templates/img/pureftpd-icon.jpg",
+      "image": "stilliard/pure-ftpd:hardened",
+      "network": "host",
+      "categories": [
+        "Network:Other",
+        "Utilities:"
+      ],
+      "ports": [
+        "21/tcp",
+        "30000/tcp",
+        "30001/tcp",
+        "30002/tcp",
+        "30003/tcp",
+        "30004/tcp",
+        "30005/tcp",
+        "30006/tcp",
+        "30007/tcp",
+        "30008/tcp",
+        "30009/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/etc/pure-ftpd/passwd",
+          "bind": "/opt/mediadepot/apps/pureftp"
+        },
+        {
+          "container": "/data/tvshows",
+          "bind": "/media/storage/tvshows"
+        },
+        {
+          "container": "/data/movies",
+          "bind": "/media/storage/movies"
+        },
+        {
+          "container": "/data/music",
+          "bind": "/media/storage/music"
+        },
+        {
+          "container": "/data/ebooks",
+          "bind": "/media/storage/ebooks"
+        },
+        {
+          "container": "/data/photos",
+          "bind": "/media/storage/photos"
+        },
+        {
+          "container": "/data/documents",
+          "bind": "/media/storage/documents"
+        },
+        {
+          "container": "/data/downloads",
+          "bind": "/media/storage/downloads"
+        },
+        {
+          "container": "/data/software",
+          "bind": "/media/storage/software"
+        },
+        {
+          "container": "/data/blackhole",
+          "bind": "/media/temp/blackhole"
+        },
+        {
+          "container": "/data/processing",
+          "bind": "/media/temp/processing"
+        }
+      ],
+      "env": [
+        {
+          "name": "FTP_USER_NAME",
+          "label": "FTP_USER_NAME",
+          "default": "depot",
+          "preset": true
+        },
+        {
+          "name": "FTP_USER_PASS",
+          "label": "FTP_USER_PASS",
+          "default": "badpass"
+        },
+        {
+          "name": "FTP_USER_HOME",
+          "label": "FTP_USER_HOME",
+          "default": "/data",
+          "preset": true
+        },
+        {
+          "name": "FTP_USER_GID",
+          "label": "FTP_USER_GID",
+          "default": "15000",
+          "preset": true
+        },
+        {
+          "name": "FTP_USER_UID",
+          "label": "FTP_USER_UID",
+          "default": "15000",
+          "preset": true
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago"
+        },
+        {
+          "name": "PUBLICHOST",
+          "label": "PUBLICHOST",
+          "default": "localhost"
+        }
+      ],
+      "labels": []
     },
     {
       "categories": [
@@ -11152,6 +14431,31 @@
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md</a><br><h3><b>Pi-Hosted dedicated documentation: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/rpi_docker_monitor.md\" target=\"_blank\">rpi_docker_monitor.md</a></h3><br><br><h3><b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/rpi_docker_monitor.sh\" target=\"_blank\">Pre-installation script</a> must be RAN before you install: </b>wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/tools/rpi_docker_monitor.sh | bash</h3><br><br><b>Youtube Video: </b><a href=https://www.youtube.com/watch?v=IoD3vFuep64&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=8 target=\"_blank\">Novaspirit Tech - Raspberry Pi Docker Monitoring</a><br><br>"
     },
     {
+      "type": 1,
+      "name": "rclone",
+      "title": "Rclone Config Backup",
+      "description": "Rclone is a command line program to sync files and directories to and from cloud providers (Dropbox, GDrive, Box, etc)",
+      "logo": "https://mediadepot.github.io/templates/img/rclone.png",
+      "image": "mediadepot/rclone:latest",
+      "categories": [
+        "Backup:",
+        "Cloud:",
+        "Network:Other",
+        "Tools:"
+      ],
+      "ports": [],
+      "volumes": [
+        {
+          "container": "/srv/rclone/config",
+          "bind": "/opt/mediadepot/apps/rclone"
+        },
+        {
+          "container": "/mnt/data",
+          "bind": "/opt/mediadepot/apps"
+        }
+      ]
+    },
+    {
       "categories": [
         "Other"
       ],
@@ -11326,6 +14630,46 @@
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://readarr.com/\" target=\"_blank\">https://readarr.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://wiki.servarr.com/en/readarr\" target=\"_blank\">https://wiki.servarr.com/en/readarr</a><br><br><br>"
     },
     {
+      "type": 1,
+      "title": "Readme-sync",
+      "name": "Readme-sync",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/readme-sync/config</p>",
+      "description": "This container needs special attention. Please check https://hub.docker.com/r/linuxserver/readme-sync for details.",
+      "platform": "linux",
+      "logo": "",
+      "image": "linuxserver/readme-sync:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        }
+      ],
+      "ports": [
+        "80:80/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/readme-sync/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
       "categories": [
         "database"
       ],
@@ -11341,6 +14685,26 @@
       "volumes": [
         {
           "container": "/data"
+        }
+      ]
+    },
+    {
+      "type": 2,
+      "title": "Redis Cluster",
+      "description": "Open-source in-memory data structure store - Cluster mode",
+      "categories": [
+        "database"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/redis-cluster/docker-stack.yaml"
+      },
+      "env": [
+        {
+          "name": "REDIS_PASSWD",
+          "label": "Redis password"
         }
       ]
     },
@@ -11428,6 +14792,32 @@
       ]
     },
     {
+      "type": 1,
+      "title": "Registry (cache)",
+      "description": "Docker image registry configured as a DockerHub pull through cache",
+      "categories": [
+        "docker"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+      "image": "registry:latest",
+      "ports": [
+        "5000/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/var/lib/registry"
+        }
+      ],
+      "env": [
+        {
+          "name": "REGISTRY_PROXY_REMOTEURL",
+          "default": "https://registry-1.docker.io",
+          "preset": true
+        }
+      ]
+    },
+    {
       "description": "[Remmina](https://remmina.org/) is a remote desktop client written in GTK, aiming to be useful for system administrators and travellers, who need to work with lots of remote computers in front of either large or tiny screens. Remmina supports multiple network protocols, in an integrated and consistent user interface. Currently RDP, VNC, SPICE, NX, XDMCP, SSH and EXEC are supported.",
       "env": [
         {
@@ -11466,6 +14856,21 @@
           "container": "/config"
         }
       ]
+    },
+    {
+      "categories": [
+        "Remote Control"
+      ],
+      "description": "Remotely is a remote control and remote scripting solution, built with .NET 6, Blazor, and SignalR Core.",
+      "logo": "",
+      "name": "Remotely",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/remotely.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Remotely",
+      "type": 3
     },
     {
       "categories": [
@@ -11555,6 +14960,62 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.resilio.com/individuals/\" target=\"_blank\">https://www.resilio.com/individuals/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-resilio-sync\" target=\"_blank\">https://docs.linuxserver.io/images/docker-resilio-sync</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Presentation"
+      ],
+      "description": "It is an open source HTML presentation framework. It enables anyone with a web browser to create fully featured and beautiful presentations for free | Production Mode",
+      "image": "cloudogu/reveal.js",
+      "logo": "https://pbs.twimg.com/profile_images/1260911777929400325/_ClbHpsz_400x400.jpg",
+      "name": "revealjs",
+      "platform": "linux",
+      "ports": [
+        "6060:8080/tcp"
+      ],
+      "restart_policy": "always",
+      "title": "Reveal.js",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/revealjs/docs/slides",
+          "container": "/reveal/docs/slides"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Config/revealjs/scripts/test",
+          "container": "/resources"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Chat Server"
+      ],
+      "description": "Rocket.Chat Server",
+      "logo": "https://raw.githubusercontent.com/portapps/rocketchat-portable/master/res/papp.png",
+      "note": "Rocket.Chat Server Container",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/rocketchat.yml",
+        "url": "https://github.com/mycroftwilde/portainer_templates"
+      },
+      "title": "Rocket Chat",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Remote Control"
+      ],
+      "description": "RPort is free remote access and remote management, now acquired by RealVNC",
+      "logo": "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_634014ae8000cebecce8a571f9ea316f/cloudradar-gmbh-rport.png",
+      "name": "Rport",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/rport.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Rport",
+      "type": 3
     },
     {
       "description": "[Rsnapshot](http://www.rsnapshot.org/) is a filesystem snapshot utility based on rsync. rsnapshot makes it easy to make periodic snapshots of local machines, and remote machines over ssh. The code makes extensive use of hard links whenever possible, to greatly reduce the disk space required.'",
@@ -11979,6 +15440,25 @@
     },
     {
       "categories": [
+        "Tools"
+      ],
+      "description": "A self-hosted bookmark management tool.",
+      "logo": "https://github.com/beromir/Servas/raw/main/docs/images/home.png",
+      "name": "Servas",
+      "repository": {
+        "stackfile": "Template/Stack/servas.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "platform": "linux",
+      "ports": [
+        "8456:80/tcp"
+      ],
+      "restart_policy": "always",
+      "title": "Servas",
+      "type": 3
+    },
+    {
+      "categories": [
         "Other",
         "Tools"
       ],
@@ -12088,6 +15568,106 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/SickGear/SickGear/wiki\" target=\"_blank\">https://github.com/SickGear/SickGear/wiki</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-sickgear\" target=\"_blank\">https://docs.linuxserver.io/images/docker-sickgear</a><br><br><br>"
+    },
+    {
+      "type": 1,
+      "name": "sickrage",
+      "title": "SickRage",
+      "description": "Automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.",
+      "logo": "https://mediadepot.github.io/templates/img/sickrage-icon.png",
+      "image": "linuxserver/sickrage:latest",
+      "categories": [
+        "Downloaders:",
+        "MediaApp:Video"
+      ],
+      "ports": [
+        "8081/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/opt/mediadepot/apps/sickrage"
+        },
+        {
+          "container": "/downloads",
+          "bind": "/media/storage/downloads/tvshows"
+        },
+        {
+          "container": "/tv",
+          "bind": "/media/storage/tvshows"
+        },
+        {
+          "container": "/blackhole",
+          "bind": "/media/temp/blackhole/tvshows"
+        }
+      ],
+      "env": [
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "15000",
+          "preset": true
+        },
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "15000",
+          "preset": true
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago"
+        }
+      ],
+      "labels": [
+        {
+          "name": "traefik.enable",
+          "value": "true"
+        },
+        {
+          "name": "traefik.http.services.sickrage.loadbalancer.server.port",
+          "value": "8081"
+        },
+        {
+          "name": "traefik.http.routers.sickrage.entrypoints",
+          "value": "websecure"
+        },
+        {
+          "name": "traefik.http.routers.sickrage.tls.certresolver",
+          "value": "mydnschallenge"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Messaging"
+      ],
+      "description": "A TLS proxy relay for the Signal privacy messenger app.",
+      "logo": "https://avatars.githubusercontent.com/u/702459?s=200&v=4",
+      "name": "signal",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/signal.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Signal Proxy",
+      "type": 3
+    },
+    {
+      "categories": [
+        "CMS"
+      ],
+      "description": "Silverstripe CMS is a free and open source Content Management System (CMS) and Framework for creating and maintaining websites and web applications.",
+      "logo": "https://github.com/brettt89/silverstripe-docker/raw/master/docs/logo.png",
+      "name": "silverstripe",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/silverstripe.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Silverstripe",
+      "type": 3
     },
     {
       "description": "[Smokeping](https://oss.oetiker.ch/smokeping/) keeps track of your network latency. For a full example of what this application is capable of visit [UCDavis](http://smokeping.ucdavis.edu/cgi-bin/smokeping.fcgi).",
@@ -12291,6 +15871,19 @@
           "container": "/app/data"
         }
       ]
+    },
+    {
+      "type": 4,
+      "title": "Softing EdgeConnector 840D",
+      "description": "Access Siemens SINUMERIK 840D sl/pl controllers and provide data via OPC UA and MQTT",
+      "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/softing-edgeconnector-840d/docker-compose.yml"
+    },
+    {
+      "type": 4,
+      "title": "Softing EdgeConnector modbus",
+      "description": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
+      "note": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
+      "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/softing-edgeconnector-modbus/docker-compose.yml"
     },
     {
       "categories": [
@@ -12503,6 +16096,50 @@
       "title": "Sshwifty",
       "type": 1,
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://sshwifty.herokuapp.com/\" target=\"_blank\">https://sshwifty.herokuapp.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/nirui/sshwifty#docker-image\" target=\"_blank\">https://github.com/nirui/sshwifty#docker-image</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Media Server"
+      ],
+      "description": "Helps you organize your *Ahem* ...more MATURE Media material....",
+      "env": [
+        {
+          "label": "PORT",
+          "name": "PORT"
+        }
+      ],
+      "logo": "https://dashy.to/img/dashy.png",
+      "name": "Stash",
+      "note": "## Keep configs, scrapers, and plugins here. </p><p> - /portainer/Files/AppData/Config/stash:/root/.stash </p><p> ## Point this at your collection. </p><p> - ./data:/data </p><p> ## This is where your stash's metadata lives </p><p> - /portainer/Files/AppData/Config/stashmeta:/metadata </p><p> ## Any other cache content. </p><p> - /portainer/Files/AppData/Config/stashcache:/cache </p><p> ## Where to store generated content (screenshots,previews,transcodes,sprites) </p><p> - /portainer/Files/AppData/Config/stashgenerated:/generated",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/stash.yml",
+        "url": "https://github.com/mycroftwilde/portainer_templates"
+      },
+      "title": "Stash",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Network"
+      ],
+      "description": "An easy to use Status Page for your websites and applications. Statping will automatically fetch the application and render a beautiful status page with tons of features for you to build an even better status page.",
+      "image": "statping/statping:latest",
+      "logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/statping.png",
+      "name": "statping",
+      "platform": "linux",
+      "ports": [
+        "4040:8080/tcp"
+      ],
+      "restart_policy": "always",
+      "title": "Statping",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/statping",
+          "container": "/app"
+        }
+      ]
     },
     {
       "categories": [
@@ -12721,6 +16358,32 @@
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/linuxserver/docker-swag\" target=\"_blank\">https://github.com/linuxserver/docker-swag</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/general/swag\" target=\"_blank\">https://docs.linuxserver.io/general/swag</a><br><br><br>"
     },
     {
+      "type": 2,
+      "title": "Swarm monitoring",
+      "description": "Monitor your cluster performances with Prometheus & Grafana",
+      "note": "Requires Docker version 19.03.0+. <b>Make sure to add the <code>monitoring == true</code> one of your Swarm manager node before deploying this stack.</b>",
+      "categories": [
+        "Monitoring"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "swarm/monitoring/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "GRAFANA_USER",
+          "label": "Grafana admin user",
+          "default": "admin"
+        },
+        {
+          "name": "GRAFANA_PASSWORD",
+          "label": "Grafana admin password"
+        }
+      ]
+    },
+    {
       "description": "[Synclounge](https://github.com/samcm/synclounge) is a third party tool that allows you to watch Plex in sync with your friends/family, wherever you are.",
       "env": [
         {
@@ -12901,6 +16564,22 @@
     },
     {
       "categories": [
+        "Productivity",
+        "DevTools"
+      ],
+      "description": "Tabby is an infinitely customizable cross-platform terminal app for local shells, serial, SSH and Telnet connections.",
+      "logo": "https://tabby.sh/32bf32ff6c87e8d18932.svg",
+      "name": "Tabby",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/tabby.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Tabby",
+      "type": 3
+    },
+    {
+      "categories": [
         "Other",
         "VPN"
       ],
@@ -12955,6 +16634,28 @@
     },
     {
       "categories": [
+        "Tools"
+      ],
+      "description": "The recipe manager that allows you to manage your ever growing collection of digital recipes.",
+      "image": "vabene1111/recipes:latest",
+      "logo": "https://docs.tandoor.dev/logo_color.svg",
+      "name": "Tandoor",
+      "platform": "linux",
+      "ports": [
+        "3280:8080/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "Tandoor",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/Tandoor",
+          "container": "/config"
+        }
+      ]
+    },
+    {
+      "categories": [
         "Other",
         "Tools"
       ],
@@ -12995,6 +16696,21 @@
     },
     {
       "categories": [
+        "Multimedia"
+      ],
+      "description": "Tdarr is a popular conditional transcoding application for processing large (or small) media libraries.",
+      "logo": "https://tdarr.io/static/media/logo3.02a3f4a3.png",
+      "name": "tdarr",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/tdarr.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Tdarr",
+      "type": 3
+    },
+    {
+      "categories": [
         "Games"
       ],
       "description": "Server for Teeworlds",
@@ -13031,6 +16747,44 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hub.docker.com/r/r3aper/teeworlds-server\" target=\"_blank\">https://hub.docker.com/r/r3aper/teeworlds-server</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Tools"
+      ],
+      "description": "Teleport allows engineers and security professionals to unify access for SSH servers, Kubernetes clusters, web applications, and databases across all environments.",
+      "logo": "https://bookface-images.s3.amazonaws.com/logos/386100350818400a035ac8e0caa84111de3316eb.png",
+      "name": "teleport",
+      "repository": {
+        "stackfile": "Template/Stack/teleport.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "platform": "linux",
+      "restart_policy": "always",
+      "title": "Teleport",
+      "type": 3
+    },
+    {
+      "type": 1,
+      "title": "Tester",
+      "name": "Tester",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p>",
+      "description": "This internal tool is used as a desktop sandbox in our CI process to grab a screenshot of a hopefully functional endpoint",
+      "platform": "linux",
+      "logo": "https://avatars3.githubusercontent.com/u/12324908?s=200&v=4",
+      "image": "linuxserver/tester:latest",
+      "env": [
+        {
+          "name": "URL",
+          "label": "URL",
+          "default": "http://google.com",
+          "description": "Specify an endpoint, the container will automatically determine the correct protocol and program to use"
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp"
+      ],
+      "restart_policy": "unless-stopped"
     },
     {
       "categories": [
@@ -13161,6 +16915,43 @@
     },
     {
       "categories": [
+        "Development",
+        "Low Code",
+        "No code"
+      ],
+      "description": "Tooljet is an Open-source low-code application development platform for building and deploying business applications.",
+      "logo": "https://uploads-ssl.webflow.com/6266634263b9179f76b2236e/63aaa161e3b3be42ec50eb6f_Logomark.svg",
+      "name": "tooljet",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/tooljet.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Tooljet",
+      "type": 3
+    },
+    {
+      "type": 3,
+      "title": "TOSIBOX Lock for Container",
+      "description": "Lock for Container brings secure connectivity inside your industrial IoT devices",
+      "categories": [
+        "edge"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/tosibox.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/tosibox/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "LICENSE_KEY",
+          "label": "License key"
+        }
+      ]
+    },
+    {
+      "categories": [
         "Proxy",
         "Security",
         "Tools"
@@ -13197,6 +16988,21 @@
           "container": "/var/run/docker.sock"
         }
       ]
+    },
+    {
+      "categories": [
+        "Time Tracking"
+      ],
+      "description": "Traggo is a tag-based time tracking tool. In Traggo there are no tasks, only tagged time spans.",
+      "logo": "https://traggo.net/images/favicon.png",
+      "name": "traggo",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/traggo.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Traggo",
+      "type": 3
     },
     {
       "categories": [
@@ -13306,6 +17112,10 @@
       "type": 1,
       "volumes": [
         {
+          "bind": "/portainer/Files/AppData/Config/transmission-openvpn",
+          "container": "/config"
+        },
+        {
           "bind": "/portainer/Downloads",
           "container": "/data"
         },
@@ -13379,6 +17189,10 @@
       "title": "Transmission OpenVPN v3",
       "type": 1,
       "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/transmission-openvpn",
+          "container": "/config"
+        },
         {
           "bind": "/portainer/Downloads",
           "container": "/data"
@@ -13527,6 +17341,69 @@
     },
     {
       "categories": [
+        "Notes Server"
+      ],
+      "description": "Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases",
+      "env": [
+        {
+          "default": "/home/node/trilium-data",
+          "label": "TRILIUM_DATA_DIR",
+          "name": "TRILIUM_DATA_DIR"
+        },
+        {
+          "label": "PORT",
+          "name": "PORT"
+        }
+      ],
+      "image": "zadam/trilium:latest",
+      "logo": "https://www.saashub.com/images/app/service_logos/55/2901389fab77/large.png?1561117248",
+      "name": "trilium",
+      "platform": "linux",
+      "ports": [
+        "3388:8080/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "Trilium",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/trilium-data",
+          "container": "/home/node/trilium-data"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Productivity"
+      ],
+      "description": "Trudesk is an Open Source Help Desk Software and Ticketing System",
+      "logo": "https://trudesk.io/wp-content/uploads/2019/10/logo-med.png",
+      "name": "trudesk",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/trudesk.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Trudesk",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Multimedia"
+      ],
+      "description": "Tubearchivist is your self hosted YouTube media server",
+      "logo": "https://raw.githubusercontent.com/tubearchivist/tubearchivist/master/assets/tube-archivist-banner.jpg",
+      "name": "tubearchivist",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/tubearchivist.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Tubearchivist",
+      "type": 3
+    },
+    {
+      "categories": [
         "Video",
         "Other"
       ],
@@ -13611,6 +17488,37 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://vaemendis.net/ubooquity/\" target=\"_blank\">https://vaemendis.net/ubooquity/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-ubooquity\" target=\"_blank\">https://docs.linuxserver.io/images/docker-ubooquity</a><br><br><br>"
+    },
+    {
+      "type": 1,
+      "title": "Ubuntu",
+      "description": "Debian-based Linux operating system",
+      "categories": [
+        "operating-system"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ubuntu.png",
+      "image": "ubuntu:latest",
+      "interactive": true,
+      "command": "/bin/bash"
+    },
+    {
+      "categories": [
+        "Analytics"
+      ],
+      "description": "Umami is a simple, easy to use, self-hosted web analytics solution. The goal is to provide you with a friendlier, privacy-focused alternative to Google Analytics and a free, open-sourced alternative to paid solutions",
+      "logo": "https://icons.duckduckgo.com/ip3/umami.is.ico",
+      "name": "umami",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/umami.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "ports": [
+        "3000:3000/tcp"
+      ],
+      "title": "Umami.is",
+      "type": 3
     },
     {
       "categories": [
@@ -13792,6 +17700,21 @@
     },
     {
       "categories": [
+        "Network"
+      ],
+      "description": "UpSnap is a simple wake on lan app written with SvelteKit, Go, PocketBase and nmap.",
+      "logo": "https://github.com/seriousm4x/UpSnap/raw/master/frontend/static/favicon.png",
+      "name": "upsnap",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/upsnap.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Upsnap",
+      "type": 3
+    },
+    {
+      "categories": [
         "Other",
         "Tools"
       ],
@@ -13855,6 +17778,50 @@
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.urbackup.org/\" target=\"_blank\">https://www.urbackup.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://www.github.com/uroni/urbackup-server-docker\" target=\"_blank\">https://www.github.com/uroni/urbackup-server-docker</a><br><br><br>"
     },
     {
+      "type": 1,
+      "name": "urlwatch",
+      "title": "UrlWatch",
+      "description": "A tool for monitoring webpages for updates",
+      "logo": "https://mediadepot.github.io/templates/img/urlwatch.png",
+      "image": "mediadepot/urlwatch:master",
+      "categories": [
+        "Tools:"
+      ],
+      "ports": [
+        "8081/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/srv/urlwatch/config",
+          "bind": "/opt/mediadepot/apps/urlwatch"
+        },
+        {
+          "container": "/etc/localtime",
+          "bind": "/etc/localtime",
+          "readonly": true
+        }
+      ],
+      "env": [],
+      "labels": [
+        {
+          "name": "traefik.enable",
+          "value": "true"
+        },
+        {
+          "name": "traefik.http.services.urlwatch.loadbalancer.server.port",
+          "value": "8081"
+        },
+        {
+          "name": "traefik.http.routers.urlwatch.entrypoints",
+          "value": "websecure"
+        },
+        {
+          "name": "traefik.http.routers.urlwatch.tls.certresolver",
+          "value": "mydnschallenge"
+        }
+      ]
+    },
+    {
       "categories": [
         "Other",
         "Tools"
@@ -13878,6 +17845,33 @@
           "container": "/data"
         }
       ]
+    },
+    {
+      "categories": [
+        "Family App Server"
+      ],
+      "description": "Vikunja is a self hosted, open-source to-do list application",
+      "env": [
+        {
+          "default": "192.168.0.2",
+          "label": "IP",
+          "name": "IP"
+        },
+        {
+          "default": "80",
+          "label": "PORT",
+          "name": "PORT"
+        }
+      ],
+      "logo": "https://raw.githubusercontent.com/go-vikunja/frontend/main/public/images/icons/android-chrome-192x192.png",
+      "note": "Vikunja is a self hosted, open-source to-do list application",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/vikunja.yml",
+        "url": "https://github.com/mycroftwilde/portainer_templates"
+      },
+      "title": "Vikunja",
+      "type": 3
     },
     {
       "categories": [
@@ -13955,6 +17949,147 @@
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hub.docker.com/r/mikolatero/vlmcsd\" target=\"_blank\">https://hub.docker.com/r/mikolatero/vlmcsd</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/mikolatero/docker-vlmcsd\" target=\"_blank\">https://github.com/mikolatero/docker-vlmcsd</a><br><br><br>"
     },
     {
+      "type": 1,
+      "title": "Vscodium",
+      "name": "Vscodium",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/vscodium/config</p>",
+      "description": "[VSCodium](https://vscodium.com/) is a community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/vscodium-icon.png",
+      "image": "linuxserver/vscodium:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp",
+        "3001:3001/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/vscodium/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
+      "type": 1,
+      "name": "vsftpd",
+      "title": "vsftpd FTP Server",
+      "description": "Secure, fast FTP server for UNIX-like systems",
+      "logo": "https://mediadepot.github.io/templates/img/pureftpd-icon.jpg",
+      "image": "delfer/alpine-ftp-server",
+      "network": "host",
+      "categories": [
+        "Network:Other",
+        "Utilities:"
+      ],
+      "ports": [
+        "21/tcp",
+        "21000/tcp",
+        "21001/tcp",
+        "21002/tcp",
+        "21003/tcp",
+        "21004/tcp",
+        "21005/tcp",
+        "21006/tcp",
+        "21007/tcp",
+        "21008/tcp",
+        "21009/tcp",
+        "21010/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/home/depot/tvshows",
+          "bind": "/media/storage/tvshows"
+        },
+        {
+          "container": "/home/depot/movies",
+          "bind": "/media/storage/movies"
+        },
+        {
+          "container": "/home/depot/music",
+          "bind": "/media/storage/music"
+        },
+        {
+          "container": "/home/depot/ebooks",
+          "bind": "/media/storage/ebooks"
+        },
+        {
+          "container": "/home/depot/photos",
+          "bind": "/media/storage/photos"
+        },
+        {
+          "container": "/home/depot/documents",
+          "bind": "/media/storage/documents"
+        },
+        {
+          "container": "/home/depot/downloads",
+          "bind": "/media/storage/downloads"
+        },
+        {
+          "container": "/home/depot/software",
+          "bind": "/media/storage/software"
+        },
+        {
+          "container": "/home/depot/blackhole",
+          "bind": "/media/temp/blackhole"
+        },
+        {
+          "container": "/home/depot/processing",
+          "bind": "/media/temp/processing"
+        }
+      ],
+      "env": [
+        {
+          "name": "ADDRESS",
+          "label": "ADDRESS"
+        },
+        {
+          "name": "USERS",
+          "label": "USERS",
+          "default": "depot|badpass|/home/depot|15000"
+        }
+      ],
+      "labels": []
+    },
+    {
+      "categories": [
+        "Tools"
+      ],
+      "description": "wallabag is a web application allowing you to save web pages for later reading. Click, save and read it when you want.",
+      "logo": "https://www.wallabag.org/user/themes/boxify/img/logo-wallabag.svg",
+      "name": "Wallabag",
+      "repository": {
+        "stackfile": "Template/Stack/wallabag.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "platform": "linux",
+      "ports": [
+        "8234:80/tcp"
+      ],
+      "restart_policy": "always",
+      "title": "Wallabag",
+      "type": 3
+    },
+    {
       "categories": [
         "Other",
         "Tools",
@@ -13976,6 +18111,47 @@
           "container": "/var/run/docker.sock"
         }
       ]
+    },
+    {
+      "type": 1,
+      "title": "Webcord",
+      "name": "Webcord",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/webcord/config</p>",
+      "description": "[WebCord](https://github.com/SpacingBat3/WebCord) can be summarized as a pack of security and privacy hardenings, Discord features reimplementations, Electron / Chromium / Discord bugs workarounds, stylesheets, internal pages and wrapped https://discord.com page, designed to conform with ToS as much as it is possible (or hide the changes that might violate it from Discord's eyes).",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/webcord-icon.png",
+      "image": "linuxserver/webcord:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp",
+        "3001:3001/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/webcord/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
     },
     {
       "categories": [
@@ -14112,6 +18288,36 @@
           "container": "/var/run/docker.sock"
         }
       ]
+    },
+    {
+      "categories": [
+        "Fitness"
+      ],
+      "description": "Self hosted FLOSS fitness/workout, nutrition and weight tracker written with Django",
+      "logo": "https://raw.githubusercontent.com/wger-project/wger/master/wger/core/static/images/logos/logo.png",
+      "name": "wger",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/wger.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Wger",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Adult"
+      ],
+      "description": "Whisparr is an adult movie collection manager for Usenet and BitTorrent users.",
+      "logo": "https://whisparr.com/logo/256.png",
+      "name": "whisparr",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/whisparr.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Whisparr",
+      "type": 3
     },
     {
       "categories": [
@@ -14364,6 +18570,56 @@
       ]
     },
     {
+      "type": 1,
+      "name": "wizarr",
+      "title": "Wizarr",
+      "description": " Wizarr is an advanced user invitation and management system for Jellyfin, Plex, Emby etc. ",
+      "logo": "https://mediadepot.github.io/templates/img/wizarr-logo.png",
+      "image": "ghcr.io/wizarrrr/wizarr",
+      "categories": [
+        "Tools:"
+      ],
+      "ports": [
+        "5690/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/data/database",
+          "bind": "/opt/mediadepot/apps/wizarr"
+        },
+        {
+          "container": "/etc/localtime",
+          "bind": "/etc/localtime",
+          "readonly": true
+        }
+      ],
+      "env": [
+        {
+          "name": "APP_URL",
+          "label": "APP_URL",
+          "default": "https://wizarr.domain.com"
+        }
+      ],
+      "labels": [
+        {
+          "name": "traefik.enable",
+          "value": "true"
+        },
+        {
+          "name": "traefik.http.services.wizarr.loadbalancer.server.port",
+          "value": "5690"
+        },
+        {
+          "name": "traefik.http.routers.wizarr.entrypoints",
+          "value": "websecure"
+        },
+        {
+          "name": "traefik.http.routers.wizarr.tls.certresolver",
+          "value": "mydnschallenge"
+        }
+      ]
+    },
+    {
       "categories": [
         "WordPress",
         "Web"
@@ -14433,6 +18689,47 @@
       ]
     },
     {
+      "type": 1,
+      "title": "Wps-office",
+      "name": "Wps-office",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/wps-office/config</p>",
+      "description": "[WPS Office](https://www.wps.com/) is a lightweight, feature-rich comprehensive office suite with high compatibility. As a handy and professional office software, WPS Office allows you to edit files in Writer, Presentation, Spreadsheet, and PDF to improve your work efficiency.",
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/wps-office-icon.png",
+      "image": "linuxserver/wps-office:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1024",
+          "description": "for UserID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100",
+          "description": "for GroupID"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "America/Chicago",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp",
+        "3001:3001/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/volume1/docker/wps-office/config"
+        }
+      ],
+      "restart_policy": "unless-stopped"
+    },
+    {
       "description": "[Xbackbone](https://github.com/SergiX44/XBackBone) is a simple, self-hosted, lightweight PHP file manager that support the instant sharing tool ShareX and *NIX systems. It supports uploading and displaying images, GIF, video, code, formatted text, and file downloading and uploading. Also have a web UI with multi user management, past uploads history and search support.",
       "env": [
         {
@@ -14472,6 +18769,21 @@
           "container": "/config"
         }
       ]
+    },
+    {
+      "categories": [
+        "Wiki"
+      ],
+      "description": "Xwiki s a free wiki software platform written in Java with a design emphasis on extensibility. XWiki is an enterprise wiki.",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Logo-xwikiorange.svg",
+      "name": "xwiki",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/xwiki.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Xwiki",
+      "type": 3
     },
     {
       "categories": [
@@ -14554,6 +18866,22 @@
         "url": "https://github.com/pi-hosted/pi-hosted"
       },
       "title": "your-spotify",
+      "type": 3
+    },
+    {
+      "categories": [
+        "Music",
+        "Monitoring"
+      ],
+      "description": "YourSpotify is a self-hosted application that tracks what you listen and offers you a dashboard to explore statistics about it!",
+      "logo": "",
+      "name": "your_spotify",
+      "platform": "linux",
+      "repository": {
+        "stackfile": "Template/Stack/your_spotify.yml",
+        "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "title": "Your_spotify",
       "type": 3
     },
     {
@@ -14742,6 +19070,41 @@
         }
       ],
       "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://wiki.znc.in/ZNC\" target=\"_blank\">https://wiki.znc.in/ZNC</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-znc\" target=\"_blank\">https://docs.linuxserver.io/images/docker-znc</a><br><br><br>"
+    },
+    {
+      "categories": [
+        "Social",
+        "Forum"
+      ],
+      "description": "Zusam is a free and open-source way to self-host private forums for groups of friends.",
+      "env": [
+        {
+          "default": "email@domain.example",
+          "label": "INIT_USER",
+          "name": "INIT_USER"
+        },
+        {
+          "default": "initpass zusam",
+          "label": "INIT_PASSWORD",
+          "name": "INIT_PASSWORD"
+        }
+      ],
+      "image": "zusam/zusam",
+      "logo": "https://github.com/zusam/zusam/raw/master/app/src/assets/zusam_logo.png",
+      "name": "Zusam",
+      "platform": "linux",
+      "ports": [
+        "4180:8080/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "Zus.am",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/Zusam",
+          "container": "/zusam/data"
+        }
+      ]
     }
   ]
 }
