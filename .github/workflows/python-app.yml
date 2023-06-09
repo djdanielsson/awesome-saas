@@ -53,11 +53,12 @@ jobs:
     #   run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v4
+      uses: peter-evans/create-pull-request@v5
       continue-on-error: true
       with:
         token: ${{ secrets.TOKEN }}
         branch: auto_update # ${{ steps.date.outputs.date }}
+        reviewers: djdanielsson
 
     - name: Auto commit if PR fails
       # if: ${{ failure() }}
