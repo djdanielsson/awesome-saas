@@ -3281,50 +3281,46 @@
     },
     {
       "categories": [
-        "File Management"
+        "Files",
+        "Management"
       ],
-      "description": "[Double Commander](https://doublecmd.sourceforge.io/) is a free cross platform open source file manager with two panels side by side. It is inspired by Total Commander and features some new ideas.",
+      "container_name": "doublecommander",
+      "description": "Double Commander",
       "env": [
         {
-          "default": "1024",
-          "description": "for GroupID",
+          "default": "1000",
           "label": "PUID",
           "name": "PUID"
         },
         {
-          "default": "100",
-          "description": "for UserID",
+          "default": "1000",
           "label": "PGID",
           "name": "PGID"
         },
         {
           "default": "America/Chicago",
-          "description": "Specify a timezone to use for example America/Chicago",
           "label": "TZ",
           "name": "TZ"
         }
       ],
-      "image": "linuxserver/doublecommander:latest",
-      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/doublecommander-icon.png",
-      "name": "Doublecommander",
-      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/doublecommander/config<br>mkdir -p /volume1/docker/doublecommander/data</p>",
+      "image": "lscr.io/linuxserver/doublecommander:latest",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/doublecommander.png",
+      "name": "doublecommander",
       "platform": "linux",
       "ports": [
-        "3000:3000/tcp"
+        "11500:11500/tcp",
+        "11502:11502/tcp"
       ],
-      "restart_policy": "unless-stopped",
-      "title": "Doublecommander",
+      "restart": "unless-stopped",
+      "title": "doublecommander",
       "type": 1,
       "volumes": [
         {
-          "bind": "/volume1/docker/doublecommander/config",
+          "bind": "/portainer/Files/AppData/Config/doublecommander",
           "container": "/config"
-        },
-        {
-          "bind": "/volume1/docker/doublecommander/data",
-          "container": "/data"
         }
-      ]
+      ],
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><br><br>"
     },
     {
       "categories": [
@@ -18306,18 +18302,58 @@
     },
     {
       "categories": [
-        "Adult"
+        "Downloaders",
+        "Video",
+        "adult"
       ],
-      "description": "Whisparr is an adult movie collection manager for Usenet and BitTorrent users.",
-      "logo": "https://whisparr.com/logo/256.png",
+      "description": "Whisparr is an adult movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available.",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "default": "1000",
+          "label": "PGID",
+          "name": "PGID"
+        },
+        {
+          "default": "America/Chicago",
+          "label": "TZ",
+          "name": "TZ"
+        },
+        {
+          "default": "002",
+          "label": "UMASK",
+          "name": "UMASK"
+        }
+      ],
+      "image": "ghcr.io/hotio/whisparr:latest",
+      "logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/whisparr-icon.png",
       "name": "whisparr",
       "platform": "linux",
-      "repository": {
-        "stackfile": "Template/Stack/whisparr.yml",
-        "url": "https://github.com/xneo1/portainer_templates"
-      },
+      "ports": [
+        "6969:6969/tcp"
+      ],
+      "restart_policy": "unless-stopped",
       "title": "Whisparr",
-      "type": 3
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/Whisparr",
+          "container": "/config"
+        },
+        {
+          "bind": "/dev/rtc",
+          "container": "/dev/rtc"
+        },
+        {
+          "bind": "/portainer/Adult",
+          "container": "/Adult"
+        }
+      ],
+      "note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://hotio.dev/\" target=\"_blank\">https://hotio.dev/</a><br><b>Official Docker Documentation: </b><a href=\"https://wiki.servarr.com/en/whisparr\" target=\"_blank\">https://wiki.servarr.com/en/whisparr</a><br><br><br>"
     },
     {
       "categories": [
