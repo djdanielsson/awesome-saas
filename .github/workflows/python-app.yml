@@ -59,6 +59,7 @@ jobs:
         token: ${{ secrets.TOKEN }}
         branch: auto_update # ${{ steps.date.outputs.date }}
         reviewers: djdanielsson
+        assignees: djdanielsson
 
     - name: Auto commit if PR fails
       # if: ${{ failure() }}
