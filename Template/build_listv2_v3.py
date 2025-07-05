@@ -61,7 +61,7 @@ def normalize_and_validate_template(template):
 
     # --- Build the V3 Template Object ---
     
-    # A. Process as a Stack Template
+    # A. Process as a Stack Template (priority)
     if is_stack:
         repo = template.get("repository", {})
         if not repo.get("url"):
@@ -82,9 +82,6 @@ def normalize_and_validate_template(template):
                 "stackfile": stackfile
             }
         }
-        # Note: A stack template should NOT have top-level 'image', 'ports', 'volumes'.
-        # These are defined within the stackfile (e.g., docker-compose.yml).
-
     # B. Process as a Container Template
     elif is_container:
         if not template.get("image"):
@@ -104,7 +101,6 @@ def normalize_and_validate_template(template):
             v3_template["volumes"] = template["volumes"]
         if "env" in template:
             v3_template["env"] = template["env"]
-        # Note: A container template should NOT have a 'repository' key.
     
     # C. If it's neither a valid stack nor container, skip it
     else:
@@ -123,6 +119,20 @@ def normalize_and_validate_template(template):
     v3_template["platforms"] = platforms
     
     v3_template["restart_policy"] = template.get("restart_policy", "unless-stopped")
+
+    # --- Final V3 Schema Enforcement ---
+    # This step is crucial to guarantee compliance. It removes any keys that
+    # don't belong to the determined template type.
+    if v3_template["type"] == "stack":
+        # A stack template should NOT have container-specific keys at the top level.
+        # These details belong inside the stackfile (e.g., docker-compose.yml).
+        v3_template.pop("image", None)
+        v3_template.pop("ports", None)
+        v3_template.pop("volumes", None)
+        v3_template.pop("env", None)
+    elif v3_template["type"] == "container":
+        # A container template should NOT have a repository key.
+        v3_template.pop("repository", None)
 
     # If we got here, the template is valid and processed.
     unique_titles.add(title_key)
@@ -187,4 +197,3 @@ try:
     print(f"\n✅ Success! {len(templates_sorted)} valid Portainer v3 templates written to: {output_path}")
 except IOError as e:
     print(f"\n❌ Error writing to file {output_path}: {e}")
-
