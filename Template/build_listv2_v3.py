@@ -196,8 +196,8 @@ import requests
 from pathlib import Path
 
 # === CONFIGURATION ===
-TEMPLATE_URL = "https://raw.githubusercontent.com/portainer/templates/master/templates-2.0.json"
-OUTPUT_DIR = "output"
+TEMPLATE_URL = "https://raw.githubusercontent.com/Lissy93/portainer-templates/main/templates.json"
+OUTPUT_DIR = "."
 
 def sanitize_name(name):
     """Turn a title into a safe folder name"""
