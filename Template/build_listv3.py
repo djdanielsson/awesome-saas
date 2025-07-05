@@ -4,6 +4,7 @@ import os
 import random
 import string
 import re
+import yaml
 
 template_urls = [
     'https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v2-amd64.json',
