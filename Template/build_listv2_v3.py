@@ -172,7 +172,7 @@ final_output = {
 }
 
 # Save to file
-output_path = "portainer-v3-latest.json"
+output_path = "portainer-v2-v3-latest.json"
 with open(output_path, "w", encoding="utf-8") as f:
     json.dump(final_output, f, indent=2, ensure_ascii=False)
 
