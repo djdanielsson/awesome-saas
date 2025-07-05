@@ -189,97 +189,104 @@
 #     print(f"\n❌ Error writing to file {output_path}: {e}")
 
 import json
+import os
 import re
-import requests
 import yaml
+import requests
+from pathlib import Path
 
-# Source of v2 templates
+# === CONFIGURATION ===
 TEMPLATE_URL = "https://raw.githubusercontent.com/Lissy93/portainer-templates/main/templates.json"
-OUTPUT_FILE = "portainer-v3-template.json"
+OUTPUT_DIR = "output"
 
 def sanitize_name(name):
+    """Turn a title into a safe folder name"""
     return re.sub(r'[^a-z0-9_]+', '_', name.strip().lower())
 
-# Download v2 template JSON
-print(f"Downloading v2 templates from: {TEMPLATE_URL}")
-res = requests.get(TEMPLATE_URL)
-res.raise_for_status()
-data = res.json()
+# === START SCRIPT ===
+print(f"⬇️ Downloading v2 templates from: {TEMPLATE_URL}")
+response = requests.get(TEMPLATE_URL)
+response.raise_for_status()
+data = response.json()
 
-v2_templates = data.get("templates", [])
-v3_templates = []
+templates = data.get("templates", [])
+print(f"🔍 Found {len(templates)} templates. Converting...")
 
-for tpl in v2_templates:
-    title = tpl.get("title", "Unnamed")
-    image = tpl.get("image")
-    if not image:
-        continue  # skip malformed
+# Ensure output dir exists
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    # Portainer v3 still supports type 1 (containers)
-    template = {
-        "type": 1,  # container template
-        "title": title,
-        "description": tpl.get("description", ""),
-        "image": image,
-        "note": tpl.get("note", ""),
-        "platform": tpl.get("platform", "linux"),
-        "categories": tpl.get("categories", []),
-        "logo": tpl.get("logo", "")
+for template in templates:
+    title = template.get("title", "unnamed")
+    name = sanitize_name(title)
+    folder = Path(OUTPUT_DIR) / name
+    folder.mkdir(parents=True, exist_ok=True)
+
+    # === docker-compose.yml ===
+    service_name = name
+    service = {
+        "image": template.get("image")
     }
 
-    # Optional fields
-    if tpl.get("registry"):
-        template["registry"] = tpl["registry"]
+    # Ports
+    ports = template.get("ports")
+    if isinstance(ports, list):
+        service["ports"] = [
+            f"{p['host']}:{p['container']}"
+            for p in ports if isinstance(p, dict) and "host" in p and "container" in p
+        ]
+    elif isinstance(ports, str):
+        service["ports"] = [ports]
 
-    if tpl.get("command"):
-        template["command"] = tpl["command"]
+    # Restart policy
+    if "restart_policy" in template:
+        service["restart"] = template["restart_policy"]
 
-    if tpl.get("hostname"):
-        template["hostname"] = tpl["hostname"]
+    # Environment variables
+    env = template.get("env")
+    if isinstance(env, list):
+        service["environment"] = [
+            f"{e['name']}={e.get('default', '')}"
+            for e in env if "name" in e
+        ]
 
-    if tpl.get("restart_policy"):
-        template["restart_policy"] = tpl["restart_policy"]
+    # Volumes
+    vols = template.get("volumes")
+    if isinstance(vols, list):
+        service["volumes"] = [
+            f"{v['bind']}:{v['container']}"
+            for v in vols if "bind" in v and "container" in v
+        ]
+    elif isinstance(vols, str):
+        service["volumes"] = [vols]
 
-    if tpl.get("network"):
-        template["network"] = tpl["network"]
+    # Command
+    if "command" in template:
+        service["command"] = template["command"]
 
-    if tpl.get("env"):
-        template["env"] = tpl["env"]
+    compose = {
+        "version": "3.8",
+        "services": {
+            service_name: service
+        }
+    }
 
-    if tpl.get("volumes"):
-        template["volumes"] = tpl["volumes"]
+    with open(folder / "docker-compose.yml", "w") as f:
+        yaml.dump(compose, f, sort_keys=False)
 
-    if tpl.get("ports"):
-        # Ensure ports are a list of strings (e.g. "8080:80/tcp")
-        if isinstance(tpl["ports"], list):
-            formatted_ports = []
-            for port in tpl["ports"]:
-                if isinstance(port, dict) and "host" in port and "container" in port:
-                    formatted_ports.append(f"{port['host']}:{port['container']}/tcp")
-                elif isinstance(port, str):
-                    formatted_ports.append(port)
-            template["ports"] = formatted_ports
+    # === config.json ===
+    config = {
+        "title": title,
+        "description": template.get("description", ""),
+        "note": template.get("note", ""),
+        "platform": template.get("platform", "linux"),
+        "categories": template.get("categories", []),
+        "logo": template.get("logo", ""),
+        "composeFile": "docker-compose.yml"
+    }
 
-    if tpl.get("labels"):
-        template["labels"] = tpl["labels"]
+    with open(folder / "config.json", "w") as f:
+        json.dump(config, f, indent=2)
 
-    if tpl.get("privileged"):
-        template["privileged"] = tpl["privileged"]
+    print(f"✅ Converted: {title}")
 
-    if tpl.get("interactive"):
-        template["interactive"] = tpl["interactive"]
-
-    v3_templates.append(template)
-
-# Wrap it in the expected structure
-output = {
-    "version": "2",
-    "templates": v3_templates
-}
-
-# Save to file
-with open(OUTPUT_FILE, "w") as f:
-    json.dump(output, f, indent=2)
-
-print(f"✅ Portainer v3-compatible template saved to: {OUTPUT_FILE}")
-
+print(f"\n🎉 Done! All templates saved in: {OUTPUT_DIR}")
