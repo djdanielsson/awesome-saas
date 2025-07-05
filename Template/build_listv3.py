@@ -11,7 +11,8 @@ template_urls = [
     'https://raw.githubusercontent.com/donspablo/awesome-saas/master/Template/portainer-v2.json',
     'https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Template/template.json',
     'https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Template/template.json',
-    'https://raw.githubusercontent.com/Lissy93/portainer-templates/main/templates.json'
+    'https://raw.githubusercontent.com/Lissy93/portainer-templates/main/templates.json',
+    'https://raw.githubusercontent.com/technorabilia/portainer-templates/refs/heads/main/lsio/templates/templates.json'
 ]
 
 templates = []
