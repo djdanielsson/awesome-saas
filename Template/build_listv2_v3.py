@@ -187,42 +187,33 @@
 #     print(f"\n✅ Success! {len(templates_sorted)} valid Portainer v3 templates written to: {output_path}")
 # except IOError as e:
 #     print(f"\n❌ Error writing to file {output_path}: {e}")
-
 import json
-import os
 import re
-import yaml
 import requests
-from pathlib import Path
+import yaml
 
 # === CONFIGURATION ===
 TEMPLATE_URL = "https://raw.githubusercontent.com/Lissy93/portainer-templates/main/templates.json"
-OUTPUT_DIR = "output"
+OUTPUT_FILE = "portainer-v3.json"
 
 def sanitize_name(name):
-    """Turn a title into a safe folder name"""
     return re.sub(r'[^a-z0-9_]+', '_', name.strip().lower())
 
-# === START SCRIPT ===
+# Download v2 templates
 print(f"⬇️ Downloading v2 templates from: {TEMPLATE_URL}")
 response = requests.get(TEMPLATE_URL)
 response.raise_for_status()
 data = response.json()
 
-templates = data.get("templates", [])
-print(f"🔍 Found {len(templates)} templates. Converting...")
+v2_templates = data.get("templates", [])
+v3_templates = []
 
-# Ensure output dir exists
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+print(f"🔁 Converting {len(v2_templates)} templates to v3...")
 
-for template in templates:
-    title = template.get("title", "unnamed")
-    name = sanitize_name(title)
-    folder = Path(OUTPUT_DIR) / name
-    folder.mkdir(parents=True, exist_ok=True)
+for template in v2_templates:
+    title = template.get("title", "Unnamed")
+    service_name = sanitize_name(title)
 
-    # === docker-compose.yml ===
-    service_name = name
     service = {
         "image": template.get("image")
     }
@@ -241,7 +232,7 @@ for template in templates:
     if "restart_policy" in template:
         service["restart"] = template["restart_policy"]
 
-    # Environment variables
+    # Environment
     env = template.get("env")
     if isinstance(env, list):
         service["environment"] = [
@@ -263,31 +254,33 @@ for template in templates:
     if "command" in template:
         service["command"] = template["command"]
 
-    compose = {
+    # Compose file as string
+    compose_obj = {
         "version": "3.8",
         "services": {
             service_name: service
         }
     }
+    compose_str = yaml.dump(compose_obj, sort_keys=False)
 
-    with open(folder / "docker-compose.yml", "w") as f:
-        yaml.dump(compose, f, sort_keys=False)
-
-    # === config.json ===
-    config = {
+    # V3 Template Entry
+    v3_templates.append({
         "title": title,
         "description": template.get("description", ""),
         "note": template.get("note", ""),
         "platform": template.get("platform", "linux"),
         "categories": template.get("categories", []),
         "logo": template.get("logo", ""),
-        "composeFile": "docker-compose.yml"
-    }
+        "stack": {
+            "name": service_name,
+            "composeFile": compose_str
+        }
+    })
 
-    with open(folder / "config.json", "w") as f:
-        json.dump(config, f, indent=2)
+# Save to output file
+with open(OUTPUT_FILE, "w") as f:
+    json.dump(v3_templates, f, indent=2)
 
-    print(f"✅ Converted: {title}")
+print(f"✅ Saved converted templates to: {OUTPUT_FILE}")
 
-print(f"\n🎉 Done! All templates saved in: {OUTPUT_DIR}")
 
