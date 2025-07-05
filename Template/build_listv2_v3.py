@@ -82,10 +82,16 @@ def normalize_and_validate_template(template, is_v2):
         v3_template = template.copy()
 
     # --- Final V3 Schema Enforcement (for all templates) ---
-    # This ensures no template violates the strict stack vs. container rules.
+    
+    # FIX: Handle v3 files that still use numeric types (like technorabilia's)
     template_type = v3_template.get("type")
+    if isinstance(template_type, int):
+        template_type = {1: "stack", 2: "container"}.get(template_type)
+        v3_template["type"] = template_type
+
+    # This ensures no template violates the strict stack vs. container rules.
     if template_type == "stack":
-        if "repository" not in v3_template or "url" not in v3_template["repository"]: return None
+        if "repository" not in v3_template or "url" not in v3_template.get("repository", {}): return None
         for key in ["image", "ports", "volumes", "env"]: v3_template.pop(key, None)
     elif template_type == "container":
         if "image" not in v3_template: return None
