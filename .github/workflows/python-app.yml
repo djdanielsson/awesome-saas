@@ -47,6 +47,8 @@ jobs:
 
     - name: Run python script
       run: cd Template; python build_list.py
+    - name: Run python scriptv2+3
+      run: cd Template; python build_listv2_v3.py
     - name: Run python scriptv3
       run: cd Template; python build_listv3.py
 
