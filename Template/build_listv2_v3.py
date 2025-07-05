@@ -5,7 +5,8 @@ import re
 # List of source template URLs
 template_urls = [
     'https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v2-amd64.json',
-    'https://raw.githubusercontent.com/donspablo/awesome-saas/master/Template/portainer-v2.json',
+    # Replaced the dead 'donspablo' link with a working, popular alternative
+    'https://raw.githubusercontent.com/dnburgess/portainer-templates/master/template.json',
     'https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Template/template.json',
     'https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Template/template.json',
     'https://raw.githubusercontent.com/Lissy93/portainer-templates/main/templates.json',
@@ -33,20 +34,14 @@ def normalize_and_validate_template(template):
     description = str(template.get("description", "")).strip()
 
     # --- Basic Filtering ---
-    # Skip if essential fields are missing or it's marked as deprecated
     if not title or not description or "[DEPRECATED]" in description.upper():
         return None
 
-    # Skip if the title is already in our list (deduplication)
     title_key = sanitize_key(title)
     if title_key in unique_titles:
         return None
 
     # --- Determine Template Type (Stack vs. Container) ---
-    # A template is a "stack" if it has a repository defined.
-    # A template is a "container" if it has an image defined.
-    # The v2 'type' field (1=stack, 2=container) is also a strong indicator.
-    
     v2_type = template.get("type")
     is_stack = (
         v2_type == 1 or
@@ -60,84 +55,74 @@ def normalize_and_validate_template(template):
     )
 
     # --- Build the V3 Template Object ---
-    
-    # A. Process as a Stack Template (priority)
     if is_stack:
         repo = template.get("repository", {})
         if not repo.get("url"):
             return None # A stack template MUST have a repository URL.
 
-        # Ensure stackfile path is correctly formatted
         stackfile = repo.get("stackfile", "docker-compose.yml")
         if not stackfile.startswith('/'):
             stackfile = f"/{stackfile}"
 
-        # Construct the valid v3 stack object
         v3_template = {
-            "type": "stack",
-            "title": title,
-            "description": description,
-            "repository": {
-                "url": repo["url"],
-                "stackfile": stackfile
-            }
+            "type": "stack", "title": title, "description": description,
+            "repository": {"url": repo["url"], "stackfile": stackfile}
         }
-    # B. Process as a Container Template
     elif is_container:
         if not template.get("image"):
             return None # A container template MUST have an image.
             
-        # Construct the valid v3 container object
         v3_template = {
-            "type": "container",
-            "title": title,
-            "description": description,
+            "type": "container", "title": title, "description": description,
             "image": template["image"]
         }
-        # A container template can have optional runtime details
-        if "ports" in template:
-            v3_template["ports"] = template["ports"]
-        if "volumes" in template:
-            v3_template["volumes"] = template["volumes"]
-        if "env" in template:
-            v3_template["env"] = template["env"]
-    
-    # C. If it's neither a valid stack nor container, skip it
+        if "ports" in template: v3_template["ports"] = template["ports"]
+        if "volumes" in template: v3_template["volumes"] = template["volumes"]
+        if "env" in template: v3_template["env"] = template["env"]
     else:
         return None
 
     # --- Add Common Optional Fields ---
-    if "logo" in template and template["logo"]:
-        v3_template["logo"] = template["logo"].strip()
-    if "categories" in template and template["categories"]:
-        v3_template["categories"] = template["categories"]
+    if "logo" in template and template["logo"]: v3_template["logo"] = template["logo"].strip()
+    if "categories" in template and template["categories"]: v3_template["categories"] = template["categories"]
     
-    # For platforms, default to linux if not specified
     platforms = template.get("platforms", [template.get("platform", "linux")])
-    if not isinstance(platforms, list):
-        platforms = [str(platforms)]
+    if not isinstance(platforms, list): platforms = [str(platforms)]
     v3_template["platforms"] = platforms
     
     v3_template["restart_policy"] = template.get("restart_policy", "unless-stopped")
 
     # --- Final V3 Schema Enforcement ---
-    # This step is crucial to guarantee compliance. It removes any keys that
-    # don't belong to the determined template type.
     if v3_template["type"] == "stack":
-        # A stack template should NOT have container-specific keys at the top level.
-        # These details belong inside the stackfile (e.g., docker-compose.yml).
-        v3_template.pop("image", None)
-        v3_template.pop("ports", None)
-        v3_template.pop("volumes", None)
-        v3_template.pop("env", None)
+        for key in ["image", "ports", "volumes", "env"]: v3_template.pop(key, None)
     elif v3_template["type"] == "container":
-        # A container template should NOT have a repository key.
         v3_template.pop("repository", None)
 
-    # If we got here, the template is valid and processed.
     unique_titles.add(title_key)
     return v3_template
 
+def parse_json_stream(text):
+    """
+    Parses a string that contains multiple, concatenated JSON objects
+    by finding the boundaries of each object.
+    """
+    templates = []
+    decoder = json.JSONDecoder()
+    pos = 0
+    while pos < len(text):
+        text = text[pos:]
+        # Skip whitespace and other non-JSON characters at the beginning
+        obj_start = text.find('{')
+        if obj_start == -1:
+            break
+        text = text[obj_start:]
+        try:
+            obj, pos = decoder.raw_decode(text)
+            templates.append(obj)
+        except json.JSONDecodeError:
+            # Could not decode, move past this point to find the next object
+            pos = 1
+    return templates
 
 def fetch_and_process_url(url):
     """Fetches a template file from a URL and processes its contents."""
@@ -146,35 +131,46 @@ def fetch_and_process_url(url):
         response = requests.get(url, timeout=15)
         response.raise_for_status()
         
-        # Some files might have leading/trailing whitespace or comments
-        # A more robust way to load JSON is to find the first '{'
-        content = response.text
-        json_start = content.find('{')
-        if json_start == -1:
-            print(f"⚠️ No JSON object found in {url}")
+        content = response.text.strip()
+        if not content:
+            print(f"⚠️ Empty content from {url}")
             return []
-        
-        data = json.loads(content[json_start:])
-        
+
+        raw_templates = []
+        try:
+            # First, try to parse as a single, valid JSON object
+            data = json.loads(content)
+            if isinstance(data, dict):
+                # Standard format: {"version": "x", "templates": [...]}
+                raw_templates = data.get("templates", [])
+            elif isinstance(data, list):
+                # Some files have the root as a list of templates
+                raw_templates = data
+        except json.JSONDecodeError:
+            # If standard parsing fails, it might be a stream of JSON objects
+            print(f"ℹ️ Standard JSON parse failed for {url}. Attempting to parse as a stream.")
+            raw_templates = parse_json_stream(content)
+
+        if not raw_templates:
+            print(f"⚠️ No templates found in {url}")
+            return []
+            
         processed_templates = []
-        for raw_template in data.get("templates", []):
+        for raw_template in raw_templates:
+            if not isinstance(raw_template, dict): continue
             v3_template = normalize_and_validate_template(raw_template)
             if v3_template:
                 processed_templates.append(v3_template)
+        print(f"👍 Processed {len(processed_templates)} templates from {url}")
         return processed_templates
         
     except requests.Timeout:
         print(f"❌ Timeout while fetching {url}")
-        return []
     except requests.RequestException as e:
         print(f"❌ Request failed for {url}: {e}")
-        return []
-    except json.JSONDecodeError as e:
-        print(f"❌ Failed to parse JSON from {url}: {e}")
-        return []
     except Exception as e:
         print(f"❌ An unexpected error occurred for {url}: {e}")
-        return []
+    return []
 
 # --- Main Processing Loop ---
 for url in template_urls:
