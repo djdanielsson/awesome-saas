@@ -19,84 +19,66 @@ def sanitize_key(text):
     return re.sub(r'[\s\-]+', '', text.lower().strip())
 
 def convert_v2_to_v3(template_v2):
-    """
-    Convert a single v2 template dict to v3 format.
-    """
-    # Basic required fields
-    title = template_v2.get("title", "").strip()
-    description = template_v2.get("description", "").strip()
-    if not title or not description:
+    title = str(template_v2.get("title", "")).strip()
+    description = str(template_v2.get("description", "")).strip()
+
+    if not title or not description or "[DEPRECATED]" in description.upper():
         return None
 
-    # Skip deprecated
-    if "[DEPRECATED]" in description.upper():
+    title_key = sanitize_key(title)
+    if title_key in unique_titles:
         return None
 
-    # Convert type: v2 uses int, map 1 -> "stack" (you can adjust mapping)
-    type_map = {1: "stack", 2: "app"}
-    v2_type = template_v2.get("type", 1)
-    ttype = type_map.get(v2_type, "stack")
+    # Guess repo URL and default stackfile path
+    repo_url = ""
+    stackfile = "/docker-compose.yml"
 
-    # Platform
-    platform = template_v2.get("platform", "linux")
-    platforms = [platform]
+    maintainer = str(template_v2.get("maintainer", "")).strip()
+    repo_match = re.search(r'https://github\.com/[\w\-]+/[\w\-\.]+', maintainer)
+    if repo_match:
+        repo_url = repo_match.group(0)
 
-    # Categories fallback
-    categories = template_v2.get("categories", [])
+    if not repo_url:
+        # Skip if no image AND no repo
+        if not template_v2.get("image"):
+            return None
 
-    # Repository: v2 often doesn't have repository info.
-    # We'll build minimal repository only if stackfile info is found.
-    # Otherwise, fallback to using image key (which is accepted by v3)
-
-    repo_url = None
-    stackfile = None
-    repository = template_v2.get("repository")
-    if isinstance(repository, dict):
-        repo_url = repository.get("url")
-        stackfile = repository.get("stackfile")
-
-    # Try to build repository if missing, from image or maintainer info (best effort)
-    # Most v2 templates do NOT have this info, so we fallback to just image.
-    if not repo_url or not stackfile:
-        repo_url = None
-        stackfile = None
-
-    # Build v3 template dict
     template_v3 = {
         "title": title,
         "description": description,
-        "type": ttype,
-        "platforms": platforms,
-        "categories": categories,
+        "type": "stack",
+        "platforms": [template_v2.get("platform", "linux")],
+        "categories": template_v2.get("categories", []),
     }
 
-    # Repository block if valid
-    if repo_url and stackfile:
-        # Normalize stackfile to start with /
-        if not stackfile.startswith("/"):
-            stackfile = "/" + stackfile
+    logo = template_v2.get("logo", "").strip()
+    if logo:
+        template_v3["logo"] = logo
+
+    if template_v2.get("image"):
+        template_v3["image"] = template_v2["image"]
+
+    if template_v2.get("env"):
+        template_v3["env"] = template_v2["env"]
+
+    if template_v2.get("volumes"):
+        template_v3["volumes"] = template_v2["volumes"]
+
+    if template_v2.get("ports"):
+        template_v3["ports"] = template_v2["ports"]
+
+    if template_v2.get("restart_policy"):
+        template_v3["restart_policy"] = template_v2["restart_policy"]
+    else:
+        template_v3["restart_policy"] = "unless-stopped"
+
+    if repo_url:
         template_v3["repository"] = {
             "url": repo_url,
             "stackfile": stackfile
         }
 
-    # For v2 templates without repository, fallback to v3 with image
-    # If "image" key present, add it
-    image = template_v2.get("image")
-    if image:
-        template_v3["image"] = image
-
-    # Add logo if exists
-    logo = template_v2.get("logo", "").strip()
-    if logo:
-        template_v3["logo"] = logo
-
-    # Optionally copy env, ports, volumes etc for completeness (v3 supports these)
-    # For brevity, just copy if present:
-    for key in ["env", "ports", "volumes", "restart_policy"]:
-        if key in template_v2:
-            template_v3[key] = template_v2[key]
-
+    unique_titles.add(title_key)
     return template_v3
 
 def process_templates_from_data(data):
@@ -178,18 +160,16 @@ def process_templates_from_data(data):
 
 def get_data(url):
     try:
-        response = requests.get(url)
-        response.raise_for_status()
-    except Exception as e:
-        print(f"❌ Failed to fetch {url}: {e}")
-        return []
-
-    try:
         data = json.loads(response.text)
-        return process_templates_from_data(data)
-    except Exception as e:
-        print(f"❌ Error parsing {url}: {e}")
-        return []
+
+        raw_templates = data.get("templates", [])
+        if isinstance(raw_templates, list):
+            for template in raw_templates:
+                v3_template = convert_v2_to_v3(template)
+                if v3_template:
+                    templates.append(v3_template)
+        else:
+            print(f"❌ Unexpected structure at {url}")
 
 # Process all source URLs
 for url in template_urls:
