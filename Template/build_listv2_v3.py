@@ -188,7 +188,6 @@
 # except IOError as e:
 #     print(f"\n❌ Error writing to file {output_path}: {e}")
 
-
 import json
 import os
 import re
@@ -196,76 +195,85 @@ import yaml
 import requests
 from pathlib import Path
 
-# Configuration
+# === CONFIGURATION ===
 TEMPLATE_URL = "https://raw.githubusercontent.com/portainer/templates/master/templates-2.0.json"
-OUTPUT_DIR = "./"
+OUTPUT_DIR = "output"
 
 def sanitize_name(name):
+    """Turn a title into a safe folder name"""
     return re.sub(r'[^a-z0-9_]+', '_', name.strip().lower())
 
-# Download the v2 JSON from the remote URL
-print(f"Downloading v2 template from: {TEMPLATE_URL}")
+# === START SCRIPT ===
+print(f"⬇️ Downloading v2 templates from: {TEMPLATE_URL}")
 response = requests.get(TEMPLATE_URL)
 response.raise_for_status()
-v2 = response.json()
+data = response.json()
 
-# Ensure output directory exists
+templates = data.get("templates", [])
+print(f"🔍 Found {len(templates)} templates. Converting...")
+
+# Ensure output dir exists
 os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-templates = v2.get("templates", [])
-
-print(f"Found {len(templates)} templates. Converting...")
 
 for template in templates:
     title = template.get("title", "unnamed")
     name = sanitize_name(title)
-    folder_path = Path(OUTPUT_DIR) / name
-    os.makedirs(folder_path, exist_ok=True)
+    folder = Path(OUTPUT_DIR) / name
+    folder.mkdir(parents=True, exist_ok=True)
 
-    # Build docker-compose.yml
+    # === docker-compose.yml ===
     service_name = name
-    compose = {
-        "version": "3.8",
-        "services": {
-            service_name: {
-                "image": template.get("image")
-            }
-        }
+    service = {
+        "image": template.get("image")
     }
 
-    service = compose["services"][service_name]
+    # Ports
+    ports = template.get("ports")
+    if isinstance(ports, list):
+        service["ports"] = [
+            f"{p['host']}:{p['container']}"
+            for p in ports if isinstance(p, dict) and "host" in p and "container" in p
+        ]
+    elif isinstance(ports, str):
+        service["ports"] = [ports]
 
-    # Add ports
-    if "ports" in template:
-        service["ports"] = [f"{p['host']}:{p['container']}" for p in template["ports"]]
-
-    # Add restart policy
+    # Restart policy
     if "restart_policy" in template:
         service["restart"] = template["restart_policy"]
 
-    # Add environment variables
-    if "env" in template:
-        envs = template["env"]
+    # Environment variables
+    env = template.get("env")
+    if isinstance(env, list):
         service["environment"] = [
-            f"{e['name']}={e.get('default', '')}" for e in envs if "name" in e
+            f"{e['name']}={e.get('default', '')}"
+            for e in env if "name" in e
         ]
 
-    # Add volumes
-    if "volumes" in template:
+    # Volumes
+    vols = template.get("volumes")
+    if isinstance(vols, list):
         service["volumes"] = [
-            f"{v['bind']}:{v['container']}" for v in template["volumes"]
-            if "bind" in v and "container" in v
+            f"{v['bind']}:{v['container']}"
+            for v in vols if "bind" in v and "container" in v
         ]
+    elif isinstance(vols, str):
+        service["volumes"] = [vols]
 
-    # Add command
+    # Command
     if "command" in template:
         service["command"] = template["command"]
 
-    # Save docker-compose.yml
-    with open(folder_path / "docker-compose.yml", "w") as f:
+    compose = {
+        "version": "3.8",
+        "services": {
+            service_name: service
+        }
+    }
+
+    with open(folder / "docker-compose.yml", "w") as f:
         yaml.dump(compose, f, sort_keys=False)
 
-    # Build config.json
+    # === config.json ===
     config = {
         "title": title,
         "description": template.get("description", ""),
@@ -276,9 +284,10 @@ for template in templates:
         "composeFile": "docker-compose.yml"
     }
 
-    with open(folder_path / "config.json", "w") as f:
+    with open(folder / "config.json", "w") as f:
         json.dump(config, f, indent=2)
 
-    print(f"✔ Converted: {title}")
+    print(f"✅ Converted: {title}")
 
-print(f"\n✅ All templates converted and saved to: {OUTPUT_DIR}")
+print(f"\n🎉 Done! All templates saved in: {OUTPUT_DIR}")
+
