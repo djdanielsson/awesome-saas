@@ -1,4 +1,3 @@
-# not working yet
 import json
 import requests
 import re
@@ -13,167 +12,179 @@ template_urls = [
     'https://raw.githubusercontent.com/technorabilia/portainer-templates/refs/heads/main/lsio/templates/templates.json'
 ]
 
-# Output list and title deduplication set
+# --- Globals for processing ---
+# Final list of processed templates
 templates = []
+# Set to track unique titles to prevent duplicates
 unique_titles = set()
 
 def sanitize_key(text):
-    """Normalize a title for deduplication"""
+    """Normalize a title for deduplication by making it lowercase and removing spaces/hyphens."""
     return re.sub(r'[\s\-]+', '', text.lower().strip())
 
-def convert_v2_to_v3(template):
-    """Convert a v2 Portainer template to v3 format"""
+def normalize_and_validate_template(template):
+    """
+    Processes a single template object (from any version), validates it,
+    and converts it to a strict Portainer v3 format.
+
+    Returns a valid v3 template dict or None if the template is invalid/skipped.
+    """
     title = str(template.get("title", "")).strip()
     description = str(template.get("description", "")).strip()
 
+    # --- Basic Filtering ---
+    # Skip if essential fields are missing or it's marked as deprecated
     if not title or not description or "[DEPRECATED]" in description.upper():
         return None
 
+    # Skip if the title is already in our list (deduplication)
     title_key = sanitize_key(title)
     if title_key in unique_titles:
         return None
 
-    maintainer = str(template.get("maintainer", "")).strip()
-    repo_match = re.search(r'https://github\.com/[\w\-]+/[\w\-\.]+', maintainer)
-    repo_url = repo_match.group(0) if repo_match else ""
-    stackfile = "/docker-compose.yml"
+    # --- Determine Template Type (Stack vs. Container) ---
+    # A template is a "stack" if it has a repository defined.
+    # A template is a "container" if it has an image defined.
+    # The v2 'type' field (1=stack, 2=container) is also a strong indicator.
+    
+    v2_type = template.get("type")
+    is_stack = (
+        v2_type == 1 or
+        template.get("type") == "stack" or
+        ("repository" in template and isinstance(template.get("repository"), dict) and "url" in template.get("repository"))
+    )
+    is_container = (
+        v2_type == 2 or
+        template.get("type") in ["container", "app"] or
+        "image" in template
+    )
 
-    # Skip template if no repo or image
-    if not repo_url and not template.get("image"):
-        return None
+    # --- Build the V3 Template Object ---
+    
+    # A. Process as a Stack Template
+    if is_stack:
+        repo = template.get("repository", {})
+        if not repo.get("url"):
+            return None # A stack template MUST have a repository URL.
 
-    result = {
-        "title": title,
-        "description": description,
-        "type": "stack",
-        "platforms": [template.get("platform", "linux")],
-        "categories": template.get("categories", []),
-        "restart_policy": template.get("restart_policy", "unless-stopped"),
-    }
+        # Ensure stackfile path is correctly formatted
+        stackfile = repo.get("stackfile", "docker-compose.yml")
+        if not stackfile.startswith('/'):
+            stackfile = f"/{stackfile}"
 
-    if "logo" in template:
-        result["logo"] = template["logo"].strip()
-    if "image" in template:
-        result["image"] = template["image"]
-    if "env" in template:
-        result["env"] = template["env"]
-    if "ports" in template:
-        result["ports"] = template["ports"]
-    if "volumes" in template:
-        result["volumes"] = template["volumes"]
-    if repo_url:
-        result["repository"] = {
-            "url": repo_url,
-            "stackfile": stackfile
+        # Construct the valid v3 stack object
+        v3_template = {
+            "type": "stack",
+            "title": title,
+            "description": description,
+            "repository": {
+                "url": repo["url"],
+                "stackfile": stackfile
+            }
         }
+        # Note: A stack template should NOT have top-level 'image', 'ports', 'volumes'.
+        # These are defined within the stackfile (e.g., docker-compose.yml).
 
-    unique_titles.add(title_key)
-    return result
-
-def normalize_v3_template(template):
-    """Normalize and filter a v3 Portainer template"""
-    title = str(template.get("title", "")).strip()
-    description = str(template.get("description", "")).strip()
-
-    if not title or not description or "[DEPRECATED]" in description.upper():
-        return None
-
-    title_key = sanitize_key(title)
-    if title_key in unique_titles:
-        return None
-
-    platforms = template.get("platforms")
-    if not platforms:
-        platform = template.get("platform")
-        platforms = [platform] if platform else ["linux"]
-
-    ttype = template.get("type", "stack")
-    if isinstance(ttype, int):
-        ttype = {1: "stack", 2: "app"}.get(ttype, "stack")
-
-    normalized = {
-        "title": title,
-        "description": description,
-        "type": ttype,
-        "platforms": platforms,
-        "categories": template.get("categories", []),
-        "restart_policy": template.get("restart_policy", "unless-stopped")
-    }
-
-    if "logo" in template:
-        normalized["logo"] = template["logo"].strip()
-    if "image" in template:
-        normalized["image"] = template["image"]
-    if "env" in template:
-        normalized["env"] = template["env"]
-    if "ports" in template:
-        normalized["ports"] = template["ports"]
-    if "volumes" in template:
-        normalized["volumes"] = template["volumes"]
-
-    repo = template.get("repository")
-    if isinstance(repo, dict) and "url" in repo and "stackfile" in repo:
-        stackfile = repo["stackfile"]
-        if not stackfile.startswith("/"):
-            stackfile = "/" + stackfile
-        normalized["repository"] = {
-            "url": repo["url"],
-            "stackfile": stackfile
+    # B. Process as a Container Template
+    elif is_container:
+        if not template.get("image"):
+            return None # A container template MUST have an image.
+            
+        # Construct the valid v3 container object
+        v3_template = {
+            "type": "container",
+            "title": title,
+            "description": description,
+            "image": template["image"]
         }
-
-    unique_titles.add(title_key)
-    return normalized
-
-def process_templates(data):
-    """Convert templates from raw JSON to unified v3 format"""
-    version = str(data.get("version", "3")).strip()
-    raw_templates = data.get("templates", [])
-    output = []
-
-    if version == "2":
-        for template in raw_templates:
-            v3 = convert_v2_to_v3(template)
-            if v3:
-                output.append(v3)
+        # A container template can have optional runtime details
+        if "ports" in template:
+            v3_template["ports"] = template["ports"]
+        if "volumes" in template:
+            v3_template["volumes"] = template["volumes"]
+        if "env" in template:
+            v3_template["env"] = template["env"]
+        # Note: A container template should NOT have a 'repository' key.
+    
+    # C. If it's neither a valid stack nor container, skip it
     else:
-        for template in raw_templates:
-            v3 = normalize_v3_template(template)
-            if v3:
-                output.append(v3)
-    return output
+        return None
 
-def fetch_templates(url):
-    """Fetch and parse a template file from URL"""
+    # --- Add Common Optional Fields ---
+    if "logo" in template and template["logo"]:
+        v3_template["logo"] = template["logo"].strip()
+    if "categories" in template and template["categories"]:
+        v3_template["categories"] = template["categories"]
+    
+    # For platforms, default to linux if not specified
+    platforms = template.get("platforms", [template.get("platform", "linux")])
+    if not isinstance(platforms, list):
+        platforms = [str(platforms)]
+    v3_template["platforms"] = platforms
+    
+    v3_template["restart_policy"] = template.get("restart_policy", "unless-stopped")
+
+    # If we got here, the template is valid and processed.
+    unique_titles.add(title_key)
+    return v3_template
+
+
+def fetch_and_process_url(url):
+    """Fetches a template file from a URL and processes its contents."""
     try:
         print(f"📥 Fetching: {url}")
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, timeout=15)
         response.raise_for_status()
-        data = json.loads(response.text)
-        return process_templates(data)
+        
+        # Some files might have leading/trailing whitespace or comments
+        # A more robust way to load JSON is to find the first '{'
+        content = response.text
+        json_start = content.find('{')
+        if json_start == -1:
+            print(f"⚠️ No JSON object found in {url}")
+            return []
+        
+        data = json.loads(content[json_start:])
+        
+        processed_templates = []
+        for raw_template in data.get("templates", []):
+            v3_template = normalize_and_validate_template(raw_template)
+            if v3_template:
+                processed_templates.append(v3_template)
+        return processed_templates
+        
+    except requests.Timeout:
+        print(f"❌ Timeout while fetching {url}")
+        return []
+    except requests.RequestException as e:
+        print(f"❌ Request failed for {url}: {e}")
+        return []
+    except json.JSONDecodeError as e:
+        print(f"❌ Failed to parse JSON from {url}: {e}")
+        return []
     except Exception as e:
-        print(f"❌ Failed to load {url}: {e}")
+        print(f"❌ An unexpected error occurred for {url}: {e}")
         return []
 
-# Main processing loop
+# --- Main Processing Loop ---
 for url in template_urls:
-    templates.extend(fetch_templates(url))
+    templates.extend(fetch_and_process_url(url))
 
-# Sort templates alphabetically
+# Sort the final list of templates alphabetically by title
 templates_sorted = sorted(templates, key=lambda t: t["title"].lower())
 
-# Assign unique numeric IDs
-for i, t in enumerate(templates_sorted, start=1):
-    t["id"] = str(i)
-
-# Final JSON output
+# Final JSON output structure required by Portainer
 final_output = {
     "version": "3",
     "templates": templates_sorted
 }
 
-# Save to file
-output_path = "portainer-v2-v3-latest.json"
-with open(output_path, "w", encoding="utf-8") as f:
-    json.dump(final_output, f, indent=2, ensure_ascii=False)
+# --- Save to File ---
+output_path = "portainer-templates-v3.json"
+try:
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(final_output, f, indent=2, ensure_ascii=False)
+    print(f"\n✅ Success! {len(templates_sorted)} valid Portainer v3 templates written to: {output_path}")
+except IOError as e:
+    print(f"\n❌ Error writing to file {output_path}: {e}")
 
-print(f"\n✅ {len(templates_sorted)} valid Portainer templates written to: {output_path}")
