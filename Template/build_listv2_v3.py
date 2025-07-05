@@ -187,100 +187,99 @@
 #     print(f"\n✅ Success! {len(templates_sorted)} valid Portainer v3 templates written to: {output_path}")
 # except IOError as e:
 #     print(f"\n❌ Error writing to file {output_path}: {e}")
+
 import json
 import re
 import requests
 import yaml
 
-# === CONFIGURATION ===
+# Source of v2 templates
 TEMPLATE_URL = "https://raw.githubusercontent.com/Lissy93/portainer-templates/main/templates.json"
-OUTPUT_FILE = "portainer-v3.json"
+OUTPUT_FILE = "portainer-v3-template.json"
 
 def sanitize_name(name):
     return re.sub(r'[^a-z0-9_]+', '_', name.strip().lower())
 
-# Download v2 templates
-print(f"⬇️ Downloading v2 templates from: {TEMPLATE_URL}")
-response = requests.get(TEMPLATE_URL)
-response.raise_for_status()
-data = response.json()
+# Download v2 template JSON
+print(f"Downloading v2 templates from: {TEMPLATE_URL}")
+res = requests.get(TEMPLATE_URL)
+res.raise_for_status()
+data = res.json()
 
 v2_templates = data.get("templates", [])
 v3_templates = []
 
-print(f"🔁 Converting {len(v2_templates)} templates to v3...")
+for tpl in v2_templates:
+    title = tpl.get("title", "Unnamed")
+    image = tpl.get("image")
+    if not image:
+        continue  # skip malformed
 
-for template in v2_templates:
-    title = template.get("title", "Unnamed")
-    service_name = sanitize_name(title)
-
-    service = {
-        "image": template.get("image")
-    }
-
-    # Ports
-    ports = template.get("ports")
-    if isinstance(ports, list):
-        service["ports"] = [
-            f"{p['host']}:{p['container']}"
-            for p in ports if isinstance(p, dict) and "host" in p and "container" in p
-        ]
-    elif isinstance(ports, str):
-        service["ports"] = [ports]
-
-    # Restart policy
-    if "restart_policy" in template:
-        service["restart"] = template["restart_policy"]
-
-    # Environment
-    env = template.get("env")
-    if isinstance(env, list):
-        service["environment"] = [
-            f"{e['name']}={e.get('default', '')}"
-            for e in env if "name" in e
-        ]
-
-    # Volumes
-    vols = template.get("volumes")
-    if isinstance(vols, list):
-        service["volumes"] = [
-            f"{v['bind']}:{v['container']}"
-            for v in vols if "bind" in v and "container" in v
-        ]
-    elif isinstance(vols, str):
-        service["volumes"] = [vols]
-
-    # Command
-    if "command" in template:
-        service["command"] = template["command"]
-
-    # Compose file as string
-    compose_obj = {
-        "version": "3.8",
-        "services": {
-            service_name: service
-        }
-    }
-    compose_str = yaml.dump(compose_obj, sort_keys=False)
-
-    # V3 Template Entry
-    v3_templates.append({
+    # Portainer v3 still supports type 1 (containers)
+    template = {
+        "type": 1,  # container template
         "title": title,
-        "description": template.get("description", ""),
-        "note": template.get("note", ""),
-        "platform": template.get("platform", "linux"),
-        "categories": template.get("categories", []),
-        "logo": template.get("logo", ""),
-        "stack": {
-            "name": service_name,
-            "composeFile": compose_str
-        }
-    })
+        "description": tpl.get("description", ""),
+        "image": image,
+        "note": tpl.get("note", ""),
+        "platform": tpl.get("platform", "linux"),
+        "categories": tpl.get("categories", []),
+        "logo": tpl.get("logo", "")
+    }
 
-# Save to output file
+    # Optional fields
+    if tpl.get("registry"):
+        template["registry"] = tpl["registry"]
+
+    if tpl.get("command"):
+        template["command"] = tpl["command"]
+
+    if tpl.get("hostname"):
+        template["hostname"] = tpl["hostname"]
+
+    if tpl.get("restart_policy"):
+        template["restart_policy"] = tpl["restart_policy"]
+
+    if tpl.get("network"):
+        template["network"] = tpl["network"]
+
+    if tpl.get("env"):
+        template["env"] = tpl["env"]
+
+    if tpl.get("volumes"):
+        template["volumes"] = tpl["volumes"]
+
+    if tpl.get("ports"):
+        # Ensure ports are a list of strings (e.g. "8080:80/tcp")
+        if isinstance(tpl["ports"], list):
+            formatted_ports = []
+            for port in tpl["ports"]:
+                if isinstance(port, dict) and "host" in port and "container" in port:
+                    formatted_ports.append(f"{port['host']}:{port['container']}/tcp")
+                elif isinstance(port, str):
+                    formatted_ports.append(port)
+            template["ports"] = formatted_ports
+
+    if tpl.get("labels"):
+        template["labels"] = tpl["labels"]
+
+    if tpl.get("privileged"):
+        template["privileged"] = tpl["privileged"]
+
+    if tpl.get("interactive"):
+        template["interactive"] = tpl["interactive"]
+
+    v3_templates.append(template)
+
+# Wrap it in the expected structure
+output = {
+    "version": "2",
+    "templates": v3_templates
+}
+
+# Save to file
 with open(OUTPUT_FILE, "w") as f:
-    json.dump(v3_templates, f, indent=2)
+    json.dump(output, f, indent=2)
 
-print(f"✅ Saved converted templates to: {OUTPUT_FILE}")
-
+print(f"✅ Portainer v3-compatible template saved to: {OUTPUT_FILE}")
 
