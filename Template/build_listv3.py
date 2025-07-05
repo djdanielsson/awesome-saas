@@ -4,8 +4,8 @@ import os
 import random
 import string
 import re
-import yaml
 
+# List of source template URLs
 template_urls = [
     'https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v2-amd64.json',
     'https://raw.githubusercontent.com/donspablo/awesome-saas/master/Template/portainer-v2.json',
@@ -15,82 +15,88 @@ template_urls = [
 ]
 
 templates = []
-unique_names = set()
+unique_titles = set()
 
-def sanitize_string(text):
-    return re.sub(r'\s+|-', '', text.lower())
+def sanitize_key(text):
+    return re.sub(r'[\s\-]+', '', text.lower().strip())
 
 def get_data(url):
     try:
         response = requests.get(url)
         response.raise_for_status()
     except Exception as e:
-        print(f"Failed to fetch {url}: {e}")
+        print(f"❌ Failed to fetch {url}: {e}")
         return
 
-    random_suffix = ''.join(random.choices(string.ascii_lowercase, k=5))
-    filename = f"/tmp/{random_suffix}_{os.path.basename(url)}"
+    try:
+        data = json.loads(response.text)
+        raw_templates = data.get("templates", [])
 
-    with open(filename, 'wb') as file:
-        file.write(response.content)
+        for template in raw_templates:
+            title = template.get("title", "").strip()
+            description = template.get("description", "").strip()
+            title_key = sanitize_key(title)
 
-    with open(filename, 'r', encoding='utf-8') as json_file:
-        try:
-            data = json.load(json_file)
-            for template in data.get("templates", []):
-                title_key = sanitize_string(template.get("title", ""))
-                description = template.get("description", "")
-                if title_key in unique_names or not description or "[DEPRECATED]" in description:
-                    continue
+            if not title or not description or "[DEPRECATED]" in description.upper():
+                continue
 
-                # Skip if no valid repository (v3 requires URL and stackfile)
-                repo = template.get("repository")
-                if not repo or "url" not in repo or not repo.get("stackfile"):
-                    continue
+            if title_key in unique_titles:
+                continue
 
-                unique_names.add(title_key)
+            repo = template.get("repository", {})
+            repo_url = repo.get("url", "").strip()
+            stackfile = repo.get("stackfile", "").lstrip("./")
 
-                v3_template = {
-                    "title": template.get("title", "Untitled"),
-                    "description": description,
-                    "categories": template.get("categories", []),
-                    "logo": template.get("logo", ""),
-                    "platforms": [template.get("platform", "linux")],
-                    "repository": {
-                        "url": repo["url"],
-                        "stackfile": repo["stackfile"]
-                    }
+            if not repo_url or not stackfile:
+                continue
+
+            # Ensure stackfile starts with "/"
+            if not stackfile.startswith("/"):
+                stackfile = "/" + stackfile
+
+            # Build Portainer v3 template structure
+            new_template = {
+                "title": title,
+                "description": description,
+                "type": "stack",  # default type
+                "platforms": [template.get("platform", "linux")],
+                "categories": template.get("categories", []),
+                "repository": {
+                    "url": repo_url,
+                    "stackfile": stackfile
                 }
+            }
 
-                # Remove empty logo fields
-                if not v3_template["logo"]:
-                    del v3_template["logo"]
+            # Optional: add logo if present and not empty
+            logo = template.get("logo", "").strip()
+            if logo:
+                new_template["logo"] = logo
 
-                templates.append(v3_template)
-        except Exception as e:
-            print(f"Error parsing {url}: {e}")
+            templates.append(new_template)
+            unique_titles.add(title_key)
 
-# Process URLs
+    except Exception as e:
+        print(f"❌ Error parsing {url}: {e}")
+
+# Process all source URLs
 for url in template_urls:
+    print(f"📥 Fetching: {url}")
     get_data(url)
 
-# Sort templates by title
-sorted_templates = sorted(templates, key=lambda d: d["title"].lower())
+# Sort and assign IDs
+templates_sorted = sorted(templates, key=lambda t: t["title"].lower())
+for i, t in enumerate(templates_sorted, start=1):
+    t["id"] = str(i)
 
-# Assign sequential numeric IDs
-for idx, template in enumerate(sorted_templates, start=1):
-    template["id"] = str(idx)
-
-# Final JSON structure
-final_data = {
+final_output = {
     "version": "3",
-    "templates": sorted_templates
+    "templates": templates_sorted
 }
 
-# Write output
+# Write to file
 output_file = "portainer-v3-latest.json"
 with open(output_file, "w", encoding="utf-8") as f:
-    json.dump(final_data, f, ensure_ascii=False, indent=2)
+    json.dump(final_output, f, ensure_ascii=False, indent=2)
 
-print(f"✔ Generated {len(sorted_templates)} valid Portainer v3 templates.")
+print(f"\n✅ Generated {len(templates_sorted)} valid Portainer v3 templates.")
 print(f"📁 Output saved to {output_file}")
