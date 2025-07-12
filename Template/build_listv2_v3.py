@@ -5,7 +5,6 @@ import re
 # List of source template URLs
 template_urls = [
     'https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v2-amd64.json',
-    # Replaced dead links with the official Portainer list and another popular one
     'https://raw.githubusercontent.com/portainer/templates/master/templates.json',
     'https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Template/template.json',
     'https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Template/template.json',
