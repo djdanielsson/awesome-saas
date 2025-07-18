@@ -41,8 +41,11 @@ def fetch_templates_from_url(url):
 
     raw_templates = data.get("templates", [])
     for template in raw_templates:
-        title = template.get("title", "").strip()
-        description = template.get("description", "").strip()
+        if not template:
+            continue
+    
+        title = str(template.get("title") or "").strip()
+        description = str(template.get("description") or "").strip()
         title_key = sanitize_key(title)
 
         if not title or not description or "[DEPRECATED]" in description.upper():
