@@ -4,7 +4,7 @@ import re
 
 # List of source template URLs
 template_urls = [
-    'https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/template/portainer-v2-amd64.json',
+    'https://raw.githubusercontent.com/pi-hosted/pi-hosted/refs/heads/master/template/portainer-v3-amd64.json',
     'https://raw.githubusercontent.com/donspablo/awesome-saas/master/Template/portainer-v2.json',
     'https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Template/template.json',
     'https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Template/template.json',
