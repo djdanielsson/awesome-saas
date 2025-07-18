@@ -17,19 +17,16 @@ unique_titles = set()
 template_counts = {}
 
 def sanitize_key(text):
-    """Normalize title text to ensure uniqueness."""
     return re.sub(r'[\s\-]+', '', text.lower().strip())
 
 def determine_type(template):
-    """Determine template type based on available keys."""
     if "image" in template:
-        return 1  # container
+        return 1
     elif "repository" in template:
-        return 2  # stack
-    return 2  # default to stack
+        return 2
+    return 2
 
 def fetch_templates_from_url(url):
-    """Fetch, parse, and collect templates from a single URL."""
     added = 0
     try:
         response = requests.get(url)
@@ -39,11 +36,15 @@ def fetch_templates_from_url(url):
         print(f"❌ Failed to fetch {url}: {e}")
         return added
 
-    raw_templates = data.get("templates", [])
+    if isinstance(data, list):
+        raw_templates = data
+    else:
+        raw_templates = data.get("templates", [])
+
     for template in raw_templates:
         if not template:
             continue
-    
+
         title = str(template.get("title") or "").strip()
         description = str(template.get("description") or "").strip()
         title_key = sanitize_key(title)
@@ -63,12 +64,11 @@ def fetch_templates_from_url(url):
             "note": template.get("note", "")
         }
 
-        logo = template.get("logo", "").strip()
+        logo = str(template.get("logo") or "").strip()
         if logo:
             new_template["logo"] = logo
 
         if new_template["type"] == 1:
-            # Container-specific fields
             if "image" in template:
                 new_template["image"] = template["image"]
             if "env" in template:
@@ -80,10 +80,9 @@ def fetch_templates_from_url(url):
             if "restart_policy" in template:
                 new_template["restart_policy"] = template["restart_policy"]
         else:
-            # Stack-specific fields
             repo = template.get("repository", {})
-            repo_url = repo.get("url", "").strip()
-            stackfile = repo.get("stackfile", "").lstrip("./")
+            repo_url = str(repo.get("url") or "").strip()
+            stackfile = str(repo.get("stackfile") or "").lstrip("./")
 
             if not repo_url or not stackfile:
                 continue
@@ -101,25 +100,24 @@ def fetch_templates_from_url(url):
 
     return added
 
-# Fetch templates from each source
+# Fetch from all sources and count per-source
 for url in template_urls:
     print(f"📥 Fetching: {url}")
     count = fetch_templates_from_url(url)
     template_counts[url] = count
 
-# Sort and assign IDs
+# Sort templates and assign IDs
 templates_sorted = sorted(templates, key=lambda t: t["title"].lower())
 for idx, template in enumerate(templates_sorted, start=1):
     template["id"] = idx
 
-# Write to file
+# Save to file
 output_file = "portainer-v3-latest.json"
-final_output = {
-    "version": "3",
-    "templates": templates_sorted
-}
 with open(output_file, "w", encoding="utf-8") as f:
-    json.dump(final_output, f, ensure_ascii=False, indent=2)
+    json.dump({
+        "version": "3",
+        "templates": templates_sorted
+    }, f, ensure_ascii=False, indent=2)
 
 # Summary
 print(f"\n✅ Generated {len(templates_sorted)} valid Portainer v3 templates.")
