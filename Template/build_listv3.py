@@ -121,8 +121,10 @@ with open(output_file, "w", encoding="utf-8") as f:
 
 # Summary
 print(f"\n✅ Generated {len(templates_sorted)} valid Portainer v3 templates.")
+print(f"📦 Total unique templates after deduplication: {len(unique_titles)}")
 print(f"📁 Output saved to {output_file}\n")
 
 print("📊 Template counts by source:")
 for url, count in template_counts.items():
     print(f"- {url}: {count} template(s)")
+
