@@ -14,116 +14,114 @@ template_urls = [
 
 templates = []
 unique_titles = set()
+template_counts = {}
 
 def sanitize_key(text):
+    """Normalize title text to ensure uniqueness."""
     return re.sub(r'[\s\-]+', '', text.lower().strip())
 
 def determine_type(template):
-    # type=1 container if "image" key present, else type=2 stack if "repository" key present
+    """Determine template type based on available keys."""
     if "image" in template:
-        return 1
+        return 1  # container
     elif "repository" in template:
-        return 2
-    else:
-        return 2  # fallback to stack type
+        return 2  # stack
+    return 2  # default to stack
 
-def get_data(url):
+def fetch_templates_from_url(url):
+    """Fetch, parse, and collect templates from a single URL."""
+    added = 0
     try:
         response = requests.get(url)
         response.raise_for_status()
+        data = response.json()
     except Exception as e:
         print(f"❌ Failed to fetch {url}: {e}")
-        return
+        return added
 
-    try:
-        data = response.json()
-        raw_templates = data.get("templates", [])
+    raw_templates = data.get("templates", [])
+    for template in raw_templates:
+        title = template.get("title", "").strip()
+        description = template.get("description", "").strip()
+        title_key = sanitize_key(title)
 
-        for template in raw_templates:
-            title = template.get("title", "").strip()
-            description = template.get("description", "").strip()
-            title_key = sanitize_key(title)
+        if not title or not description or "[DEPRECATED]" in description.upper():
+            continue
+        if title_key in unique_titles:
+            continue
 
-            # Filter conditions
-            if not title or not description or "[DEPRECATED]" in description.upper():
+        new_template = {
+            "title": title,
+            "description": description,
+            "type": determine_type(template),
+            "platforms": [template.get("platform", "linux")],
+            "categories": template.get("categories", []),
+            "name": template.get("name", title),
+            "note": template.get("note", "")
+        }
+
+        logo = template.get("logo", "").strip()
+        if logo:
+            new_template["logo"] = logo
+
+        if new_template["type"] == 1:
+            # Container-specific fields
+            if "image" in template:
+                new_template["image"] = template["image"]
+            if "env" in template:
+                new_template["env"] = template["env"]
+            if "ports" in template:
+                new_template["ports"] = template["ports"]
+            if "volumes" in template:
+                new_template["volumes"] = template["volumes"]
+            if "restart_policy" in template:
+                new_template["restart_policy"] = template["restart_policy"]
+        else:
+            # Stack-specific fields
+            repo = template.get("repository", {})
+            repo_url = repo.get("url", "").strip()
+            stackfile = repo.get("stackfile", "").lstrip("./")
+
+            if not repo_url or not stackfile:
                 continue
+            if not stackfile.startswith("/"):
+                stackfile = "/" + stackfile
 
-            if title_key in unique_titles:
-                continue
-
-            # Base new template
-            new_template = {
-                "title": title,
-                "description": description,
-                "type": determine_type(template),
-                "platforms": [template.get("platform", "linux")],
-                "categories": template.get("categories", []),
-                "name": template.get("name", title),
-                "note": template.get("note", ""),
+            new_template["repository"] = {
+                "url": repo_url,
+                "stackfile": stackfile
             }
 
-            # Add logo if present
-            logo = template.get("logo", "").strip()
-            if logo:
-                new_template["logo"] = logo
+        templates.append(new_template)
+        unique_titles.add(title_key)
+        added += 1
 
-            # Add container-specific fields if type=1
-            if new_template["type"] == 1:
-                if "image" in template:
-                    new_template["image"] = template["image"]
-                if "env" in template:
-                    new_template["env"] = template["env"]
-                if "ports" in template:
-                    new_template["ports"] = template["ports"]
-                if "volumes" in template:
-                    new_template["volumes"] = template["volumes"]
-                if "restart_policy" in template:
-                    new_template["restart_policy"] = template["restart_policy"]
+    return added
 
-            # Add stack-specific repository if type=2
-            elif new_template["type"] == 2:
-                repo = template.get("repository", {})
-                repo_url = repo.get("url", "").strip()
-                stackfile = repo.get("stackfile", "").lstrip("./")
-
-                if not repo_url or not stackfile:
-                    # Skip if repo info incomplete
-                    continue
-
-                # Ensure stackfile starts with '/'
-                if not stackfile.startswith("/"):
-                    stackfile = "/" + stackfile
-
-                new_template["repository"] = {
-                    "url": repo_url,
-                    "stackfile": stackfile
-                }
-
-            templates.append(new_template)
-            unique_titles.add(title_key)
-
-    except Exception as e:
-        print(f"❌ Error parsing {url}: {e}")
-
-# Fetch all templates from URLs
+# Fetch templates from each source
 for url in template_urls:
     print(f"📥 Fetching: {url}")
-    get_data(url)
+    count = fetch_templates_from_url(url)
+    template_counts[url] = count
 
-# Sort by title, assign incremental integer IDs
+# Sort and assign IDs
 templates_sorted = sorted(templates, key=lambda t: t["title"].lower())
 for idx, template in enumerate(templates_sorted, start=1):
     template["id"] = idx
 
+# Write to file
+output_file = "portainer-v3-latest.json"
 final_output = {
     "version": "3",
     "templates": templates_sorted
 }
-
-# Write output file
-output_file = "portainer-v3-latest.json"
 with open(output_file, "w", encoding="utf-8") as f:
     json.dump(final_output, f, ensure_ascii=False, indent=2)
 
+# Summary
 print(f"\n✅ Generated {len(templates_sorted)} valid Portainer v3 templates.")
-print(f"📁 Output saved to {output_file}")
+print(f"📁 Output saved to {output_file}\n")
+
+print("📊 Template counts by source:")
+for url, count in template_counts.items():
+    print(f"- {url}: {count} template(s)")
