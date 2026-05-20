@@ -1656,6 +1656,53 @@
       "id": 47
     },
     {
+      "title": "Blade-of-agony",
+      "description": "[Wolfenstein: Blade of Agony](https://boa.realm667.com/) is a story-driven WWII shooter inspired by Wolfenstein and Doom.",
+      "type": 1,
+      "platforms": [
+        "linux"
+      ],
+      "categories": [
+        "Games"
+      ],
+      "name": "Blade-of-agony",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a>, based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Ensure to create the following volume directories on the host file system, or modify the paths in the volume mapping section under the advanced options below, as needed.</p><p>mkdir -p /srv/lsio/blade-of-agony/config</p>",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/boa-logo.png",
+      "image": "linuxserver/blade-of-agony:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000",
+          "description": "Run 'id [USER]' for the owner of the host volume directories to get the UID to use here."
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "1000",
+          "description": "Run 'id [USER]' for the owner of the host volume directories to get the GID to use here."
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "Etc/UTC",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp",
+        "3001:3001/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/srv/lsio/blade-of-agony/config"
+        }
+      ],
+      "restart_policy": "unless-stopped",
+      "id": 48
+    },
+    {
       "title": "Blender",
       "description": "[Blender](https://www.blender.org/) is a free and open-source 3D computer graphics software toolset used for creating animated films, visual effects, art, 3D printed models, motion graphics, interactive 3D applications, virtual reality, and computer games. **This image does not support GPU rendering out of the box only accelerated workspace experience**",
       "type": 1,
@@ -1700,7 +1747,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 48
+      "id": 49
     },
     {
       "title": "Blinko",
@@ -1719,7 +1766,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/blinko.yml"
       },
-      "id": 49
+      "id": 50
     },
     {
       "title": "Boinc",
@@ -1772,7 +1819,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 50
+      "id": 51
     },
     {
       "title": "Booksonic",
@@ -1824,7 +1871,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 51
+      "id": 52
     },
     {
       "title": "Bookstack",
@@ -1843,7 +1890,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted/",
         "stackfile": "/stack/bookstack.yml"
       },
-      "id": 52
+      "id": 53
     },
     {
       "title": "Bookstack (stack)",
@@ -1862,7 +1909,7 @@
         "url": "https://github.com/Qballjos/portainer_templates",
         "stackfile": "/Template/Stack/bookstack.yml"
       },
-      "id": 53
+      "id": 54
     },
     {
       "title": "Bookstack (swarm)",
@@ -1881,7 +1928,7 @@
         "url": "https://github.com/mikestraney/portainer-templates",
         "stackfile": "/stacks/bookstack/docker-stack.yml"
       },
-      "id": 54
+      "id": 55
     },
     {
       "title": "Brave",
@@ -1928,7 +1975,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 55
+      "id": 56
     },
     {
       "title": "Broadlink Manager",
@@ -1947,7 +1994,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/broadlink-manager.yml"
       },
-      "id": 56
+      "id": 57
     },
     {
       "title": "Budge",
@@ -1993,7 +2040,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 57
+      "id": 58
     },
     {
       "title": "Budibase",
@@ -2015,7 +2062,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/budibase.yml"
       },
-      "id": 58
+      "id": 59
     },
     {
       "title": "Caddy",
@@ -2053,7 +2100,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 59
+      "id": 60
     },
     {
       "title": "Calibre",
@@ -2102,7 +2149,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 60
+      "id": 61
     },
     {
       "title": "Calibre Web",
@@ -2145,7 +2192,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 61
+      "id": 62
     },
     {
       "title": "Calligra",
@@ -2192,7 +2239,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 62
+      "id": 63
     },
     {
       "title": "Cardigann",
@@ -2230,7 +2277,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 63
+      "id": 64
     },
     {
       "title": "CashPilot",
@@ -2271,7 +2318,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 64
+      "id": 65
     },
     {
       "title": "Castopod",
@@ -2290,7 +2337,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/castopod.yml"
       },
-      "id": 65
+      "id": 66
     },
     {
       "title": "ChangeDetection",
@@ -2318,7 +2365,7 @@
           "bind": "/opt/mediadepot/apps/changedetection"
         }
       ],
-      "id": 66
+      "id": 67
     },
     {
       "title": "Changedetection.io",
@@ -2377,7 +2424,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 67
+      "id": 68
     },
     {
       "title": "CheckCle",
@@ -2396,7 +2443,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/checkcle.yml"
       },
-      "id": 68
+      "id": 69
     },
     {
       "title": "Checkmate",
@@ -2415,7 +2462,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/checkmate.yml"
       },
-      "id": 69
+      "id": 70
     },
     {
       "title": "Chevereto",
@@ -2479,7 +2526,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 70
+      "id": 71
     },
     {
       "title": "Chibisafe",
@@ -2498,7 +2545,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/chibisafe.yml"
       },
-      "id": 71
+      "id": 72
     },
     {
       "title": "Chiefonboarding",
@@ -2517,7 +2564,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/chiefonboarding.yml"
       },
-      "id": 72
+      "id": 73
     },
     {
       "title": "Chowdown",
@@ -2544,7 +2591,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 73
+      "id": 74
     },
     {
       "title": "Chrome",
@@ -2597,7 +2644,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 74
+      "id": 75
     },
     {
       "title": "Chromium",
@@ -2650,7 +2697,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 75
+      "id": 76
     },
     {
       "title": "Chrony NTP",
@@ -2682,53 +2729,6 @@
       ],
       "ports": [
         "123:123/udp"
-      ],
-      "restart_policy": "unless-stopped",
-      "id": 76
-    },
-    {
-      "title": "Citron",
-      "description": "[Citron](https://citron-emu.org/) is a feature rich Switch 1 emulator for homebrew.",
-      "type": 1,
-      "platforms": [
-        "linux"
-      ],
-      "categories": [
-        "Games"
-      ],
-      "name": "Citron",
-      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a>, based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Ensure to create the following volume directories on the host file system, or modify the paths in the volume mapping section under the advanced options below, as needed.</p><p>mkdir -p /srv/lsio/citron/config</p>",
-      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/citron-logo.png",
-      "image": "linuxserver/citron:latest",
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1000",
-          "description": "Run 'id [USER]' for the owner of the host volume directories to get the UID to use here."
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "1000",
-          "description": "Run 'id [USER]' for the owner of the host volume directories to get the GID to use here."
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "default": "Etc/UTC",
-          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
-        }
-      ],
-      "ports": [
-        "3000:3000/tcp",
-        "3001:3001/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config",
-          "bind": "/srv/lsio/citron/config"
-        }
       ],
       "restart_policy": "unless-stopped",
       "id": 77
@@ -6912,7 +6912,7 @@
     },
     {
       "title": "Freescout",
-      "description": "FreeScout is the super lightweight free open source help desk and shared inbox written in PHP (Laravel framework) – self hosted clone of HelpScout.",
+      "description": "FreeScout is the super lightweight free open source help desk and shared inbox written in PHP (Laravel framework) – self hosted clone of HelpScout.",
       "type": 2,
       "platforms": [
         "linux"
@@ -7590,7 +7590,7 @@
     },
     {
       "title": "Gokapi",
-      "description": "Gokapi is a lightweight server to share files, which expire after a set amount of downloads or days. It is similar to the discontinued Firefox Send, with the difference that only the admin is allowed to upload files",
+      "description": "Gokapi is a lightweight server to share files, which expire after a set amount of downloads or days. It is similar to the discontinued Firefox Send, with the difference that only the admin is allowed to upload files",
       "type": 2,
       "platforms": [
         "linux"
@@ -8436,6 +8436,59 @@
       "id": 236
     },
     {
+      "title": "Helium",
+      "description": "[Helium](https://helium.computer/) is a Chromium-based web browser made for people, with love. Privacy-first with unbiased ad-blocking.",
+      "type": 1,
+      "platforms": [
+        "linux"
+      ],
+      "categories": [
+        "Web Browser"
+      ],
+      "name": "Helium",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a>, based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Ensure to create the following volume directories on the host file system, or modify the paths in the volume mapping section under the advanced options below, as needed.</p><p>mkdir -p /srv/lsio/helium/config</p>",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/helium-logo.png",
+      "image": "linuxserver/helium:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000",
+          "description": "Run 'id [USER]' for the owner of the host volume directories to get the UID to use here."
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "1000",
+          "description": "Run 'id [USER]' for the owner of the host volume directories to get the GID to use here."
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "Etc/UTC",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        },
+        {
+          "name": "HELIUM_CLI",
+          "label": "HELIUM_CLI",
+          "default": "https://www.linuxserver.io/",
+          "description": "Specify one or multiple Chromium CLI flags, this string will be passed to the application in full. [OPTIONAL]"
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp",
+        "3001:3001/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/srv/lsio/helium/config"
+        }
+      ],
+      "restart_policy": "unless-stopped",
+      "id": 237
+    },
+    {
       "title": "Hishtory-server",
       "description": "[hiSHtory](https://github.com/ddworken/hishtory) is a better shell history. It stores your shell history in context (what directory you ran the command in, whether it succeeded or failed, how long it took, etc). This is all stored locally and end-to-end encrypted for syncing to to all your other computers.",
       "type": 1,
@@ -8491,7 +8544,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 237
+      "id": 238
     },
     {
       "title": "Hoarder",
@@ -8510,7 +8563,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/hoarder.yml"
       },
-      "id": 238
+      "id": 239
     },
     {
       "title": "Homarr",
@@ -8558,7 +8611,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 239
+      "id": 240
     },
     {
       "title": "Homarr (container)",
@@ -8606,7 +8659,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 240
+      "id": 241
     },
     {
       "title": "Homarr (stack)",
@@ -8625,7 +8678,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/homarr.yml"
       },
-      "id": 241
+      "id": 242
     },
     {
       "title": "Homarr-Secured",
@@ -8669,7 +8722,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 242
+      "id": 243
     },
     {
       "title": "Home Assistant",
@@ -8693,7 +8746,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 243
+      "id": 244
     },
     {
       "title": "Homebox",
@@ -8720,7 +8773,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 244
+      "id": 245
     },
     {
       "title": "Homebridge",
@@ -8770,7 +8823,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 245
+      "id": 246
     },
     {
       "title": "Homebridge (container)",
@@ -8820,7 +8873,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 246
+      "id": 247
     },
     {
       "title": "Homebridge (stack)",
@@ -8839,7 +8892,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/homebridge.yml"
       },
-      "id": 247
+      "id": 248
     },
     {
       "title": "Homebridge - Debian",
@@ -8889,7 +8942,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 248
+      "id": 249
     },
     {
       "title": "Homechart",
@@ -8908,7 +8961,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/homechart.yml"
       },
-      "id": 249
+      "id": 250
     },
     {
       "title": "Homepage",
@@ -8945,7 +8998,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 250
+      "id": 251
     },
     {
       "title": "Homepage (container)",
@@ -8997,7 +9050,7 @@
           "readonly": true
         }
       ],
-      "id": 251
+      "id": 252
     },
     {
       "title": "Homepage (stack)",
@@ -9016,7 +9069,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/homepage.yml"
       },
-      "id": 252
+      "id": 253
     },
     {
       "title": "Homer",
@@ -9055,7 +9108,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 253
+      "id": 254
     },
     {
       "title": "HTPC Manager",
@@ -9095,7 +9148,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 254
+      "id": 255
     },
     {
       "title": "Httpd",
@@ -9119,7 +9172,7 @@
           "container": "/usr/local/apache2/htdocs/"
         }
       ],
-      "id": 255
+      "id": 256
     },
     {
       "title": "Huginn",
@@ -9146,7 +9199,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 256
+      "id": 257
     },
     {
       "title": "hydra2",
@@ -9195,7 +9248,7 @@
           "container": "/downloads"
         }
       ],
-      "id": 257
+      "id": 258
     },
     {
       "title": "I hate money",
@@ -9213,7 +9266,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/ihatemoney.yml"
       },
-      "id": 258
+      "id": 259
     },
     {
       "title": "Immich",
@@ -9233,7 +9286,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/immich.yml"
       },
-      "id": 259
+      "id": 260
     },
     {
       "title": "Immich {shmolf}",
@@ -9253,7 +9306,7 @@
         "url": "https://github.com/shmolf/portainer-templates",
         "stackfile": "/stacks/immich/docker-compose.yml"
       },
-      "id": 260
+      "id": 261
     },
     {
       "title": "Infisical {shmolf}",
@@ -9273,7 +9326,7 @@
         "url": "https://github.com/shmolf/portainer-templates",
         "stackfile": "/stacks/infisical/compose.yml"
       },
-      "id": 261
+      "id": 262
     },
     {
       "title": "Influxdb",
@@ -9292,7 +9345,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/influxdb2.yml"
       },
-      "id": 262
+      "id": 263
     },
     {
       "title": "Influxdb & Telegraf",
@@ -9312,7 +9365,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/influxdb2_telegraf.yml"
       },
-      "id": 263
+      "id": 264
     },
     {
       "title": "Influxdb 1.8.10",
@@ -9343,7 +9396,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 264
+      "id": 265
     },
     {
       "title": "Influxdb Latest",
@@ -9401,7 +9454,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 265
+      "id": 266
     },
     {
       "title": "Inkscape",
@@ -9448,7 +9501,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 266
+      "id": 267
     },
     {
       "title": "Intellij-idea",
@@ -9495,7 +9548,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 267
+      "id": 268
     },
     {
       "title": "Invidious",
@@ -9515,7 +9568,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted",
         "stackfile": "/stack/invidious-amd64.yml"
       },
-      "id": 268
+      "id": 269
     },
     {
       "title": "Invoice Ninja",
@@ -9538,7 +9591,7 @@
         "url": "https://github.com/SelfhostedPro/selfhosted_templates",
         "stackfile": "/Template/Stack/invoice-ninja.yml"
       },
-      "id": 269
+      "id": 270
     },
     {
       "title": "Invoice Ninja (stack)",
@@ -9561,7 +9614,7 @@
         "url": "https://github.com/Qballjos/portainer_templates",
         "stackfile": "/Template/Stack/invoice-ninja.yml"
       },
-      "id": 270
+      "id": 271
     },
     {
       "title": "Invoice Ninja (swarm)",
@@ -9584,7 +9637,7 @@
         "url": "https://github.com/mikestraney/portainer-templates",
         "stackfile": "/stacks/invoice-ninja/docker-stack.yml"
       },
-      "id": 271
+      "id": 272
     },
     {
       "title": "iobroker",
@@ -9622,7 +9675,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 272
+      "id": 273
     },
     {
       "title": "iperf",
@@ -9640,7 +9693,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/iperf.yml"
       },
-      "id": 273
+      "id": 274
     },
     {
       "title": "IronFunctions",
@@ -9659,7 +9712,7 @@
         "url": "https://github.com/mikestraney/portainer-templates",
         "stackfile": "/stacks/ironfunctions/docker-stack.yml"
       },
-      "id": 274
+      "id": 275
     },
     {
       "title": "IronFunctions API",
@@ -9683,7 +9736,7 @@
           "container": "/app/data"
         }
       ],
-      "id": 275
+      "id": 276
     },
     {
       "title": "IronFunctions UI",
@@ -9713,7 +9766,7 @@
           "container": "/app/data"
         }
       ],
-      "id": 276
+      "id": 277
     },
     {
       "title": "IT-Tools",
@@ -9735,7 +9788,7 @@
         "8080:80/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "id": 277
+      "id": 278
     },
     {
       "title": "Jackett",
@@ -9778,7 +9831,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 278
+      "id": 279
     },
     {
       "title": "JDownloader",
@@ -9826,7 +9879,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 279
+      "id": 280
     },
     {
       "title": "Jellyfin",
@@ -9880,7 +9933,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 280
+      "id": 281
     },
     {
       "title": "Jellyfin-Accounts",
@@ -9918,7 +9971,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 281
+      "id": 282
     },
     {
       "title": "Jellyseer",
@@ -9937,7 +9990,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/jellyseer.yml"
       },
-      "id": 282
+      "id": 283
     },
     {
       "title": "Jellyseerr",
@@ -9987,7 +10040,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 283
+      "id": 284
     },
     {
       "title": "Jenkins",
@@ -10018,7 +10071,7 @@
           "container": "/var/jenkins_home"
         }
       ],
-      "id": 284
+      "id": 285
     },
     {
       "title": "Joomla",
@@ -10053,7 +10106,7 @@
           "container": "/var/www/html"
         }
       ],
-      "id": 285
+      "id": 286
     },
     {
       "title": "Joplin",
@@ -10100,7 +10153,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 286
+      "id": 287
     },
     {
       "title": "Joplin server",
@@ -10122,7 +10175,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted/master/",
         "stackfile": "/stack/joplin-server.yml"
       },
-      "id": 287
+      "id": 288
     },
     {
       "title": "Jump",
@@ -10140,7 +10193,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/jump.yml"
       },
-      "id": 288
+      "id": 289
     },
     {
       "title": "Kali-linux",
@@ -10188,7 +10241,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 289
+      "id": 290
     },
     {
       "title": "Kapowarr",
@@ -10207,7 +10260,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/kapowarr.yml"
       },
-      "id": 290
+      "id": 291
     },
     {
       "title": "Kasm",
@@ -10246,7 +10299,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 291
+      "id": 292
     },
     {
       "title": "Kasm with renderD128 support",
@@ -10289,7 +10342,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 292
+      "id": 293
     },
     {
       "title": "Kasm Workspaces",
@@ -10308,7 +10361,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/kasmworkspaces.yml"
       },
-      "id": 293
+      "id": 294
     },
     {
       "title": "Kavita",
@@ -10354,7 +10407,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 294
+      "id": 295
     },
     {
       "title": "Kdenlive",
@@ -10401,7 +10454,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 295
+      "id": 296
     },
     {
       "title": "Keepassxc",
@@ -10448,7 +10501,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 296
+      "id": 297
     },
     {
       "title": "Kestra",
@@ -10468,7 +10521,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/kestra.yml"
       },
-      "id": 297
+      "id": 298
     },
     {
       "title": "Kicad",
@@ -10515,7 +10568,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 298
+      "id": 299
     },
     {
       "title": "Kimai",
@@ -10575,7 +10628,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 299
+      "id": 300
     },
     {
       "title": "Kiwix",
@@ -10594,7 +10647,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/kiwix.yml"
       },
-      "id": 300
+      "id": 301
     },
     {
       "title": "Klaxon",
@@ -10615,7 +10668,7 @@
         "url": "https://github.com/mediadepot/templates",
         "stackfile": "/stacks/klaxon/docker-compose.yml"
       },
-      "id": 301
+      "id": 302
     },
     {
       "title": "Klipper[Testing], Mainsail, Moonraker",
@@ -10636,7 +10689,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted/",
         "stackfile": "/stack/klipper.yml"
       },
-      "id": 302
+      "id": 303
     },
     {
       "title": "Kodi Headless",
@@ -10675,7 +10728,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 303
+      "id": 304
     },
     {
       "title": "Koillection",
@@ -10694,7 +10747,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/koillection.yml"
       },
-      "id": 304
+      "id": 305
     },
     {
       "title": "Kometa",
@@ -10770,7 +10823,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 305
+      "id": 306
     },
     {
       "title": "Komga",
@@ -10806,7 +10859,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 306
+      "id": 307
     },
     {
       "title": "Krita",
@@ -10853,7 +10906,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 307
+      "id": 308
     },
     {
       "title": "LazyLibrarian",
@@ -10896,7 +10949,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 308
+      "id": 309
     },
     {
       "title": "Lazytainer",
@@ -10914,7 +10967,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/lazytainer.yml"
       },
-      "id": 309
+      "id": 310
     },
     {
       "title": "Ldap-auth",
@@ -10980,7 +11033,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 310
+      "id": 311
     },
     {
       "title": "Leantime",
@@ -10999,7 +11052,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/leantime.yml"
       },
-      "id": 311
+      "id": 312
     },
     {
       "title": "Let's Encrypt",
@@ -11074,7 +11127,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 312
+      "id": 313
     },
     {
       "title": "Let's Encrypt / SWAG",
@@ -11149,7 +11202,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 313
+      "id": 314
     },
     {
       "title": "libreddit",
@@ -11176,7 +11229,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 314
+      "id": 315
     },
     {
       "title": "Libreoffice",
@@ -11223,7 +11276,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 315
+      "id": 316
     },
     {
       "title": "libresonic",
@@ -11285,7 +11338,7 @@
           "container": "/config"
         }
       ],
-      "id": 316
+      "id": 317
     },
     {
       "title": "LibreSpeed",
@@ -11324,7 +11377,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 317
+      "id": 318
     },
     {
       "title": "Librewolf",
@@ -11377,7 +11430,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 318
+      "id": 319
     },
     {
       "title": "lidarr",
@@ -11424,7 +11477,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 319
+      "id": 320
     },
     {
       "title": "Lidify",
@@ -11443,7 +11496,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/lidify.yml"
       },
-      "id": 320
+      "id": 321
     },
     {
       "title": "Lidify-full",
@@ -11462,7 +11515,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/lidify-full.yml"
       },
-      "id": 321
+      "id": 322
     },
     {
       "title": "Limnoria",
@@ -11508,7 +11561,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 322
+      "id": 323
     },
     {
       "title": "Lingva Translate",
@@ -11551,7 +11604,7 @@
         "3010:3000/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "id": 323
+      "id": 324
     },
     {
       "title": "Linkding",
@@ -11589,7 +11642,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 324
+      "id": 325
     },
     {
       "title": "linkstack",
@@ -11648,7 +11701,7 @@
         "8844:443/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "id": 325
+      "id": 326
     },
     {
       "title": "Listmonk",
@@ -11668,7 +11721,7 @@
         "url": "https://github.com/lissy93/portainer-templates",
         "stackfile": "/sources/stacks/listmonk.yml"
       },
-      "id": 326
+      "id": 327
     },
     {
       "title": "Littlelink Server",
@@ -11687,7 +11740,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/littlelink.yml"
       },
-      "id": 327
+      "id": 328
     },
     {
       "title": "LiveSwitch (stack)",
@@ -11706,7 +11759,7 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "/stacks/liveswitch/docker-compose.yml"
       },
-      "id": 328
+      "id": 329
     },
     {
       "title": "LiveSwitch (swarm)",
@@ -11725,7 +11778,7 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "/stacks/liveswitch/docker-stack.yml"
       },
-      "id": 329
+      "id": 330
     },
     {
       "title": "LLDAP",
@@ -11770,7 +11823,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 330
+      "id": 331
     },
     {
       "title": "Loggifly",
@@ -11790,7 +11843,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/loggifly.yml"
       },
-      "id": 331
+      "id": 332
     },
     {
       "title": "Logzio Logs Collector",
@@ -11830,7 +11883,7 @@
           "bind": "/var/lib/docker/containers"
         }
       ],
-      "id": 332
+      "id": 333
     },
     {
       "title": "Logzio Metrics Collector",
@@ -11881,7 +11934,7 @@
           "readonly": true
         }
       ],
-      "id": 333
+      "id": 334
     },
     {
       "title": "Lollypop",
@@ -11928,7 +11981,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 334
+      "id": 335
     },
     {
       "title": "Luanti",
@@ -11980,7 +12033,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 335
+      "id": 336
     },
     {
       "title": "Lunalytics",
@@ -11999,7 +12052,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/lunalytics.yml"
       },
-      "id": 336
+      "id": 337
     },
     {
       "title": "Lychee",
@@ -12069,7 +12122,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 337
+      "id": 338
     },
     {
       "title": "Lychee With Mariadb",
@@ -12091,7 +12144,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted/",
         "stackfile": "/stack/lychee-mariadb.yml"
       },
-      "id": 338
+      "id": 339
     },
     {
       "title": "LynxPrompt",
@@ -12111,7 +12164,7 @@
         "url": "https://github.com/lissy93/portainer-templates",
         "stackfile": "/sources/stacks/lynxprompt.yml"
       },
-      "id": 339
+      "id": 340
     },
     {
       "title": "Magento 2",
@@ -12137,7 +12190,7 @@
           "container": "/var/www/html/"
         }
       ],
-      "id": 340
+      "id": 341
     },
     {
       "title": "Mailpile",
@@ -12156,7 +12209,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/mailpile.yml"
       },
-      "id": 341
+      "id": 342
     },
     {
       "title": "Maloja",
@@ -12194,7 +12247,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 342
+      "id": 343
     },
     {
       "title": "Mame",
@@ -12245,7 +12298,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 343
+      "id": 344
     },
     {
       "title": "Manubes Edge Node",
@@ -12264,7 +12317,7 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "/edge/inray-manubes-edge-node/docker-compose.yml"
       },
-      "id": 344
+      "id": 345
     },
     {
       "title": "Manyfold",
@@ -12332,7 +12385,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 345
+      "id": 346
     },
     {
       "title": "MariaDB",
@@ -12391,7 +12444,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 346
+      "id": 347
     },
     {
       "title": "Markopolis",
@@ -12409,7 +12462,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/markopolis.yml"
       },
-      "id": 347
+      "id": 348
     },
     {
       "title": "Marreta",
@@ -12427,7 +12480,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/marreta.yml"
       },
-      "id": 348
+      "id": 349
     },
     {
       "title": "Mastodon",
@@ -12446,7 +12499,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/mastodon.yml"
       },
-      "id": 349
+      "id": 350
     },
     {
       "title": "Matomo",
@@ -12465,7 +12518,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/matomo.yml"
       },
-      "id": 350
+      "id": 351
     },
     {
       "title": "Mautic (container)",
@@ -12500,7 +12553,7 @@
           "container": "/var/www/html"
         }
       ],
-      "id": 351
+      "id": 352
     },
     {
       "title": "Mautic (stack)",
@@ -12519,7 +12572,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/mautic.yml"
       },
-      "id": 352
+      "id": 353
     },
     {
       "title": "Mayan EDMS",
@@ -12539,7 +12592,7 @@
         "url": "https://github.com/mediadepot/templates",
         "stackfile": "/stacks/mayan/docker-compose.yml"
       },
-      "id": 353
+      "id": 354
     },
     {
       "title": "McMyAdmin 2",
@@ -12577,7 +12630,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 354
+      "id": 355
     },
     {
       "title": "Mealie",
@@ -12661,7 +12714,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 355
+      "id": 356
     },
     {
       "title": "Medama",
@@ -12680,7 +12733,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/medama.yml"
       },
-      "id": 356
+      "id": 357
     },
     {
       "title": "Mediaelch",
@@ -12727,7 +12780,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 357
+      "id": 358
     },
     {
       "title": "Medusa",
@@ -12774,7 +12827,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 358
+      "id": 359
     },
     {
       "title": "Medusa (container)",
@@ -12821,7 +12874,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 359
+      "id": 360
     },
     {
       "title": "Medusa (stack)",
@@ -12840,11 +12893,11 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/medusa.yml"
       },
-      "id": 360
+      "id": 361
     },
     {
       "title": "Meilisearch",
-      "description": "Meilisearch is a **RESTful search API**. It aims to be a **ready-to-go solution** for everyone who wants a **fast and relevant search experience** for their end-users",
+      "description": "Meilisearch is a **RESTful search API**. It aims to be a **ready-to-go solution** for everyone who wants a **fast and relevant search experience** for their end-users",
       "type": 2,
       "platforms": [
         "linux"
@@ -12859,7 +12912,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/meilisearch.yml"
       },
-      "id": 361
+      "id": 362
     },
     {
       "title": "Melonds",
@@ -12906,7 +12959,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 362
+      "id": 363
     },
     {
       "title": "Memos",
@@ -12933,7 +12986,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 363
+      "id": 364
     },
     {
       "title": "Meshcentral",
@@ -12952,7 +13005,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/meshcentral.yml"
       },
-      "id": 364
+      "id": 365
     },
     {
       "title": "MeTube",
@@ -12990,7 +13043,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 365
+      "id": 366
     },
     {
       "title": "Microsoft OMS Agent",
@@ -13009,7 +13062,7 @@
         "url": "https://github.com/mikestraney/portainer-templates",
         "stackfile": "/stacks/microsoft-oms/docker-stack.yml"
       },
-      "id": 366
+      "id": 367
     },
     {
       "title": "Midarr",
@@ -13028,7 +13081,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/midarr.yml"
       },
-      "id": 367
+      "id": 368
     },
     {
       "title": "Minecraft Server",
@@ -13063,7 +13116,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 368
+      "id": 369
     },
     {
       "title": "Minetest",
@@ -13100,7 +13153,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 369
+      "id": 370
     },
     {
       "title": "Miniflux",
@@ -13118,7 +13171,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/miniflux.yml"
       },
-      "id": 370
+      "id": 371
     },
     {
       "title": "MinIO",
@@ -13174,7 +13227,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 371
+      "id": 372
     },
     {
       "title": "Minisatip",
@@ -13210,7 +13263,7 @@
         "1900:1900/udp"
       ],
       "restart_policy": "unless-stopped",
-      "id": 372
+      "id": 373
     },
     {
       "title": "Modmanager",
@@ -13256,7 +13309,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 373
+      "id": 374
     },
     {
       "title": "Modrinth",
@@ -13303,7 +13356,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 374
+      "id": 375
     },
     {
       "title": "Mongo",
@@ -13327,7 +13380,7 @@
           "container": "/data/db"
         }
       ],
-      "id": 375
+      "id": 376
     },
     {
       "title": "Monica",
@@ -13347,7 +13400,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted",
         "stackfile": "/stack/monica.yml"
       },
-      "id": 376
+      "id": 377
     },
     {
       "title": "Moodle",
@@ -13366,7 +13419,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/moodle.yml"
       },
-      "id": 377
+      "id": 378
     },
     {
       "title": "Mozilla Syncserver",
@@ -13423,7 +13476,7 @@
           "bind": "/opt/mediadepot/apps/syncserver"
         }
       ],
-      "id": 378
+      "id": 379
     },
     {
       "title": "Msedge",
@@ -13476,7 +13529,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 379
+      "id": 380
     },
     {
       "title": "Mstream",
@@ -13519,7 +13572,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 380
+      "id": 381
     },
     {
       "title": "Mullvad-browser",
@@ -13573,7 +13626,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 381
+      "id": 382
     },
     {
       "title": "Murmur",
@@ -13631,7 +13684,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 382
+      "id": 383
     },
     {
       "title": "MusicBrainz",
@@ -13680,7 +13733,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 383
+      "id": 384
     },
     {
       "title": "Muximux",
@@ -13721,7 +13774,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 384
+      "id": 385
     },
     {
       "title": "Mylar",
@@ -13768,11 +13821,11 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 385
+      "id": 386
     },
     {
       "title": "Mylar3",
-      "description": "[Mylar3](https://github.com/mylar3/mylar3) is an automated Comic Book downloader (cbr/cbz) for use with NZB and torrents written in python. It supports SABnzbd, NZBGET, and many torrent clients in addition to DDL.",
+      "description": "[Mylar3](https://github.com/MylarComics/mylar3) is an automated Comic Book downloader (cbr/cbz) for use with NZB and torrents written in python. It supports SABnzbd, NZBGET, and many torrent clients in addition to DDL.",
       "type": 1,
       "platforms": [
         "linux"
@@ -13823,7 +13876,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 386
+      "id": 387
     },
     {
       "title": "MySQL",
@@ -13872,7 +13925,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 387
+      "id": 388
     },
     {
       "title": "Mysql-workbench",
@@ -13919,7 +13972,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 388
+      "id": 389
     },
     {
       "title": "n8n",
@@ -13963,7 +14016,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 389
+      "id": 390
     },
     {
       "title": "n8n (container)",
@@ -14007,7 +14060,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 390
+      "id": 391
     },
     {
       "title": "N8n (stack)",
@@ -14026,7 +14079,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/n8n.yml"
       },
-      "id": 391
+      "id": 392
     },
     {
       "title": "Navidrome",
@@ -14046,7 +14099,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/navidrome.yml"
       },
-      "id": 392
+      "id": 393
     },
     {
       "title": "Neko",
@@ -14065,7 +14118,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/neko.yml"
       },
-      "id": 393
+      "id": 394
     },
     {
       "title": "NetAlertX",
@@ -14084,7 +14137,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/netalertx.yml"
       },
-      "id": 394
+      "id": 395
     },
     {
       "title": "Netboot.xyz (container)",
@@ -14135,7 +14188,7 @@
           "readonly": true
         }
       ],
-      "id": 395
+      "id": 396
     },
     {
       "title": "Netboot.xyz (stack)",
@@ -14154,7 +14207,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/netbootxyz.yml"
       },
-      "id": 396
+      "id": 397
     },
     {
       "title": "Netbox",
@@ -14174,7 +14227,7 @@
         "8000:80/tcp"
       ],
       "restart_policy": "always",
-      "id": 397
+      "id": 398
     },
     {
       "title": "Netdata",
@@ -14237,7 +14290,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 398
+      "id": 399
     },
     {
       "title": "Nextcloud",
@@ -14260,7 +14313,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted",
         "stackfile": "/stack/nextcloud.yml"
       },
-      "id": 399
+      "id": 400
     },
     {
       "title": "nextcloud (container)",
@@ -14311,7 +14364,7 @@
           "container": "/data"
         }
       ],
-      "id": 400
+      "id": 401
     },
     {
       "title": "Nextcloud (stack)",
@@ -14334,7 +14387,7 @@
         "url": "https://github.com/Qballjos/portainer_templates",
         "stackfile": "/Template/Stack/nextcloud.yml"
       },
-      "id": 401
+      "id": 402
     },
     {
       "title": "Nextcloud (swarm)",
@@ -14357,7 +14410,7 @@
         "url": "https://github.com/mikestraney/portainer-templates",
         "stackfile": "/stacks/nextcloud/docker-stack.yml"
       },
-      "id": 402
+      "id": 403
     },
     {
       "title": "NextcloudStack (swarm)",
@@ -14376,7 +14429,7 @@
         "url": "https://github.com/mikestraney/portainer-templates",
         "stackfile": "/stacks/nextcloud/docker-stack.yml"
       },
-      "id": 403
+      "id": 404
     },
     {
       "title": "Nexterm",
@@ -14395,7 +14448,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/nexterm.yml"
       },
-      "id": 404
+      "id": 405
     },
     {
       "title": "Nginx",
@@ -14435,7 +14488,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 405
+      "id": 406
     },
     {
       "title": "Nginx Proxy Manager",
@@ -14464,7 +14517,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 406
+      "id": 407
     },
     {
       "title": "Nginx Proxy Manager (container)",
@@ -14504,7 +14557,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 407
+      "id": 408
     },
     {
       "title": "Nginx Proxy Manager (stack)",
@@ -14526,7 +14579,7 @@
         "8000:80/tcp"
       ],
       "restart_policy": "always",
-      "id": 408
+      "id": 409
     },
     {
       "title": "Nginx Proxy Manager v2 with Sqlite and Goaccess Charts",
@@ -14546,7 +14599,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted",
         "stackfile": "/stack/nginx-proxy-manager-sqlite-goaccess.yml"
       },
-      "id": 409
+      "id": 410
     },
     {
       "title": "Nginx Proxy Manager v2 with Sqllite",
@@ -14596,7 +14649,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 410
+      "id": 411
     },
     {
       "title": "Nginx Proxy Manager v3 [DEVEL] NOT READY FOR USE",
@@ -14642,7 +14695,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 411
+      "id": 412
     },
     {
       "title": "Ngircd",
@@ -14688,7 +14741,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 412
+      "id": 413
     },
     {
       "title": "Nitter",
@@ -14709,7 +14762,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted/",
         "stackfile": "/stack/nitter.yml"
       },
-      "id": 413
+      "id": 414
     },
     {
       "title": "NocoDB",
@@ -14730,7 +14783,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/nocodb.yml"
       },
-      "id": 414
+      "id": 415
     },
     {
       "title": "Node Red",
@@ -14751,7 +14804,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted/",
         "stackfile": "/stack/node-red.yml"
       },
-      "id": 415
+      "id": 416
     },
     {
       "title": "NodeJS",
@@ -14767,7 +14820,7 @@
       "note": "",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/node.png",
       "image": "node:latest",
-      "id": 416
+      "id": 417
     },
     {
       "title": "nord-vpn",
@@ -14834,7 +14887,7 @@
         "8080:80/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "id": 417
+      "id": 418
     },
     {
       "title": "ntfy",
@@ -14864,7 +14917,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 418
+      "id": 419
     },
     {
       "title": "NUT Server",
@@ -14922,7 +14975,7 @@
         "3493:3493/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "id": 419
+      "id": 420
     },
     {
       "title": "Nutify",
@@ -14941,7 +14994,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/nutify.yml"
       },
-      "id": 420
+      "id": 421
     },
     {
       "title": "NUTS",
@@ -14966,7 +15019,7 @@
         }
       ],
       "restart_policy": "always",
-      "id": 421
+      "id": 422
     },
     {
       "title": "NZBGet",
@@ -15008,7 +15061,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 422
+      "id": 423
     },
     {
       "title": "NZBHydra 2",
@@ -15052,7 +15105,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 423
+      "id": 424
     },
     {
       "title": "Obsidian",
@@ -15099,7 +15152,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 424
+      "id": 425
     },
     {
       "title": "OctoPrint",
@@ -15142,7 +15195,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 425
+      "id": 426
     },
     {
       "title": "Odoo",
@@ -15184,7 +15237,7 @@
           "container": "/mnt/extra-addons"
         }
       ],
-      "id": 426
+      "id": 427
     },
     {
       "title": "Omada EAP Controller",
@@ -15230,7 +15283,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 427
+      "id": 428
     },
     {
       "title": "Ombi",
@@ -15271,7 +15324,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 428
+      "id": 429
     },
     {
       "title": "Ombi (container)",
@@ -15318,7 +15371,7 @@
           "readonly": true
         }
       ],
-      "id": 429
+      "id": 430
     },
     {
       "title": "Ombi (stack)",
@@ -15339,7 +15392,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/ombi.yml"
       },
-      "id": 430
+      "id": 431
     },
     {
       "title": "Onlyoffice",
@@ -15386,7 +15439,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 431
+      "id": 432
     },
     {
       "title": "OPC Router (container)",
@@ -15439,7 +15492,7 @@
           "container": "/var/log/opcrouter"
         }
       ],
-      "id": 432
+      "id": 433
     },
     {
       "title": "OpenAMT",
@@ -15458,7 +15511,7 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "/stacks/openamt/docker-compose.yml"
       },
-      "id": 433
+      "id": 434
     },
     {
       "title": "OpenBudgeteer",
@@ -15477,7 +15530,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/openbudgeteer.yml"
       },
-      "id": 434
+      "id": 435
     },
     {
       "title": "OpenFaaS",
@@ -15496,7 +15549,7 @@
         "url": "https://github.com/openfaas/faas",
         "stackfile": "/docker-compose.yml"
       },
-      "id": 435
+      "id": 436
     },
     {
       "title": "Openshot",
@@ -15543,7 +15596,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 436
+      "id": 437
     },
     {
       "title": "OpenSpeedTest",
@@ -15575,7 +15628,7 @@
         "30000:3000/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "id": 437
+      "id": 438
     },
     {
       "title": "Openssh-server",
@@ -15681,7 +15734,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 438
+      "id": 439
     },
     {
       "title": "OpenVPN Access Server",
@@ -15726,7 +15779,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 439
+      "id": 440
     },
     {
       "title": "openvpn-as",
@@ -15778,7 +15831,7 @@
           "container": "/config"
         }
       ],
-      "id": 440
+      "id": 441
     },
     {
       "title": "Openvscode-server",
@@ -15848,7 +15901,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 441
+      "id": 442
     },
     {
       "title": "Opera",
@@ -15901,7 +15954,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 442
+      "id": 443
     },
     {
       "title": "OpnForm",
@@ -15921,7 +15974,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/opnform.yml"
       },
-      "id": 443
+      "id": 444
     },
     {
       "title": "Orcaslicer",
@@ -15968,7 +16021,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 444
+      "id": 445
     },
     {
       "title": "Organizr",
@@ -16007,7 +16060,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 445
+      "id": 446
     },
     {
       "title": "Organizr (container)",
@@ -16046,7 +16099,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 446
+      "id": 447
     },
     {
       "title": "Organizr (stack)",
@@ -16066,7 +16119,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/organizr.yml"
       },
-      "id": 447
+      "id": 448
     },
     {
       "title": "Organizr v2",
@@ -16105,7 +16158,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 448
+      "id": 449
     },
     {
       "title": "Ory Kratos (Oathkeeper)",
@@ -16125,11 +16178,11 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/ory-kratos-oathkeeper.yml"
       },
-      "id": 449
+      "id": 450
     },
     {
       "title": "Ory Kratos (Standalone)",
-      "description": "Ory Kratos with Oathkeeper is _the_ developer-friendly, security-hardened and battle-test Identity, User Management and Authentication system for the Cloud.",
+      "description": "Ory Kratos with Oathkeeper is _the_ developer-friendly, security-hardened and battle-test Identity, User Management and Authentication system for the Cloud.",
       "type": 2,
       "platforms": [
         "linux"
@@ -16145,7 +16198,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/ory-kratos-standalone.yml"
       },
-      "id": 450
+      "id": 451
     },
     {
       "title": "OScam",
@@ -16184,7 +16237,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 451
+      "id": 452
     },
     {
       "title": "Outline",
@@ -16204,7 +16257,7 @@
         "url": "https://github.com/lissy93/portainer-templates",
         "stackfile": "/sources/stacks/outline.yml"
       },
-      "id": 452
+      "id": 453
     },
     {
       "title": "Overseerr",
@@ -16249,7 +16302,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 453
+      "id": 454
     },
     {
       "title": "Overseerr (container)",
@@ -16301,7 +16354,7 @@
           "readonly": true
         }
       ],
-      "id": 454
+      "id": 455
     },
     {
       "title": "Overseerr (stack)",
@@ -16320,7 +16373,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/overseerr.yml"
       },
-      "id": 455
+      "id": 456
     },
     {
       "title": "Owncloud",
@@ -16343,7 +16396,7 @@
         "url": "https://github.com/Qballjos/portainer_templates",
         "stackfile": "/Template/Stack/owncloud.yml"
       },
-      "id": 456
+      "id": 457
     },
     {
       "title": "PairDrop",
@@ -16381,7 +16434,7 @@
         "3000:3000/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "id": 457
+      "id": 458
     },
     {
       "title": "Paperless NGX",
@@ -16402,7 +16455,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted/",
         "stackfile": "/stack/paperless-ngx.yml"
       },
-      "id": 458
+      "id": 459
     },
     {
       "title": "Passbolt",
@@ -16422,7 +16475,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted",
         "stackfile": "/stack/passbolt.yml"
       },
-      "id": 459
+      "id": 460
     },
     {
       "title": "Passky Client",
@@ -16443,7 +16496,7 @@
         "8081:80/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "id": 460
+      "id": 461
     },
     {
       "title": "Passky Server",
@@ -16481,7 +16534,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 461
+      "id": 462
     },
     {
       "title": "Pcsx2",
@@ -16528,7 +16581,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 462
+      "id": 463
     },
     {
       "title": "Penpot (http) {shmolf}",
@@ -16547,7 +16600,7 @@
         "url": "https://github.com/shmolf/portainer-templates",
         "stackfile": "/stacks/penpot/docker-compose-http.yml"
       },
-      "id": 463
+      "id": 464
     },
     {
       "title": "Peppermint",
@@ -16607,7 +16660,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 464
+      "id": 465
     },
     {
       "title": "Petio",
@@ -16627,7 +16680,7 @@
         "url": "https://github.com/Qballjos/portainer_templates",
         "stackfile": "/Template/Stack/petio.yml"
       },
-      "id": 465
+      "id": 466
     },
     {
       "title": "pgAdmin",
@@ -16681,7 +16734,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 466
+      "id": 467
     },
     {
       "title": "PhotoPrism",
@@ -16700,7 +16753,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted",
         "stackfile": "/stack/photoprism.yml"
       },
-      "id": 467
+      "id": 468
     },
     {
       "title": "PhotoShow",
@@ -16746,7 +16799,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 468
+      "id": 469
     },
     {
       "title": "Phpmyadmin",
@@ -16804,7 +16857,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 469
+      "id": 470
     },
     {
       "title": "Pi-Hole",
@@ -16839,7 +16892,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 470
+      "id": 471
     },
     {
       "title": "Pi-Hole DoH/DoT",
@@ -16874,7 +16927,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 471
+      "id": 472
     },
     {
       "title": "Pi-Hole-Unbound",
@@ -16948,7 +17001,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 472
+      "id": 473
     },
     {
       "title": "pi-weather-station",
@@ -16975,7 +17028,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 473
+      "id": 474
     },
     {
       "title": "Pi.alert",
@@ -17013,7 +17066,7 @@
         }
       ],
       "restart_policy": "always",
-      "id": 474
+      "id": 475
     },
     {
       "title": "Pidgin",
@@ -17061,7 +17114,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 475
+      "id": 476
     },
     {
       "title": "Pinchflat",
@@ -17080,7 +17133,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/pinchflat.yml"
       },
-      "id": 476
+      "id": 477
     },
     {
       "title": "Pingvin",
@@ -17099,7 +17152,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/pingvin.yml"
       },
-      "id": 477
+      "id": 478
     },
     {
       "title": "Piper",
@@ -17187,7 +17240,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 478
+      "id": 479
     },
     {
       "title": "Piwigo",
@@ -17225,7 +17278,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 479
+      "id": 480
     },
     {
       "title": "Pixel-server",
@@ -17262,7 +17315,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 480
+      "id": 481
     },
     {
       "title": "Plane",
@@ -17282,7 +17335,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/plane.yml"
       },
-      "id": 481
+      "id": 482
     },
     {
       "title": "Planka",
@@ -17302,7 +17355,7 @@
         "url": "https://github.com/lissy93/portainer-templates",
         "stackfile": "/sources/stacks/planka.yml"
       },
-      "id": 482
+      "id": 483
     },
     {
       "title": "Plesk",
@@ -17326,7 +17379,7 @@
         "8443/tcp",
         "8447/tcp"
       ],
-      "id": 483
+      "id": 484
     },
     {
       "title": "Plex",
@@ -17376,7 +17429,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 484
+      "id": 485
     },
     {
       "title": "Plex Media Server",
@@ -17440,7 +17493,7 @@
           "container": "/transcode"
         }
       ],
-      "id": 485
+      "id": 486
     },
     {
       "title": "Plex Requests",
@@ -17486,7 +17539,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 486
+      "id": 487
     },
     {
       "title": "PlexRipper",
@@ -17536,7 +17589,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 487
+      "id": 488
     },
     {
       "title": "PlexTraktSync",
@@ -17556,7 +17609,7 @@
         "url": "https://github.com/mediadepot/templates",
         "stackfile": "/stacks/plextraktsync/docker-compose.yml"
       },
-      "id": 488
+      "id": 489
     },
     {
       "title": "Plone",
@@ -17580,7 +17633,7 @@
           "container": "/data"
         }
       ],
-      "id": 489
+      "id": 490
     },
     {
       "title": "Portainer Agent",
@@ -17599,7 +17652,7 @@
         "url": "https://github.com/mikestraney/portainer-templates",
         "stackfile": "/stacks/portainer-agent/docker-stack.yml"
       },
-      "id": 490
+      "id": 491
     },
     {
       "title": "Poste.io",
@@ -17617,7 +17670,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/posteio.yml"
       },
-      "id": 491
+      "id": 492
     },
     {
       "title": "PostgreSQL",
@@ -17666,7 +17719,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 492
+      "id": 493
     },
     {
       "title": "Postiz",
@@ -17685,7 +17738,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/postiz.yml"
       },
-      "id": 493
+      "id": 494
     },
     {
       "title": "Ppsspp",
@@ -17732,7 +17785,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 494
+      "id": 495
     },
     {
       "title": "PriceGhost",
@@ -17751,7 +17804,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/priceghost.yml"
       },
-      "id": 495
+      "id": 496
     },
     {
       "title": "Pritunl",
@@ -17773,7 +17826,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted",
         "stackfile": "/stack/pritunl.yml"
       },
-      "id": 496
+      "id": 497
     },
     {
       "title": "PrivateBin",
@@ -17818,7 +17871,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 497
+      "id": 498
     },
     {
       "title": "Pro Mosquitto with Management Center (stack)",
@@ -17837,7 +17890,7 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "/edge/cedalo-mosquitto-mc/docker-compose.yml"
       },
-      "id": 498
+      "id": 499
     },
     {
       "title": "ProjectSend",
@@ -17882,7 +17935,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 499
+      "id": 500
     },
     {
       "title": "ProtonMail Bridge",
@@ -17912,7 +17965,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 500
+      "id": 501
     },
     {
       "title": "prowlarr",
@@ -17955,7 +18008,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 501
+      "id": 502
     },
     {
       "title": "ProxiTok",
@@ -17973,7 +18026,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/proxitok.yml"
       },
-      "id": 502
+      "id": 503
     },
     {
       "title": "Pumperly",
@@ -17993,7 +18046,7 @@
         "url": "https://github.com/lissy93/portainer-templates",
         "stackfile": "/sources/stacks/pumperly.yml"
       },
-      "id": 503
+      "id": 504
     },
     {
       "title": "Pure-FTP Server",
@@ -18110,7 +18163,7 @@
           "bind": "/media/temp/processing"
         }
       ],
-      "id": 504
+      "id": 505
     },
     {
       "title": "pve-exporter",
@@ -18128,7 +18181,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/pve-exporter.yml"
       },
-      "id": 505
+      "id": 506
     },
     {
       "title": "Pwndrop",
@@ -18177,7 +18230,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 506
+      "id": 507
     },
     {
       "title": "Pycharm",
@@ -18224,7 +18277,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 507
+      "id": 508
     },
     {
       "title": "Pydio",
@@ -18267,7 +18320,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 508
+      "id": 509
     },
     {
       "title": "Pydio-cells",
@@ -18325,7 +18378,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 509
+      "id": 510
     },
     {
       "title": "Pyload-ng",
@@ -18376,7 +18429,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 510
+      "id": 511
     },
     {
       "title": "qBittorrent",
@@ -18420,7 +18473,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 511
+      "id": 512
     },
     {
       "title": "qdirstat",
@@ -18467,7 +18520,7 @@
           "bind": "/mnt"
         }
       ],
-      "id": 512
+      "id": 513
     },
     {
       "title": "Qemu-static",
@@ -18513,7 +18566,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 513
+      "id": 514
     },
     {
       "title": "qFlood",
@@ -18571,7 +18624,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 514
+      "id": 515
     },
     {
       "title": "QuakeJs",
@@ -18604,7 +18657,7 @@
         "4043:443/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "id": 515
+      "id": 516
     },
     {
       "title": "Quassel IRC",
@@ -18642,7 +18695,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 516
+      "id": 517
     },
     {
       "title": "quassel-core",
@@ -18686,7 +18739,7 @@
           "container": "/config"
         }
       ],
-      "id": 517
+      "id": 518
     },
     {
       "title": "RabbitMQ",
@@ -18711,7 +18764,26 @@
           "container": "/var/lib/rabbitmq"
         }
       ],
-      "id": 518
+      "id": 519
+    },
+    {
+      "title": "Rackula",
+      "description": "Plan your rack layout. Drag your devices in, move them around, export it. It runs in your browser. You can close the tab whenever you want",
+      "type": 2,
+      "platforms": [
+        "linux"
+      ],
+      "categories": [
+        "Network"
+      ],
+      "name": "rackula",
+      "note": "",
+      "logo": "https://github.com/RackulaLives/Rackula/raw/main/assets/Rackula-lockup-dark.svg",
+      "repository": {
+        "url": "https://github.com/xneo1/portainer_templates",
+        "stackfile": "/Template/Stack/rackula.yml"
+      },
+      "id": 520
     },
     {
       "title": "Radarr",
@@ -18758,7 +18830,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 519
+      "id": 521
     },
     {
       "title": "Raneto",
@@ -18804,7 +18876,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 520
+      "id": 522
     },
     {
       "title": "Raspberry Pi Docker Monitor",
@@ -18824,7 +18896,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted",
         "stackfile": "/stack/raspberrypi-monitoring.yml"
       },
-      "id": 521
+      "id": 523
     },
     {
       "title": "Rawtherapee",
@@ -18871,7 +18943,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 522
+      "id": 524
     },
     {
       "title": "Rclone Config Backup",
@@ -18901,7 +18973,7 @@
           "bind": "/opt/mediadepot/apps"
         }
       ],
-      "id": 523
+      "id": 525
     },
     {
       "title": "RDesktop",
@@ -18944,7 +19016,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 524
+      "id": 526
     },
     {
       "title": "Reactive-Resume",
@@ -19028,7 +19100,7 @@
           "name": "TZ"
         }
       ],
-      "id": 525
+      "id": 527
     },
     {
       "title": "readarr",
@@ -19080,7 +19152,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 526
+      "id": 528
     },
     {
       "title": "Readarr (container)",
@@ -19142,7 +19214,7 @@
           "readonly": true
         }
       ],
-      "id": 527
+      "id": 529
     },
     {
       "title": "Readarr (stack)",
@@ -19161,7 +19233,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/readarr.yml"
       },
-      "id": 528
+      "id": 530
     },
     {
       "title": "Redis",
@@ -19185,7 +19257,7 @@
           "container": "/data"
         }
       ],
-      "id": 529
+      "id": 531
     },
     {
       "title": "Redis Cluster",
@@ -19204,7 +19276,7 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "/stacks/redis-cluster/docker-stack.yaml"
       },
-      "id": 530
+      "id": 532
     },
     {
       "title": "Redmine",
@@ -19225,7 +19297,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted",
         "stackfile": "/stack/redmine.yml"
       },
-      "id": 531
+      "id": 533
     },
     {
       "title": "Registry",
@@ -19249,7 +19321,7 @@
           "container": "/var/lib/registry"
         }
       ],
-      "id": 532
+      "id": 534
     },
     {
       "title": "Registry (cache)",
@@ -19280,7 +19352,7 @@
           "container": "/var/lib/registry"
         }
       ],
-      "id": 533
+      "id": 535
     },
     {
       "title": "Remmina",
@@ -19327,7 +19399,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 534
+      "id": 536
     },
     {
       "title": "Remotely",
@@ -19345,7 +19417,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/remotely.yml"
       },
-      "id": 535
+      "id": 537
     },
     {
       "title": "Resilio Sync",
@@ -19394,7 +19466,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 536
+      "id": 538
     },
     {
       "title": "Retroarch",
@@ -19441,7 +19513,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 537
+      "id": 539
     },
     {
       "title": "Reveal.js",
@@ -19471,7 +19543,7 @@
         }
       ],
       "restart_policy": "always",
-      "id": 538
+      "id": 540
     },
     {
       "title": "RomM",
@@ -19490,7 +19562,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/romm.yml"
       },
-      "id": 539
+      "id": 541
     },
     {
       "title": "Rpcs3",
@@ -19537,7 +19609,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 540
+      "id": 542
     },
     {
       "title": "Rport",
@@ -19556,7 +19628,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/rport.yml"
       },
-      "id": 541
+      "id": 543
     },
     {
       "title": "Rsnapshot",
@@ -19610,7 +19682,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 542
+      "id": 544
     },
     {
       "title": "Rust Desk (stack)",
@@ -19629,7 +19701,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/rustdesk.yml"
       },
-      "id": 543
+      "id": 545
     },
     {
       "title": "RustDesk",
@@ -19675,7 +19747,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 544
+      "id": 546
     },
     {
       "title": "RustDesk (container)",
@@ -19721,7 +19793,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 545
+      "id": 547
     },
     {
       "title": "ruTorrent",
@@ -19791,7 +19863,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 546
+      "id": 548
     },
     {
       "title": "SABnzbd",
@@ -19838,7 +19910,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 547
+      "id": 549
     },
     {
       "title": "Samba",
@@ -19903,7 +19975,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 548
+      "id": 550
     },
     {
       "title": "Scality S3",
@@ -19940,7 +20012,7 @@
           "container": "/usr/src/app/localMetadata"
         }
       ],
-      "id": 549
+      "id": 551
     },
     {
       "title": "scrutiny",
@@ -19975,7 +20047,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 550
+      "id": 552
     },
     {
       "title": "Scummvm",
@@ -20022,7 +20094,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 551
+      "id": 553
     },
     {
       "title": "Seafile",
@@ -20042,7 +20114,7 @@
         "url": "https://github.com/SelfhostedPro/selfhosted_templates",
         "stackfile": "/Template/Stack/seafile.yml"
       },
-      "id": 552
+      "id": 554
     },
     {
       "title": "Sealskin",
@@ -20104,7 +20176,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 553
+      "id": 555
     },
     {
       "title": "SearXNG",
@@ -20143,7 +20215,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 554
+      "id": 556
     },
     {
       "title": "Sematext Docker Agent (container)",
@@ -20176,7 +20248,7 @@
           "bind": "/var/run/docker.sock"
         }
       ],
-      "id": 555
+      "id": 557
     },
     {
       "title": "Sematext Docker Agent (swarm)",
@@ -20196,7 +20268,7 @@
         "url": "https://github.com/mikestraney/portainer-templates",
         "stackfile": "/stacks/sematext-agent-docker/docker-stack.yml"
       },
-      "id": 556
+      "id": 558
     },
     {
       "title": "Servas",
@@ -20215,7 +20287,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/servas.yml"
       },
-      "id": 557
+      "id": 559
     },
     {
       "title": "Shaarli",
@@ -20234,7 +20306,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/shaarli.yml"
       },
-      "id": 558
+      "id": 560
     },
     {
       "title": "Shadowbroker",
@@ -20253,7 +20325,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/shadowbroker.yml"
       },
-      "id": 559
+      "id": 561
     },
     {
       "title": "Shadps4",
@@ -20300,7 +20372,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 560
+      "id": 562
     },
     {
       "title": "Shiori",
@@ -20327,7 +20399,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 561
+      "id": 563
     },
     {
       "title": "Shiori (container)",
@@ -20354,7 +20426,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 562
+      "id": 564
     },
     {
       "title": "Shiori (stack)",
@@ -20373,7 +20445,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/shiori.yml"
       },
-      "id": 563
+      "id": 565
     },
     {
       "title": "Shotcut",
@@ -20420,7 +20492,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 564
+      "id": 566
     },
     {
       "title": "SickChill",
@@ -20467,7 +20539,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 565
+      "id": 567
     },
     {
       "title": "SickGear",
@@ -20514,7 +20586,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 566
+      "id": 568
     },
     {
       "title": "SickRage",
@@ -20571,7 +20643,7 @@
           "bind": "/media/temp/blackhole/tvshows"
         }
       ],
-      "id": 567
+      "id": 569
     },
     {
       "title": "Signal",
@@ -20618,7 +20690,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 568
+      "id": 570
     },
     {
       "title": "Signal Proxy",
@@ -20637,7 +20709,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/signal.yml"
       },
-      "id": 569
+      "id": 571
     },
     {
       "title": "Silverstripe",
@@ -20656,7 +20728,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/silverstripe.yml"
       },
-      "id": 570
+      "id": 572
     },
     {
       "title": "Slash",
@@ -20683,7 +20755,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 571
+      "id": 573
     },
     {
       "title": "SmokePing",
@@ -20725,7 +20797,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 572
+      "id": 574
     },
     {
       "title": "Snibox",
@@ -20752,7 +20824,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 573
+      "id": 575
     },
     {
       "title": "Snibox (container)",
@@ -20779,7 +20851,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 574
+      "id": 576
     },
     {
       "title": "Snibox (stack)",
@@ -20798,7 +20870,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/snibox.yml"
       },
-      "id": 575
+      "id": 577
     },
     {
       "title": "Snippet Box (stack)",
@@ -20816,7 +20888,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/snippetbox.yml"
       },
-      "id": 576
+      "id": 578
     },
     {
       "title": "Snippet-box",
@@ -20843,7 +20915,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 577
+      "id": 579
     },
     {
       "title": "Snippet-box (container)",
@@ -20870,7 +20942,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 578
+      "id": 580
     },
     {
       "title": "Socket-proxy",
@@ -20916,7 +20988,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 579
+      "id": 581
     },
     {
       "title": "SolidTime",
@@ -20935,7 +21007,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/solidtime.yml"
       },
-      "id": 580
+      "id": 582
     },
     {
       "title": "Solr",
@@ -20959,7 +21031,7 @@
           "container": "/opt/solr/mydata"
         }
       ],
-      "id": 581
+      "id": 583
     },
     {
       "title": "Sonarr",
@@ -21010,7 +21082,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 582
+      "id": 584
     },
     {
       "title": "Speedtest Tracker",
@@ -21045,7 +21117,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 583
+      "id": 585
     },
     {
       "title": "Speedtest Tracker (container)",
@@ -21080,7 +21152,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 584
+      "id": 586
     },
     {
       "title": "Speedtest Tracker (stack)",
@@ -21099,7 +21171,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/speedtest-tracker.yml"
       },
-      "id": 585
+      "id": 587
     },
     {
       "title": "Spotube",
@@ -21146,7 +21218,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 586
+      "id": 588
     },
     {
       "title": "SQL Server",
@@ -21181,7 +21253,7 @@
           "container": "C:/temp/"
         }
       ],
-      "id": 587
+      "id": 589
     },
     {
       "title": "SQL Server Express",
@@ -21216,7 +21288,7 @@
           "container": "C:/temp/"
         }
       ],
-      "id": 588
+      "id": 590
     },
     {
       "title": "Sqlitebrowser",
@@ -21263,7 +21335,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 589
+      "id": 591
     },
     {
       "title": "Sshwifty",
@@ -21284,7 +21356,7 @@
         "8182:8182/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "id": 590
+      "id": 592
     },
     {
       "title": "Stalwart Mail Server",
@@ -21317,7 +21389,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 591
+      "id": 593
     },
     {
       "title": "Statping",
@@ -21343,7 +21415,7 @@
         }
       ],
       "restart_policy": "always",
-      "id": 592
+      "id": 594
     },
     {
       "title": "Steam",
@@ -21390,7 +21462,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 593
+      "id": 595
     },
     {
       "title": "Stirling PDF {shmolf}",
@@ -21449,7 +21521,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 594
+      "id": 596
     },
     {
       "title": "Stirling-PDF",
@@ -21469,7 +21541,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/stirling-pdf.yml"
       },
-      "id": 595
+      "id": 597
     },
     {
       "title": "Stump",
@@ -21515,7 +21587,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 596
+      "id": 598
     },
     {
       "title": "SurrealDB",
@@ -21553,7 +21625,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 597
+      "id": 599
     },
     {
       "title": "Swag",
@@ -21679,7 +21751,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 598
+      "id": 600
     },
     {
       "title": "Swarm monitoring",
@@ -21698,7 +21770,7 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "/swarm/monitoring/docker-compose.yml"
       },
-      "id": 599
+      "id": 601
     },
     {
       "title": "Synclounge",
@@ -21732,7 +21804,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 600
+      "id": 602
     },
     {
       "title": "SyncThing",
@@ -21778,7 +21850,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 601
+      "id": 603
     },
     {
       "title": "SyncThing (container)",
@@ -21824,7 +21896,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 602
+      "id": 604
     },
     {
       "title": "Syncthing (stack)",
@@ -21846,7 +21918,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/syncthing.yml"
       },
-      "id": 603
+      "id": 605
     },
     {
       "title": "Syslog-ng",
@@ -21904,7 +21976,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 604
+      "id": 606
     },
     {
       "title": "System Stats OLED display",
@@ -21944,7 +22016,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 605
+      "id": 607
     },
     {
       "title": "Tabby",
@@ -21964,7 +22036,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/tabby.yml"
       },
-      "id": 606
+      "id": 608
     },
     {
       "title": "Tailscale",
@@ -22000,7 +22072,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 607
+      "id": 609
     },
     {
       "title": "Tailscale (container)",
@@ -22036,7 +22108,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 608
+      "id": 610
     },
     {
       "title": "Tailscale (stack)",
@@ -22056,7 +22128,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/tailscale.yml"
       },
-      "id": 609
+      "id": 611
     },
     {
       "title": "Tandoor",
@@ -22075,7 +22147,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/tandoor.yml"
       },
-      "id": 610
+      "id": 612
     },
     {
       "title": "Tautulli",
@@ -22118,7 +22190,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 611
+      "id": 613
     },
     {
       "title": "Tdarr",
@@ -22137,7 +22209,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/tdarr.yml"
       },
-      "id": 612
+      "id": 614
     },
     {
       "title": "Technitium DNS",
@@ -22172,7 +22244,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 613
+      "id": 615
     },
     {
       "title": "Teeworlds",
@@ -22214,7 +22286,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 614
+      "id": 616
     },
     {
       "title": "Telegram",
@@ -22261,7 +22333,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 615
+      "id": 617
     },
     {
       "title": "Teleport",
@@ -22280,7 +22352,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/teleport.yml"
       },
-      "id": 616
+      "id": 618
     },
     {
       "title": "Terraria Server",
@@ -22300,7 +22372,7 @@
         "url": "https://github.com/lissy93/portainer-templates",
         "stackfile": "/sources/stacks/terraria-server.yml"
       },
-      "id": 617
+      "id": 619
     },
     {
       "title": "Terraria Server {shmolf}",
@@ -22343,7 +22415,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 618
+      "id": 620
     },
     {
       "title": "Thanos",
@@ -22380,7 +22452,7 @@
         }
       ],
       "restart_policy": "never",
-      "id": 619
+      "id": 621
     },
     {
       "title": "TheLounge",
@@ -22418,7 +22490,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 620
+      "id": 622
     },
     {
       "title": "Thunderbird",
@@ -22465,7 +22537,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 621
+      "id": 623
     },
     {
       "title": "TiddlyWiki",
@@ -22492,7 +22564,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 622
+      "id": 624
     },
     {
       "title": "TimeTagger",
@@ -22512,7 +22584,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/timetagger.yml"
       },
-      "id": 623
+      "id": 625
     },
     {
       "title": "Tiny Tiny RSS",
@@ -22550,7 +22622,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 624
+      "id": 626
     },
     {
       "title": "TinyMediaManager",
@@ -22569,7 +22641,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/tinymediamanager.yml"
       },
-      "id": 625
+      "id": 627
     },
     {
       "title": "Tooljet",
@@ -22590,7 +22662,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/tooljet.yml"
       },
-      "id": 626
+      "id": 628
     },
     {
       "title": "TOSIBOX Lock for Container",
@@ -22609,7 +22681,7 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "/stacks/tosibox/docker-compose.yml"
       },
-      "id": 627
+      "id": 629
     },
     {
       "title": "Traefik",
@@ -22651,7 +22723,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 628
+      "id": 630
     },
     {
       "title": "Traefik (container)",
@@ -22693,7 +22765,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 629
+      "id": 631
     },
     {
       "title": "Traefik (stack)",
@@ -22713,7 +22785,7 @@
         "url": "https://github.com/lissy93/portainer-templates",
         "stackfile": "/sources/stacks/traefik.yml"
       },
-      "id": 630
+      "id": 632
     },
     {
       "title": "Traggo",
@@ -22732,7 +22804,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/traggo.yml"
       },
-      "id": 631
+      "id": 633
     },
     {
       "title": "Transmission",
@@ -22778,7 +22850,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 632
+      "id": 634
     },
     {
       "title": "Transmission OpenVPN Latest",
@@ -22858,7 +22930,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 633
+      "id": 635
     },
     {
       "title": "Transmission OpenVPN v3",
@@ -22938,7 +23010,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 634
+      "id": 636
     },
     {
       "title": "Transmission-OpenVPN",
@@ -23003,7 +23075,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 635
+      "id": 637
     },
     {
       "title": "Trilium",
@@ -23040,7 +23112,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 636
+      "id": 638
     },
     {
       "title": "TRIP",
@@ -23059,7 +23131,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/trip.yml"
       },
-      "id": 637
+      "id": 639
     },
     {
       "title": "Trudesk",
@@ -23078,7 +23150,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/trudesk.yml"
       },
-      "id": 638
+      "id": 640
     },
     {
       "title": "Tubearchivist",
@@ -23097,7 +23169,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/tubearchivist.yml"
       },
-      "id": 639
+      "id": 641
     },
     {
       "title": "Tvheadend",
@@ -23140,7 +23212,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 640
+      "id": 642
     },
     {
       "title": "Twitch Points Miner",
@@ -23179,7 +23251,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 641
+      "id": 643
     },
     {
       "title": "Ubooquity",
@@ -23229,7 +23301,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 642
+      "id": 644
     },
     {
       "title": "Ubuntu",
@@ -23245,7 +23317,7 @@
       "note": "",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ubuntu.png",
       "image": "ubuntu:latest",
-      "id": 643
+      "id": 645
     },
     {
       "title": "Umami.is",
@@ -23264,7 +23336,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/umami.yml"
       },
-      "id": 644
+      "id": 646
     },
     {
       "title": "Ungoogled-chromium",
@@ -23317,7 +23389,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 645
+      "id": 647
     },
     {
       "title": "UniFi Controller",
@@ -23363,7 +23435,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 646
+      "id": 648
     },
     {
       "title": "UniFi Video",
@@ -23423,7 +23495,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 647
+      "id": 649
     },
     {
       "title": "Unifi-network-application",
@@ -23531,7 +23603,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 648
+      "id": 650
     },
     {
       "title": "Unmanic",
@@ -23577,7 +23649,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 649
+      "id": 651
     },
     {
       "title": "UnPoller Monitor",
@@ -23597,7 +23669,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted",
         "stackfile": "/stack/unpoller-stack.yml"
       },
-      "id": 650
+      "id": 652
     },
     {
       "title": "Upsnap",
@@ -23616,7 +23688,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/upsnap.yml"
       },
-      "id": 651
+      "id": 653
     },
     {
       "title": "Uptime Kuma",
@@ -23643,7 +23715,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 652
+      "id": 654
     },
     {
       "title": "Uptime Kuma (container)",
@@ -23670,7 +23742,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 653
+      "id": 655
     },
     {
       "title": "Uptime Kuma (stack)",
@@ -23690,7 +23762,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/uptimekuma.yml"
       },
-      "id": 654
+      "id": 656
     },
     {
       "title": "UrBackup",
@@ -23733,7 +23805,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 655
+      "id": 657
     },
     {
       "title": "UrlWatch",
@@ -23764,7 +23836,7 @@
           "readonly": true
         }
       ],
-      "id": 656
+      "id": 658
     },
     {
       "title": "Valheim Server",
@@ -23784,7 +23856,7 @@
         "url": "https://github.com/lissy93/portainer-templates",
         "stackfile": "/sources/stacks/valheim-server-docker.yml"
       },
-      "id": 657
+      "id": 659
     },
     {
       "title": "Vaultwarden",
@@ -23812,7 +23884,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 658
+      "id": 660
     },
     {
       "title": "Vikunja",
@@ -23832,7 +23904,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/vikunja.yml"
       },
-      "id": 659
+      "id": 661
     },
     {
       "title": "Vikunja With Frontend",
@@ -23854,7 +23926,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted/",
         "stackfile": "/stack/vikunja.yml"
       },
-      "id": 660
+      "id": 662
     },
     {
       "title": "Vivaldi",
@@ -23907,7 +23979,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 661
+      "id": 663
     },
     {
       "title": "Vlc",
@@ -23960,7 +24032,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 662
+      "id": 664
     },
     {
       "title": "Vlmcsd - KMS",
@@ -23981,7 +24053,7 @@
         "1688:1688/tcp"
       ],
       "restart_policy": "unless-stopped",
-      "id": 663
+      "id": 665
     },
     {
       "title": "Vscode",
@@ -24028,7 +24100,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 664
+      "id": 666
     },
     {
       "title": "Vscodium",
@@ -24075,7 +24147,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 665
+      "id": 667
     },
     {
       "title": "Vscodium-web",
@@ -24151,7 +24223,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 666
+      "id": 668
     },
     {
       "title": "vsftpd FTP Server",
@@ -24235,7 +24307,7 @@
           "bind": "/media/temp/processing"
         }
       ],
-      "id": 667
+      "id": 669
     },
     {
       "title": "Wallabag",
@@ -24254,7 +24326,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/wallabag.yml"
       },
-      "id": 668
+      "id": 670
     },
     {
       "title": "Wallbag",
@@ -24350,7 +24422,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 669
+      "id": 671
     },
     {
       "title": "Wallos",
@@ -24387,7 +24459,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 670
+      "id": 672
     },
     {
       "title": "Watchtower",
@@ -24412,7 +24484,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 671
+      "id": 673
     },
     {
       "title": "Watchtower {shmolf}",
@@ -24438,7 +24510,7 @@
         }
       ],
       "restart_policy": "always",
-      "id": 672
+      "id": 674
     },
     {
       "title": "Web Check",
@@ -24457,7 +24529,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/webcheck.yml"
       },
-      "id": 673
+      "id": 675
     },
     {
       "title": "Webcord",
@@ -24504,7 +24576,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 674
+      "id": 676
     },
     {
       "title": "WebGrab+Plus",
@@ -24543,7 +24615,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 675
+      "id": 677
     },
     {
       "title": "Webgrabplus",
@@ -24593,7 +24665,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 676
+      "id": 678
     },
     {
       "title": "Webstation",
@@ -24640,7 +24712,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 677
+      "id": 679
     },
     {
       "title": "Webtop",
@@ -24682,7 +24754,7 @@
         }
       ],
       "restart_policy": "always",
-      "id": 678
+      "id": 680
     },
     {
       "title": "Webtrees",
@@ -24701,7 +24773,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/webtrees.yml"
       },
-      "id": 679
+      "id": 681
     },
     {
       "title": "Weixin",
@@ -24748,7 +24820,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 680
+      "id": 682
     },
     {
       "title": "Wger",
@@ -24767,7 +24839,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/wger.yml"
       },
-      "id": 681
+      "id": 683
     },
     {
       "title": "Whisparr",
@@ -24825,7 +24897,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 682
+      "id": 684
     },
     {
       "title": "Whoogle",
@@ -24852,7 +24924,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 683
+      "id": 685
     },
     {
       "title": "Wikijs",
@@ -24883,7 +24955,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 684
+      "id": 686
     },
     {
       "title": "Windows 2000",
@@ -24912,7 +24984,55 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 685
+      "id": 687
+    },
+    {
+      "title": "Winegui",
+      "description": "[WineGUI](https://gitlab.melroy.org/melroy/winegui) is a user-interface friendly Wine manager that provides a graphical frontend for creating and managing Wine bottles.",
+      "type": 1,
+      "platforms": [
+        "linux"
+      ],
+      "categories": [
+        "Games",
+        "Business"
+      ],
+      "name": "Winegui",
+      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a>, based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Ensure to create the following volume directories on the host file system, or modify the paths in the volume mapping section under the advanced options below, as needed.</p><p>mkdir -p /srv/lsio/winegui/config</p>",
+      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/winegui-logo.png",
+      "image": "linuxserver/winegui:latest",
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000",
+          "description": "Run 'id [USER]' for the owner of the host volume directories to get the UID to use here."
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "1000",
+          "description": "Run 'id [USER]' for the owner of the host volume directories to get the GID to use here."
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "default": "Etc/UTC",
+          "description": "specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List)."
+        }
+      ],
+      "ports": [
+        "3000:3000/tcp",
+        "3001:3001/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/srv/lsio/winegui/config"
+        }
+      ],
+      "restart_policy": "unless-stopped",
+      "id": 688
     },
     {
       "title": "Wireguard",
@@ -25011,7 +25131,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 686
+      "id": 689
     },
     {
       "title": "Wireguard Server",
@@ -25031,7 +25151,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted",
         "stackfile": "/stack/wireguard-easy.yml"
       },
-      "id": 687
+      "id": 690
     },
     {
       "title": "Wireshark",
@@ -25079,7 +25199,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 688
+      "id": 691
     },
     {
       "title": "Wizarr",
@@ -25116,7 +25236,7 @@
           "readonly": true
         }
       ],
-      "id": 689
+      "id": 692
     },
     {
       "title": "Woodpecker CI",
@@ -25136,7 +25256,7 @@
         "url": "https://github.com/lissy93/portainer-templates",
         "stackfile": "/sources/stacks/woodpecker-ci.yml"
       },
-      "id": 690
+      "id": 693
     },
     {
       "title": "Wordpress",
@@ -25156,7 +25276,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted",
         "stackfile": "/stack/wordpress-stack.yml"
       },
-      "id": 691
+      "id": 694
     },
     {
       "title": "Wordpress (stack)",
@@ -25176,7 +25296,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted",
         "stackfile": "/stack/wordpress-stack.yml"
       },
-      "id": 692
+      "id": 695
     },
     {
       "title": "Wordpress (swarm)",
@@ -25195,7 +25315,7 @@
         "url": "https://github.com/mikestraney/portainer-templates",
         "stackfile": "/stacks/wordpress/docker-stack.yml"
       },
-      "id": 693
+      "id": 696
     },
     {
       "title": "Wowza",
@@ -25234,7 +25354,7 @@
           "container": "/var/lib/wowza"
         }
       ],
-      "id": 694
+      "id": 697
     },
     {
       "title": "Wps-office",
@@ -25281,7 +25401,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 695
+      "id": 698
     },
     {
       "title": "Xbackbone",
@@ -25328,7 +25448,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 696
+      "id": 699
     },
     {
       "title": "Xemu",
@@ -25375,7 +25495,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 697
+      "id": 700
     },
     {
       "title": "Xwiki",
@@ -25394,7 +25514,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/xwiki.yml"
       },
-      "id": 698
+      "id": 701
     },
     {
       "title": "Yaak",
@@ -25441,7 +25561,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 699
+      "id": 702
     },
     {
       "title": "Yacht",
@@ -25472,7 +25592,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 700
+      "id": 703
     },
     {
       "title": "your-spotify",
@@ -25491,7 +25611,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted",
         "stackfile": "/stack/your-spotify.yml"
       },
-      "id": 701
+      "id": 704
     },
     {
       "title": "Your_spotify",
@@ -25510,7 +25630,7 @@
         "url": "https://github.com/xneo1/portainer_templates",
         "stackfile": "/Template/Stack/your_spotify.yml"
       },
-      "id": 702
+      "id": 705
     },
     {
       "title": "Yourls",
@@ -25532,7 +25652,7 @@
         "url": "https://github.com/pi-hosted/pi-hosted/",
         "stackfile": "/stack/yourls.yml"
       },
-      "id": 703
+      "id": 706
     },
     {
       "title": "YouTubeDL-Material",
@@ -25575,7 +25695,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 704
+      "id": 707
     },
     {
       "title": "Zen",
@@ -25622,7 +25742,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 705
+      "id": 708
     },
     {
       "title": "ZNC",
@@ -25660,7 +25780,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 706
+      "id": 709
     },
     {
       "title": "Zotero",
@@ -25707,7 +25827,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 707
+      "id": 710
     },
     {
       "title": "ZTNet",
@@ -25727,7 +25847,7 @@
         "url": "https://github.com/lissy93/portainer-templates",
         "stackfile": "/sources/stacks/ztnet/docker-compose.yml"
       },
-      "id": 708
+      "id": 711
     },
     {
       "title": "Zus.am",
@@ -25766,7 +25886,7 @@
         }
       ],
       "restart_policy": "unless-stopped",
-      "id": 709
+      "id": 712
     }
   ]
 }
